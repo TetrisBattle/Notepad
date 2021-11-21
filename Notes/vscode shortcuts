@@ -1,0 +1,12 @@
+ctrl + ö                        toggle terminal
+ctrl + '                        toggle comment
+(ctrl + k) + (ctrl + num)       fold all (decide scope by number)
+(ctrl + k) + (ctrl + j)         unfold all
+
+ctrl + d                        highlight text (press again to select next occurrance)
+ctrl + l                        highlight line
+alt + up/down arrow             move line
+alt + shift + up/down arrow     move & copy line
+
+alt + click                     multiple cursor
+

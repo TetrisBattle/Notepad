@@ -1,0 +1,35 @@
+/* Notes
+  default font size is 16px
+  1rem = 16px
+*/
+
+.myExtenderClass {
+  background: pink
+}
+
+@function sum($num1, $num2) {
+  @return $num1 + $num2;
+}
+
+@mixin setBackground($background) {
+  background: $background;
+}
+
+@mixin isDarkMode($isDarkMode: true) {
+  @if ($isDarkMode) {
+    background: black;
+  } @else {
+    background: $lightBlue;
+  }
+}
+
+@mixin resetCss() {
+  all: initial
+}
+
+// body {
+//   @extend .myExtenderClass;
+//   font-size: sum(50px, 6px);
+//   @include setBackground(red);
+//   @include isDarkMode(false);
+// }
