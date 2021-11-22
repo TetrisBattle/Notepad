@@ -8,21 +8,21 @@
  */
 
 export const getNode = (name) => { // #id .class div
-  const node = document.querySelector(name)
-  return node
+	const node = document.querySelector(name)
+	return node
 }
 
 export const addClass = (name, newClassName) => {
-  const node = document.querySelector(name)
-  node.classList.add(newClassName)
+	const node = document.querySelector(name)
+	node.classList.add(newClassName)
 }
 
 export const removeClass = (name, removeClassName) => {
-  const node = document.querySelector(name)
-  node.classList.remove(removeClassName)
+	const node = document.querySelector(name)
+	node.classList.remove(removeClassName)
 }
 
 export const toggleClass = (name, className) => {
-  const node = document.querySelector(name)
-  node.classList.toggle(className)
+	const node = document.querySelector(name)
+	node.classList.toggle(className)
 }

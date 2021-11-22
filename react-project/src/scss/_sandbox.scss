@@ -1,0 +1,113 @@
+.myExtenderClass {
+  background: pink
+}
+
+@function sum($num1, $num2) {
+  @return $num1 + $num2;
+}
+
+@mixin setBackground($background) {
+  background: $background;
+}
+
+@mixin isDarkMode($isDarkMode: true) {
+  @if ($isDarkMode) {
+    background: black;
+  } @else {
+    background: $lightBlue;
+  }
+}
+
+@mixin resetCss() {
+  all: initial
+}
+
+// body {
+//   @extend .myExtenderClass;
+//   font-size: sum(1rem, 2rem);
+//   @include setBackground(red);
+//   @include isDarkMode(false);
+// }
+
+#Sandbox {
+  background: black;
+  color: $colorText;
+  height: 100vh;
+  overflow: auto;
+  
+  header {
+    color: rgb(182, 14, 14);
+  }
+  
+  button {
+    border-radius: 25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: rgb(13, 31, 110);
+    color: $colorText;
+    border: solid .125rem $colorText;
+    text-transform: none;
+		padding: 0;
+    
+    &:hover {
+      filter: brightness(130%);
+    }
+  }
+  
+  header {
+    padding: 1.25rem;
+    
+    .title {
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+  
+  .printSection {
+    background: rgb(20, 75, 3);
+    margin: 0 auto;
+    border-radius: 3;
+    justify-content: space-between;
+    width: 21rem;
+    height: 5rem;
+    align-items: center;
+    position: relative;
+    display: flex;
+    padding-left: 2rem;
+  
+    button {
+      position: absolute;
+      right: 1.25rem;
+      width: 10rem;
+      height: 3rem;
+    }
+  }
+  
+  .testArea {
+    margin: 0 auto;
+    width: 40rem;
+    height: 30rem;
+    border-radius: .6rem;
+    margin-top: 3rem;
+    
+    $borderColor: rgb(112, 25, 25);
+    border: solid .3rem $borderColor;
+    
+    h2 {
+      text-align: center;
+      padding: 1.25rem;
+      background: rgb(4, 100, 117);
+      border-bottom: solid .3rem $borderColor;
+			background-color: rgb(13, 31, 110);
+    }
+    
+    .testButtonsContainer {
+      padding: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(3, 10rem);
+      grid-auto-rows: 3rem;
+      gap: 1.25rem;
+      justify-content: space-evenly;
+    }
+  }
+}

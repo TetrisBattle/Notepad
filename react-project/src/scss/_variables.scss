@@ -1,15 +1,23 @@
-$blue: #00BEDA;
-$darkBlue: #0592BD;
-$black: #333333;
-$lightBlue: #E5F8FB;
-$lightGray: #F4F4F4;
-$gray: #7E7E7E;
-$green: #70BE60;
-$yellow: #FCD200;
-$red: #E43B5A;
+// $xs: 480px; // Mobile devices
+// $sm: 768px; // iPads, Tablets
+// $md: 1024px; // Small screens, laptops
+// $lg: 1200px; // Desktops, large screens
+// $xl: 1600px; // Extra large screens, TV
 
-$xs: 320px;
-$sm: 600px;
-$md: 900px;
-$lg: 1200px;
-$xl: 1536px;
+$xs: 30rem;
+$sm: 48rem;
+$md: 64rem;
+$lg: 75rem;
+$xl: 100rem;
+
+$colorPrimary: hsl(200, 100%, 30%);
+$colorText: #eee;
+$colorBackground: hsl(200, 4%, 10%);
+$colorHeader: hsl(200, 4%, 14%);
+
+$colorRed: hsl(346, 100%, 30%);
+// $colorGreen: hsl(120, 100%, 30%);
+// $colorLightBlue: hsl(200, 100%, 30%);
+// $colorBlue: hsl(240, 100%, 30%);
+// $colorPurple: hsl(270, 100%, 30%);
+// $colorPink: hsl(300, 100%, 30%);

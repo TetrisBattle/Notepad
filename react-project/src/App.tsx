@@ -1,10 +1,16 @@
 import React from 'react'
-import Menu from './components/Menu';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Menu'
+import Sandbox from './components/Sandbox'
+
 
 export default function App() {
-  return (
-    <div className="App">
-      <Menu />
-    </div>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Header />} />
+				<Route path="/sandbox" element={<Sandbox />} />
+			</Routes>
+		</Router>
+	)
 }
