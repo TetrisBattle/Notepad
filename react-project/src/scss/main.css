@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
-.Header header {
+#Index header {
   width: 100%;
   background-color: #222425;
   border-bottom: solid 0.063rem #6c7275;
 }
 
-.Header header nav {
+#Index header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,37 +14,108 @@
           justify-content: space-between;
 }
 
-.Header header nav ul {
+#Index header nav ul {
   width: 100%;
 }
 
-.Header header nav ul li {
+#Index header nav ul li {
   float: left;
 }
 
-.Header header nav ul li button {
+#Index header nav ul li button {
   height: 3rem;
   padding: 0 2.5rem;
   font-size: 1.25rem;
-  text-transform: uppercase;
   background-color: #222425;
   border-radius: 0;
 }
 
-.Header header nav ul li:last-child {
+#Index header nav ul li:hover {
+  -webkit-filter: brightness(1.3);
+          filter: brightness(1.3);
+}
+
+#Index header nav ul li:last-child {
   float: right;
 }
 
-.Header header nav ul li:last-child button {
+#Index header nav ul li:last-child button {
   color: #990024;
 }
 
+#RemConverter {
+  width: clamp(13rem, 80vW, 45rem);
+  margin: auto;
+  text-align: center;
+}
+
+#RemConverter h1 {
+  margin: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+#RemConverter .converters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+#RemConverter .converters .converter {
+  width: clamp(8rem, 80%, 20rem);
+  position: relative;
+}
+
+#RemConverter .converters .converter p {
+  font-size: 1.5rem;
+}
+
+#RemConverter .converters .converter input {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  border-radius: .25rem;
+}
+
+#RemConverter .converters .converter .inputType {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+#RemConverter .convertIcon {
+  font-size: 1.5rem;
+  padding: 1rem;
+  padding-top: 2.75rem;
+}
+
+@media (max-width: 48rem) {
+  #RemConverter .converters {
+    display: block;
+  }
+  #RemConverter .converters .converter {
+    margin: auto;
+  }
+  #RemConverter .converters .converter:first-child {
+    margin-bottom: 1rem;
+  }
+  #RemConverter .convertIcon {
+    display: none;
+  }
+}
+
 .myExtenderClass {
-  background: pink;
+  background-color: pink;
 }
 
 #Sandbox {
-  background: black;
+  background-color: black;
   color: #eee;
   height: 100vh;
   overflow: auto;
@@ -58,7 +129,7 @@
   border-radius: 25rem;
   font-size: 1.25rem;
   font-weight: bold;
-  background: #0d1f6e;
+  background-color: #0d1f6e;
   color: #eee;
   border: solid 0.125rem #eee;
   text-transform: none;
@@ -80,7 +151,7 @@
 }
 
 #Sandbox .printSection {
-  background: #144b03;
+  background-color: #144b03;
   margin: 0 auto;
   border-radius: 3;
   -webkit-box-pack: justify;
@@ -117,7 +188,6 @@
 #Sandbox .testArea h2 {
   text-align: center;
   padding: 1.25rem;
-  background: #046475;
   border-bottom: solid 0.3rem #701919;
   background-color: #0d1f6e;
 }
@@ -168,7 +238,7 @@ button {
 }
 
 button:hover {
-  -webkit-filter: brightness(130%);
-          filter: brightness(130%);
+  -webkit-filter: brightness(1.3);
+          filter: brightness(1.3);
 }
 /*# sourceMappingURL=main.css.map */

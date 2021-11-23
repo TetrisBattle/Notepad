@@ -1,25 +1,25 @@
 .myExtenderClass {
-  background: pink
+  background-color: pink
 }
 
 @function sum($num1, $num2) {
   @return $num1 + $num2;
 }
 
-@mixin setBackground($background) {
-  background: $background;
+@mixin setBackgroundColor($background) {
+  background-color: $background;
 }
 
 @mixin isDarkMode($isDarkMode: true) {
   @if ($isDarkMode) {
-    background: black;
+    background-color: black;
   } @else {
-    background: $lightBlue;
+    background-color: $lightBlue;
   }
 }
 
 @mixin resetCss() {
-  all: initial
+  all: initial;
 }
 
 // body {
@@ -30,7 +30,7 @@
 // }
 
 #Sandbox {
-  background: black;
+  background-color: black;
   color: $colorText;
   height: 100vh;
   overflow: auto;
@@ -43,7 +43,7 @@
     border-radius: 25rem;
     font-size: 1.25rem;
     font-weight: bold;
-    background: rgb(13, 31, 110);
+    background-color: rgb(13, 31, 110);
     color: $colorText;
     border: solid .125rem $colorText;
     text-transform: none;
@@ -64,7 +64,7 @@
   }
   
   .printSection {
-    background: rgb(20, 75, 3);
+    background-color: rgb(20, 75, 3);
     margin: 0 auto;
     border-radius: 3;
     justify-content: space-between;
@@ -96,7 +96,6 @@
     h2 {
       text-align: center;
       padding: 1.25rem;
-      background: rgb(4, 100, 117);
       border-bottom: solid .3rem $borderColor;
 			background-color: rgb(13, 31, 110);
     }

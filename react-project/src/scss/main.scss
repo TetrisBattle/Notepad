@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
 @import "./variables";
-@import "./components";
+@import "./index";
 
 @import "./sandbox";
 
@@ -35,7 +35,6 @@ button {
   cursor: pointer;
 	
 	&:hover {
-		// background-color: filter: brightness(130%);
-		filter: brightness(130%);
+		filter: brightness(1.3);
 	}
 }

@@ -1,14 +1,16 @@
+// $xxs: 320px; // Small mobile devices
 // $xs: 480px; // Mobile devices
 // $sm: 768px; // iPads, Tablets
 // $md: 1024px; // Small screens, laptops
 // $lg: 1200px; // Desktops, large screens
 // $xl: 1600px; // Extra large screens, TV
 
-$xs: 30rem;
-$sm: 48rem;
-$md: 64rem;
-$lg: 75rem;
-$xl: 100rem;
+$xxs: 20rem; 	// 320px 	Small mobile devices
+$xs: 30rem; 	// 480px 	Mobile devices
+$sm: 48rem; 	// 768px 	iPads, Tablets
+$md: 64rem; 	// 1024px Small screens, laptops
+$lg: 75rem; 	// 1200px Desktops, large screens
+$xl: 100rem; 	// 1600px Extra large screens, TV
 
 $colorPrimary: hsl(200, 100%, 30%);
 $colorText: #eee;
