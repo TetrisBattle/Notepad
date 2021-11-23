@@ -1,21 +1,21 @@
 import { useState } from "react"
 
 export default function RemConverter() {
-	const [px, setPx] = useState(16)
+	const rootPx = 16
+	const [px, setPx] = useState(rootPx)
 	const [rem, setRem] = useState(1)
 	
 	const handleChange = (e: HTMLInputElement) => {
 		if (isNaN(+e.value)) return
 		
-		
-		if (e.className === "rem") {
+		if (e.id === "rem") {
 			setRem(+e.value)
-			setPx(+e.value * 16)
+			setPx(+e.value * rootPx)
 			return
 		}
 		
 		setPx(+e.value)
-		setRem(+e.value / 16)
+		setRem(+e.value / rootPx)
 	}
 	
 	return (
@@ -24,9 +24,9 @@ export default function RemConverter() {
 			
 			<div className="converters">
 				<div className="converter">
-					<p>Pixels</p>
+					<label htmlFor="px">Pixels</label>
 					<input
-						className="px"
+						id="px"
 						type="text"
 						value={px}
 						onChange={(e) => handleChange(e.currentTarget)}
@@ -37,9 +37,9 @@ export default function RemConverter() {
 				<span className="convertIcon">⇄</span>
 				
 				<div className="converter">
-					<p>REM</p>
+					<label htmlFor="rem">REM</label>
 					<input
-						className="rem"
+						id="rem"
 						type="text"
 						value={rem}
 						onChange={(e) => handleChange(e.currentTarget)} 

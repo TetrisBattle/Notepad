@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import RemConverter from "../components-index-content/RemConverter"
+import Logo from "../images/logo.png"
 
 export default function Content() {
 	const [content, setContent] = useState(<RemConverter />)
@@ -17,6 +18,7 @@ export default function Content() {
 	return (
 		<div id="Index">
 			<header>
+				<img src={Logo} alt="Logo" />
 				<nav>
 					<ul>
 						<li>

@@ -5,6 +5,14 @@
   border-bottom: solid 0.063rem #6c7275;
 }
 
+#Index header img {
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  margin: 0 .5rem;
+  float: left;
+}
+
 #Index header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,14 +33,9 @@
 #Index header nav ul li button {
   height: 3rem;
   padding: 0 2.5rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background-color: #222425;
   border-radius: 0;
-}
-
-#Index header nav ul li:hover {
-  -webkit-filter: brightness(1.3);
-          filter: brightness(1.3);
 }
 
 #Index header nav ul li:last-child {
@@ -40,7 +43,7 @@
 }
 
 #Index header nav ul li:last-child button {
-  color: #990024;
+  color: #00aaff;
 }
 
 #RemConverter {
@@ -69,7 +72,7 @@
   position: relative;
 }
 
-#RemConverter .converters .converter p {
+#RemConverter .converters .converter label {
   font-size: 1.5rem;
 }
 

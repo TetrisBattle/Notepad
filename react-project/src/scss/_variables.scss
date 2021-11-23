@@ -12,12 +12,14 @@ $md: 64rem; 	// 1024px Small screens, laptops
 $lg: 75rem; 	// 1200px Desktops, large screens
 $xl: 100rem; 	// 1600px Extra large screens, TV
 
-$colorPrimary: hsl(200, 100%, 30%);
+$colorPrimary: hsl(200, 100%, 50%);
 $colorText: #eee;
 $colorBackground: hsl(200, 4%, 10%);
 $colorHeader: hsl(200, 4%, 14%);
+$colorButton: hsl(200, 100%, 30%);
 
-$colorRed: hsl(346, 100%, 30%);
+$colorRed: hsl(0, 100%, 50%);
+$colorOrange: hsl(32, 100%, 50%);
 // $colorGreen: hsl(120, 100%, 30%);
 // $colorLightBlue: hsl(200, 100%, 30%);
 // $colorBlue: hsl(240, 100%, 30%);
