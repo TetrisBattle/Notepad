@@ -8,17 +8,17 @@
  * const toggleDarkTheme = useDarkThemeUpdater()
  */
 
-ReactDOM.render(
-	<ThemeProvider theme={HoituAppTheme}>
-		<HoituApp />
-	</ThemeProvider>,
-	document.getElementById("root")
-)
+// ReactDOM.render(
+// 	<ThemeProvider theme={HoituAppTheme}>
+// 		<HoituApp />
+// 	</ThemeProvider>,
+// 	document.getElementById("root")
+// )
 
-import React, { useState, createContext, useContext } from "react"
+import { useState, createContext, useContext } from "react"
 
-const DarkThemeContext = createContext()
-const UpdateDarkThemeContext = createContext()
+const DarkThemeContext = createContext(null)
+const UpdateDarkThemeContext = createContext(null)
 
 export const useDarkTheme = () => {
 	return useContext(DarkThemeContext)
@@ -43,8 +43,3 @@ return (
 	</DarkThemeContext.Provider>
 	)
 }
-
-// How to use:
-// import { useDarkTheme, useDarkThemeUpdate } from "./DarkThemeProvider"
-// const isDarkTheme = useDarkTheme()
-// const toggleDarkTheme = useDarkThemeUpdater()

@@ -1,14 +1,12 @@
-import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Menu'
+import Content from './components/Content'
 import Sandbox from './components/Sandbox'
-
 
 export default function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/" element={<Header />} />
+				<Route path="/" element={<Content />} />
 				<Route path="/sandbox" element={<Sandbox />} />
 			</Routes>
 		</Router>
