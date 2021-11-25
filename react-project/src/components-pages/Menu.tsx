@@ -16,7 +16,7 @@ export default function Content() {
 	}
 
 	return (
-		<div id="Index">
+		<div id="Menu">
 			<header>
 				<img src={Logo} alt="Logo" />
 				<nav>

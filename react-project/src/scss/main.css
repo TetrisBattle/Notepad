@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
-#Index header {
+#Menu header {
   width: 100%;
   background-color: #222425;
   border-bottom: solid 0.063rem #6c7275;
 }
 
-#Index header img {
+#Menu header img {
   width: 3rem;
   height: 3rem;
   padding: .5rem;
@@ -13,7 +13,7 @@
   float: left;
 }
 
-#Index header nav {
+#Menu header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,15 +22,15 @@
           justify-content: space-between;
 }
 
-#Index header nav ul {
+#Menu header nav ul {
   width: 100%;
 }
 
-#Index header nav ul li {
+#Menu header nav ul li {
   float: left;
 }
 
-#Index header nav ul li button {
+#Menu header nav ul li button {
   height: 3rem;
   padding: 0 2.5rem;
   font-size: 1.5rem;
@@ -38,11 +38,11 @@
   border-radius: 0;
 }
 
-#Index header nav ul li:last-child {
+#Menu header nav ul li:last-child {
   float: right;
 }
 
-#Index header nav ul li:last-child button {
+#Menu header nav ul li:last-child button {
   color: #00aaff;
 }
 

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Index from './components-pages/Index'
+import Index from './components-pages/Menu'
 import Sandbox from './components-pages/Sandbox'
 
 export default function App() {

@@ -1,1 +1,10 @@
 unit test (Jest)
+
+test
+	unit test						# test small functions
+	integration					# test how small functions work together
+	end-to-end (E2E)		# test by interacting		// cypress?
+
+
+document.documentElement.style.cssText = "--variable: ${newValue}" # get css variable
+document.getElementsByClassName("className").style.display

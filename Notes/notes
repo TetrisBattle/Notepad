@@ -1,7 +1,0 @@
-update dependecies: yarn upgrade
-
-useState 			re-render onChange
-useRef				no re-Render onChange
-
-useEffect			re-render onChange
-useMemo				no re-Render onChange
