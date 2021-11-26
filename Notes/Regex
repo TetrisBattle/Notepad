@@ -12,16 +12,19 @@
 /asd+/g							# match "asd" and every "d" after it, like "asddddd"
 /asd?/g							# match "as" or "asd", "d" is optional
 /asd*/g							# match "as", "asd", "asddd", combination of + and ? expressions
-
-/\./g								# match ".", special characters will be treated as string with "\" sign
-/\s/g								# match white spaces (spaces, tabs and line breaks)
-/\d/g								# match digits (numbers 0-9)
-/\w/g								# match alphanumeric and underscore "_"
+/asd./g							# match "asd" and any letter after it 
+/asd\./g						# match "asd.", special characters will be treated as string with "\" sign
 
 /.asd/g							# match "asd" and any letter before it except line break
 /asd./g							# match "asd" and any letter after it except line break
 /as.d/g							# match "as?d" and and question mark can be any character except line break
 /asd../g						# match "asd" and two letters after it, if its a line break then the match is not found
+
+/\s/g								# match white spaces (spaces, tabs and line breaks)
+/\d/g								# match digits (numbers 0-9)
+/\D/g								# match everything except digits (numbers 0-9)
+/\w/g								# match alphanumeric and underscore "_"
+/\w/g								# match everything except alphanumeric and underscore "_"
 
 /[cm]ode/g					# start by "c" or "m" and ends with "ode", like "code" or "mode"
 /[a-z]/g						# match lowercase letters between a-z

@@ -30,28 +30,12 @@
 // }
 
 #Sandbox {
-  background-color: black;
   color: $colorText;
   height: 100vh;
   overflow: auto;
   
   header {
-    color: rgb(182, 14, 14);
-  }
-  
-  button {
-    border-radius: 25rem;
-    font-size: 1.25rem;
-    font-weight: bold;
-    background-color: rgb(13, 31, 110);
-    color: $colorText;
-    border: solid .125rem $colorText;
-    text-transform: none;
-		padding: 0;
-    
-    &:hover {
-      filter: brightness(130%);
-    }
+    color: $colorPrimary;
   }
   
   header {
@@ -64,9 +48,10 @@
   }
   
   .printSection {
-    background-color: rgb(20, 75, 3);
+    // background-color: $colorGreen;
     margin: 0 auto;
-    border-radius: 3;
+    border-radius: 3rem;
+		border: solid .3rem $colorRed;
     justify-content: space-between;
     width: 21rem;
     height: 5rem;
@@ -78,8 +63,9 @@
     button {
       position: absolute;
       right: 1.25rem;
-      width: 10rem;
+      width: 7rem;
       height: 3rem;
+			border-radius: 25rem;
     }
   }
   
@@ -89,15 +75,14 @@
     height: 30rem;
     border-radius: .6rem;
     margin-top: 3rem;
-    
-    $borderColor: rgb(112, 25, 25);
+    $borderColor: $colorRed;
     border: solid .3rem $borderColor;
     
     h2 {
       text-align: center;
-      padding: 1.25rem;
+      padding: .25rem;
       border-bottom: solid .3rem $borderColor;
-			background-color: rgb(13, 31, 110);
+			font-size: 2rem;
     }
     
     .testButtonsContainer {

@@ -1,10 +1,12 @@
-unit test (Jest)
+# react
+web storage and cookies
+fetch from other websites
+nextJs
+express (recap)
 
-test
-	unit test						# test small functions
-	integration					# test how small functions work together
-	end-to-end (E2E)		# test by interacting		// cypress?
+pwa (progressive web app)
+spa (single page app)
 
 
-document.documentElement.style.cssText = "--variable: ${newValue}" # get css variable
-document.getElementsByClassName("className").style.display
+react native
+

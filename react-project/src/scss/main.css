@@ -1,63 +1,74 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
-#Menu header {
-  width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700;900&display=swap");
+:root {
+  --orange: #000000;
+  --colorSecondary: hsl(32, 100%, 46%);
+}
+
+#MenuPage header {
+  inline-size: 100%;
   background-color: #222425;
-  border-bottom: solid 0.063rem #6c7275;
+  -webkit-border-after: solid 0.063rem #6c7275;
+          border-block-end: solid 0.063rem #6c7275;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-#Menu header img {
-  width: 3rem;
-  height: 3rem;
-  padding: .5rem;
-  margin: 0 .5rem;
-  float: left;
+#MenuPage header img {
+  inline-size: 3rem;
+  block-size: 3rem;
+  padding: .6rem;
+  margin-inline: .5rem;
 }
 
-#Menu header nav {
+#MenuPage header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  inline-size: 100%;
 }
 
-#Menu header nav ul {
-  width: 100%;
+#MenuPage header nav ul {
+  inline-size: 100%;
 }
 
-#Menu header nav ul li {
+#MenuPage header nav ul li {
   float: left;
 }
 
-#Menu header nav ul li button {
-  height: 3rem;
-  padding: 0 2.5rem;
+#MenuPage header nav ul li button {
+  block-size: 3rem;
+  padding-inline: 2.5rem;
   font-size: 1.5rem;
   background-color: #222425;
   border-radius: 0;
 }
 
-#Menu header nav ul li:last-child {
+#MenuPage header nav ul li:last-child {
   float: right;
 }
 
-#Menu header nav ul li:last-child button {
-  color: #00aaff;
+#MenuPage header nav ul li:last-child button {
+  color: #00cbeb;
 }
 
-#RemConverter {
-  width: clamp(13rem, 80vW, 45rem);
+#RemConverterPage {
+  inline-size: clamp(13rem, 80vW, 45rem);
   margin: auto;
   text-align: center;
 }
 
-#RemConverter h1 {
-  margin: 3rem 0;
-  margin-bottom: 2rem;
+#RemConverterPage h1 {
+  -webkit-margin-before: 3rem;
+          margin-block-start: 3rem;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
 }
 
-#RemConverter .converters {
+#RemConverterPage .converters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,48 +78,46 @@
   position: relative;
 }
 
-#RemConverter .converters .converter {
-  width: clamp(8rem, 80%, 20rem);
+#RemConverterPage .converters .converter {
+  inline-size: clamp(8rem, 80%, 20rem);
   position: relative;
 }
 
-#RemConverter .converters .converter label {
+#RemConverterPage .converters .converter label {
   font-size: 1.5rem;
 }
 
-#RemConverter .converters .converter input {
-  width: 100%;
+#RemConverterPage .converters .converter input {
+  inline-size: 100%;
   font-size: 2rem;
   text-align: center;
   font-weight: 600;
   border-radius: .25rem;
 }
 
-#RemConverter .converters .converter .inputType {
+#RemConverterPage .converters .converter .inputType {
   position: absolute;
-  bottom: 1.25rem;
-  right: 1rem;
+  inset-block-end: 1.25rem;
+  inset-inline-end: 1rem;
   font-size: 1rem;
   color: #333;
 }
 
-#RemConverter .convertIcon {
+#RemConverterPage .convertIcon {
   font-size: 1.5rem;
   padding: 1rem;
-  padding-top: 2.75rem;
+  -webkit-padding-before: 2.75rem;
+          padding-block-start: 2.75rem;
 }
 
 @media (max-width: 48rem) {
-  #RemConverter .converters {
+  #RemConverterPage .converters {
     display: block;
   }
-  #RemConverter .converters .converter {
+  #RemConverterPage .converters .converter {
     margin: auto;
   }
-  #RemConverter .converters .converter:first-child {
-    margin-bottom: 1rem;
-  }
-  #RemConverter .convertIcon {
+  #RemConverterPage .convertIcon {
     display: none;
   }
 }
@@ -118,30 +127,13 @@
 }
 
 #Sandbox {
-  background-color: black;
   color: #eee;
   height: 100vh;
   overflow: auto;
 }
 
 #Sandbox header {
-  color: #b60e0e;
-}
-
-#Sandbox button {
-  border-radius: 25rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  background-color: #0d1f6e;
-  color: #eee;
-  border: solid 0.125rem #eee;
-  text-transform: none;
-  padding: 0;
-}
-
-#Sandbox button:hover {
-  -webkit-filter: brightness(130%);
-          filter: brightness(130%);
+  color: #00cbeb;
 }
 
 #Sandbox header {
@@ -154,9 +146,9 @@
 }
 
 #Sandbox .printSection {
-  background-color: #144b03;
   margin: 0 auto;
-  border-radius: 3;
+  border-radius: 3rem;
+  border: solid 0.3rem #990000;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -175,8 +167,9 @@
 #Sandbox .printSection button {
   position: absolute;
   right: 1.25rem;
-  width: 10rem;
+  width: 7rem;
   height: 3rem;
+  border-radius: 25rem;
 }
 
 #Sandbox .testArea {
@@ -185,14 +178,14 @@
   height: 30rem;
   border-radius: .6rem;
   margin-top: 3rem;
-  border: solid 0.3rem #701919;
+  border: solid 0.3rem #990000;
 }
 
 #Sandbox .testArea h2 {
   text-align: center;
-  padding: 1.25rem;
-  border-bottom: solid 0.3rem #701919;
-  background-color: #0d1f6e;
+  padding: .25rem;
+  border-bottom: solid 0.3rem #990000;
+  font-size: 2rem;
 }
 
 #Sandbox .testArea .testButtonsContainer {
@@ -213,7 +206,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Poppins";
 }
 
 body {
@@ -230,8 +223,9 @@ a {
 }
 
 button {
-  padding: .3rem 1rem;
-  background-color: #006699;
+  padding-block: .3rem;
+  padding-inline: 1rem;
+  background-color: #009bb3;
   color: #eee;
   font-size: 1.25rem;
   font-weight: bold;
@@ -241,7 +235,7 @@ button {
 }
 
 button:hover {
-  -webkit-filter: brightness(1.3);
-          filter: brightness(1.3);
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
 }
 /*# sourceMappingURL=main.css.map */

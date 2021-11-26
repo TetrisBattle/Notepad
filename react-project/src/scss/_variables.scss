@@ -1,10 +1,3 @@
-// $xxs: 320px; // Small mobile devices
-// $xs: 480px; // Mobile devices
-// $sm: 768px; // iPads, Tablets
-// $md: 1024px; // Small screens, laptops
-// $lg: 1200px; // Desktops, large screens
-// $xl: 1600px; // Extra large screens, TV
-
 $xxs: 20rem; 	// 320px 	Small mobile devices
 $xs: 30rem; 	// 480px 	Mobile devices
 $sm: 48rem; 	// 768px 	iPads, Tablets
@@ -12,16 +5,22 @@ $md: 64rem; 	// 1024px Small screens, laptops
 $lg: 75rem; 	// 1200px Desktops, large screens
 $xl: 100rem; 	// 1600px Extra large screens, TV
 
-$colorPrimary: hsl(200, 100%, 50%);
+$colorPrimary: hsl(188, 100%, 46%);
+$colorSecondary: hsl(188, 100%, 46%);
 $colorText: #eee;
 $colorBackground: hsl(200, 4%, 10%);
 $colorHeader: hsl(200, 4%, 14%);
-$colorButton: hsl(200, 100%, 30%);
+$colorButton: hsl(188, 100%, 35%);
 
-$colorRed: hsl(0, 100%, 50%);
+$colorRed: hsl(0, 100%, 30%);
 $colorOrange: hsl(32, 100%, 50%);
-// $colorGreen: hsl(120, 100%, 30%);
+$colorGreen: hsl(120, 100%, 30%);
 // $colorLightBlue: hsl(200, 100%, 30%);
 // $colorBlue: hsl(240, 100%, 30%);
 // $colorPurple: hsl(270, 100%, 30%);
 // $colorPink: hsl(300, 100%, 30%);
+
+:root {
+	--orange: #000000;
+	--colorSecondary: hsl(32, 100%, 46%);
+}

@@ -1,30 +1,32 @@
-#Menu {
+#MenuPage {
 	header {
-		width: 100%;
+		inline-size: 100%;
 		background-color: $colorHeader;
-		border-bottom: solid .063rem hsl(200, 4%, 44%);
+		border-block-end: solid .063rem hsl(200, 4%, 44%);
+		display: inline-flex;
 		
 		img {
-			width: 3rem;
-			height: 3rem;
-			padding: .5rem;
-			margin: 0 .5rem;
-			float: left;
+			inline-size: 3rem;
+			block-size: 3rem;
+			padding: .6rem;
+			margin-inline: .5rem;
 		}
 		
 		nav {
 			display: flex;
 			justify-content: space-between;
+			inline-size: 100%;
 			
 			ul {
-				width: 100%;
+				inline-size: 100%;
 			
 				li {
+					// float: inline-start;
 					float: left;
 				
 					button {
-						height: 3rem;
-						padding: 0 2.5rem;
+						block-size: 3rem;
+						padding-inline: 2.5rem;
 						font-size: 1.5rem;
 						background-color: $colorHeader;
 						border-radius: 0;
@@ -32,6 +34,7 @@
 				}
 			
 				li:last-child {
+					// float: inline-end;
 					float: right;
 					
 					button {
@@ -43,14 +46,14 @@
 	}
 }
 
-#RemConverter {
-	width: clamp(13rem, 80vW, 45rem);
+#RemConverterPage {
+	inline-size: clamp(13rem, 80vW, 45rem);
 	margin: auto;
 	text-align: center;
 	
 	h1 {
-		margin: 3rem 0;
-		margin-bottom: 2rem;
+		margin-block-start: 3rem;
+		margin-block-end: 2rem;
 	}
 	
 	.converters {
@@ -59,7 +62,7 @@
 		position: relative;
 	
 		.converter {
-			width: clamp(8rem, 80%, 20rem);
+			inline-size: clamp(8rem, 80%, 20rem);
 			position: relative;
 			
 			label {
@@ -67,7 +70,7 @@
 			}
 			
 			input {
-				width: 100%;
+				inline-size: 100%;
 				font-size: 2rem;
 				text-align: center;
 				font-weight: 600;
@@ -76,8 +79,8 @@
 			
 			.inputType {
 				position: absolute;
-				bottom: 1.25rem;
-				right: 1rem;
+				inset-block-end: 1.25rem;
+				inset-inline-end: 1rem;
 				font-size: 1rem;
 				color: #333;
 			}
@@ -87,19 +90,16 @@
 	.convertIcon {
 		font-size: 1.5rem;
 		padding: 1rem;
-		padding-top: 2.75rem;
+		padding-block-start: 2.75rem;
 	}
-		
+	
+	// @media (max-inline-size: $sm) {
 	@media (max-width: $sm) {
 		.converters {
 			display: block;
 			
 			.converter {
 				margin: auto;
-				
-				&:first-child{
-					margin-bottom: 1rem;
-				}
 			}
 		}
 		

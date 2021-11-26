@@ -2,24 +2,41 @@ import { useState } from "react"
 
 export default function RemConverter() {
 	const rootPx = 16
-	const [px, setPx] = useState(rootPx)
-	const [rem, setRem] = useState(1)
+	const [px, setPx] = useState(rootPx.toString())
+	const [rem, setRem] = useState("1")
 	
 	const handleChange = (e: HTMLInputElement) => {
-		if (isNaN(+e.value)) return
-		
-		if (e.id === "rem") {
-			setRem(+e.value)
-			setPx(+e.value * rootPx)
+		if (e.value === "") {
+			setPx(e.value)
+			setRem(e.value)
 			return
 		}
 		
-		setPx(+e.value)
-		setRem(+e.value / rootPx)
+		if (e.value === ".") {
+			if (e.id === "rem") {
+				setPx("0")
+				setRem("0" + e.value)
+				return
+			}
+			setPx("0" + e.value)
+			setRem("0")
+			return
+		}
+		
+		if (isNaN(+e.value) || e.value === " ") return
+		
+		if (e.id === "rem") {
+			setRem(e.value)
+			setPx((+e.value * rootPx).toString())
+			return
+		}
+		
+		setPx(e.value)
+		setRem((+e.value / rootPx).toString())
 	}
 	
 	return (
-		<div id="RemConverter">
+		<div id="RemConverterPage">
 			<h1>PX - REM Converter</h1>
 			
 			<div className="converters">
