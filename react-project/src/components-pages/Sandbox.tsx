@@ -3,13 +3,6 @@ import React from "react"
 export default function Sandbox() {
 	const counter = React.useRef(0)
 	const [print, setPrint] = React.useState(`Counter: ${counter.current}`)
-	// const myRef = React.createRef()
-
-	//init
-	// React.useEffect(() => {
-	// 	console.log("init")
-	// 	console.log("end of init")
-	// }, [])
 
 	const printCounter = () => {
 		counter.current++
@@ -17,13 +10,16 @@ export default function Sandbox() {
 		console.log(counter.current)
 	}
 
+	//init
+	// React.useEffect(() => {
+	// 	console.log("init")
+	// 	console.log("end of init")
+	// }, [])
+
 	const test1 = () => {
 		console.log("test1")
-
-		// myRef.current.openDialog()
-		// myRef.current.click()
-		// addClass(".testArea", "addedClass")
-		// console.log(getNode(".testArea"))
+		
+		
 
 		console.log("end of test1")
 	}

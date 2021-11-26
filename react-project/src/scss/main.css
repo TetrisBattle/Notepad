@@ -1,93 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700;900&display=swap");
 :root {
-  --orange: #000000;
+  --colorPrimary: hsl(192, 100%, 46%);
   --colorSecondary: hsl(32, 100%, 46%);
 }
 
-#MenuPage header {
-  inline-size: 100%;
+.Menu header {
+  inline-size: 100vw;
+  block-size: 3rem;
   background-color: #222425;
   -webkit-border-after: solid 0.063rem #6c7275;
           border-block-end: solid 0.063rem #6c7275;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
-#MenuPage header img {
+.Menu header img {
   inline-size: 3rem;
   block-size: 3rem;
   padding: .6rem;
   margin-inline: .5rem;
-}
-
-#MenuPage header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  inline-size: 100%;
-}
-
-#MenuPage header nav ul {
-  inline-size: 100%;
-}
-
-#MenuPage header nav ul li {
   float: left;
 }
 
-#MenuPage header nav ul li button {
-  block-size: 3rem;
-  padding-inline: 2.5rem;
-  font-size: 1.5rem;
-  background-color: #222425;
-  border-radius: 0;
+.Menu header nav {
+  display: none;
 }
 
-#MenuPage header nav ul li:last-child {
+.Menu header .menuIcon {
   float: right;
 }
 
-#MenuPage header nav ul li:last-child button {
-  color: #00bceb;
+@media (min-Width: 48rem) {
+  .Menu header nav {
+    display: block;
+    float: left;
+  }
+  .Menu header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Menu header nav ul li button {
+    block-size: 100%;
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+    background-color: #222425;
+    border-radius: 0;
+  }
 }
 
-#RemConverterPage {
+.RemConverter {
   inline-size: clamp(13rem, 80vW, 45rem);
   margin: auto;
   text-align: center;
 }
 
-#RemConverterPage h1 {
-  -webkit-margin-before: 3rem;
-          margin-block-start: 3rem;
-  -webkit-margin-after: 2rem;
-          margin-block-end: 2rem;
+.RemConverter h1 {
+  padding-block: 3rem;
+  color: #eb7d00;
 }
 
-#RemConverterPage .converters {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.RemConverter .converters {
+  display: block;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  block-size: 100%;
 }
 
-#RemConverterPage .converters .converter {
+.RemConverter .converters .converter {
   inline-size: clamp(8rem, 80%, 20rem);
   position: relative;
+  margin: auto;
 }
 
-#RemConverterPage .converters .converter label {
+.RemConverter .converters .converter label {
   font-size: 1.5rem;
 }
 
-#RemConverterPage .converters .converter input {
+.RemConverter .converters .converter input {
   inline-size: 100%;
   font-size: 2rem;
   text-align: center;
@@ -95,30 +85,30 @@
   border-radius: .25rem;
 }
 
-#RemConverterPage .converters .converter .inputType {
+.RemConverter .converters .converter .inputType {
   position: absolute;
-  inset-block-end: 1.25rem;
+  inset-block-end: .75rem;
   inset-inline-end: 1rem;
   font-size: 1rem;
   color: #333;
 }
 
-#RemConverterPage .convertIcon {
-  font-size: 1.5rem;
-  padding: 1rem;
-  -webkit-padding-before: 2.75rem;
-          padding-block-start: 2.75rem;
+.RemConverter .convertIcon {
+  display: none;
 }
 
-@media (max-width: 48rem) {
-  #RemConverterPage .converters {
+@media (min-width: 48rem) {
+  .RemConverter .converters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .RemConverter .convertIcon {
     display: block;
-  }
-  #RemConverterPage .converters .converter {
-    margin: auto;
-  }
-  #RemConverterPage .convertIcon {
-    display: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    -webkit-padding-before: 2.75rem;
+            padding-block-start: 2.75rem;
   }
 }
 

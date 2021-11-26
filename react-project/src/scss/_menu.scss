@@ -1,44 +1,40 @@
-#MenuPage {
+.Menu {
 	header {
-		inline-size: 100%;
+		inline-size: 100vw;
+		block-size: 3rem;
 		background-color: $colorHeader;
 		border-block-end: solid .063rem hsl(200, 4%, 44%);
-		display: inline-flex;
 		
 		img {
 			inline-size: 3rem;
 			block-size: 3rem;
 			padding: .6rem;
 			margin-inline: .5rem;
+			float: left;
 		}
 		
 		nav {
-			display: flex;
-			justify-content: space-between;
-			inline-size: 100%;
+			display: none;
+		}
+		
+		.menuIcon {
+			float: right;
+		}
+		
+		@media (min-Width: $sm) {
+			nav {
+				display: block;
+				float: left;
 			
-			ul {
-				inline-size: 100%;
-			
-				li {
-					// float: inline-start;
-					float: left;
+				ul {
+					display: flex;
 				
-					button {
-						block-size: 3rem;
-						padding-inline: 2.5rem;
+					li button {
+						block-size: 100%;
+						padding-inline: 1rem;
 						font-size: 1.5rem;
 						background-color: $colorHeader;
 						border-radius: 0;
-					}
-				}
-			
-				li:last-child {
-					// float: inline-end;
-					float: right;
-					
-					button {
-						color: $colorPrimary;
 					}
 				}
 			}
@@ -46,24 +42,27 @@
 	}
 }
 
-#RemConverterPage {
+.RemConverter {
 	inline-size: clamp(13rem, 80vW, 45rem);
 	margin: auto;
+	// block-size: 100%;
 	text-align: center;
 	
 	h1 {
-		margin-block-start: 3rem;
-		margin-block-end: 2rem;
+		padding-block: 3rem;
+		color: $colorSecondary;
 	}
 	
 	.converters {
-		display: flex;
+		display: block;
 		justify-content: space-between;
 		position: relative;
+		block-size: 100%;
 	
 		.converter {
 			inline-size: clamp(8rem, 80%, 20rem);
 			position: relative;
+			margin: auto;
 			
 			label {
 				font-size: 1.5rem;
@@ -79,7 +78,7 @@
 			
 			.inputType {
 				position: absolute;
-				inset-block-end: 1.25rem;
+				inset-block-end: .75rem;
 				inset-inline-end: 1rem;
 				font-size: 1rem;
 				color: #333;
@@ -88,23 +87,20 @@
 	}
 		
 	.convertIcon {
-		font-size: 1.5rem;
-		padding: 1rem;
-		padding-block-start: 2.75rem;
+		display: none;
 	}
 	
 	// @media (max-inline-size: $sm) {
-	@media (max-width: $sm) {
+	@media (min-width: $sm) {
 		.converters {
-			display: block;
-			
-			.converter {
-				margin: auto;
-			}
+			display: flex;
 		}
 		
 		.convertIcon {
-			display: none;
+			display: block;
+			font-size: 1.5rem;
+			padding: 1rem;
+			padding-block-start: 2.75rem;
 		}
 	}
 }

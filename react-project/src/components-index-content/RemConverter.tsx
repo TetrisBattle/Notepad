@@ -36,7 +36,7 @@ export default function RemConverter() {
 	}
 	
 	return (
-		<div id="RemConverterPage">
+		<div className="RemConverter">
 			<h1>PX - REM Converter</h1>
 			
 			<div className="converters">
