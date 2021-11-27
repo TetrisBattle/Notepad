@@ -21,10 +21,9 @@
 			float: right;
 		}
 		
-		@media (min-Width: $sm) {
+		@media (min-Width: $xs) {
 			nav {
 				display: block;
-				float: left;
 			
 				ul {
 					display: flex;
@@ -38,6 +37,10 @@
 					}
 				}
 			}
+		
+			.menuIcon {
+				display: none;
+			}
 		}
 	}
 }
@@ -45,7 +48,6 @@
 .RemConverter {
 	inline-size: clamp(13rem, 80vW, 45rem);
 	margin: auto;
-	// block-size: 100%;
 	text-align: center;
 	
 	h1 {
@@ -90,7 +92,7 @@
 		display: none;
 	}
 	
-	// @media (max-inline-size: $sm) {
+	// @media (min-inline-size: $sm) {
 	@media (min-width: $sm) {
 		.converters {
 			display: flex;

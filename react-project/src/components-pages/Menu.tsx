@@ -12,7 +12,7 @@ export default function Menu() {
 		
 	const navButtonNames = [
 		"RemConverter",
-		"Two"
+		"Empty"
 	]
 	
 	const navBar = (

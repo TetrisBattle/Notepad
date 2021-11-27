@@ -7,7 +7,7 @@
 .Menu header {
   inline-size: 100vw;
   block-size: 3rem;
-  background-color: #222425;
+  background-color: #222;
   -webkit-border-after: solid 0.063rem #6c7275;
           border-block-end: solid 0.063rem #6c7275;
 }
@@ -28,10 +28,9 @@
   float: right;
 }
 
-@media (min-Width: 48rem) {
+@media (min-Width: 30rem) {
   .Menu header nav {
     display: block;
-    float: left;
   }
   .Menu header nav ul {
     display: -webkit-box;
@@ -42,8 +41,11 @@
     block-size: 100%;
     padding-inline: 1rem;
     font-size: 1.5rem;
-    background-color: #222425;
+    background-color: #222;
     border-radius: 0;
+  }
+  .Menu header .menuIcon {
+    display: none;
   }
 }
 
@@ -200,7 +202,7 @@
 }
 
 body {
-  background-color: #181a1b;
+  background-color: #111;
   color: #eee;
 }
 
