@@ -5,24 +5,37 @@ $md: 64rem; 	// 1024px Small screens, laptops
 $lg: 75rem; 	// 1200px Desktops, large screens
 $xl: 100rem; 	// 1600px Extra large screens, TV
 
-$colorPrimary: hsl(192, 100%, 46%);
-$colorSecondary: hsl(32, 100%, 46%);
-$colorText: #eee;
-$colorBackground: #111;
+$colorPrimary: #FF6D00;
+$solorSecondary: #18FFFF;
 
-$colorHeader: hsl(200, 4%, 14%);
-$colorHeader: #222;
-$colorButton: hsl(188, 100%, 35%);
 
-$colorRed: hsl(0, 100%, 30%);
-// $colorOrange: hsl(32, 100%, 50%);
-// $colorGreen: hsl(120, 100%, 30%);
-// $colorLightBlue: hsl(200, 100%, 30%);
-// $colorBlue: hsl(240, 100%, 30%);
-// $colorPurple: hsl(270, 100%, 30%);
-// $colorPink: hsl(300, 100%, 30%);
+$colorPrimary: #ff8c02;
+
+// $colorHeader: #212121;
+// $colorButton: hsl(188, 100%, 35%);
+// $colorButton: #FF6D00;
+
+$colorRed: #f90c00;
+
+$gray50: #FAFAFA;
+$gray100: #F5F5F5;
+$gray200: #EEEEEE;
+$gray300: #E0E0E0;
+$gray400: #BDBDBD;
+$gray500: #9E9E9E;
+$gray600: #757575;
+$gray700: #616161;
+$gray800: #424242;
+$gray900: #212121;
+
+// $gray900: #2E2E2E;
+// $gray900: #1F1F1F;
+// $gray900: #383838;
+
+$colorBackground: #121212;
+$colorText: $gray50;
 
 :root {
-	--colorPrimary: hsl(192, 100%, 46%);
-	--colorSecondary: hsl(32, 100%, 46%);
+	--colorPrimary: #FF6D00;
+	--solorSecondary: #18FFFF;
 }

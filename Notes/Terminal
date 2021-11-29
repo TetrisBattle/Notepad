@@ -1,0 +1,21 @@
+start [file / dir]						# open file or directory
+dir > file.txt									# create file
+mkdir [dirName]								# create directory
+
+dir | findstr "asd"						# dir | grep
+dir *.png											# list all png files
+
+attrib												# list all attributes in directory
+attrib [file]									# show files attribute
+attrib +r [file]							# make file read-only
+attrib -r [file]							# remove read-only from file
+
+type [file]										# print file content
+echo "text" > [file]					# create and write "text" to file
+echo "text" >> [file]					# add "text" to file
+
+cp [file] [dir]								# copy file to directory
+cp [file] [dir]/[newName]			# copy file to directory with different name
+
+mv [file] [dir]								# movei file to dir
+ren [file] [newName]					# rename

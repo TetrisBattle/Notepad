@@ -2,8 +2,8 @@
 	header {
 		inline-size: 100vw;
 		block-size: 3rem;
-		background-color: $colorHeader;
-		border-block-end: solid .063rem hsl(200, 4%, 44%);
+		background-color: $gray900;
+		border-block-end: solid .063rem $gray600;
 		
 		img {
 			inline-size: 3rem;
@@ -24,15 +24,17 @@
 		@media (min-Width: $xs) {
 			nav {
 				display: block;
+				block-size: 100%;
 			
 				ul {
 					display: flex;
+					block-size: 100%;
 				
 					li button {
 						block-size: 100%;
 						padding-inline: 1rem;
 						font-size: 1.5rem;
-						background-color: $colorHeader;
+						background-color: $gray900;
 						border-radius: 0;
 					}
 				}
@@ -47,12 +49,11 @@
 
 .RemConverter {
 	inline-size: clamp(13rem, 80vW, 45rem);
-	margin: auto;
+	margin: 0 auto;
 	text-align: center;
 	
 	h1 {
 		padding-block: 3rem;
-		color: $colorSecondary;
 	}
 	
 	.converters {
@@ -62,12 +63,14 @@
 		block-size: 100%;
 	
 		.converter {
+			display: block;
 			inline-size: clamp(8rem, 80%, 20rem);
 			position: relative;
-			margin: auto;
+			margin: 0 auto;
 			
 			label {
 				font-size: 1.5rem;
+				color: $gray200;
 			}
 			
 			input {
@@ -80,10 +83,10 @@
 			
 			.inputType {
 				position: absolute;
-				inset-block-end: .75rem;
+				inset-block-end: .55rem;
 				inset-inline-end: 1rem;
 				font-size: 1rem;
-				color: #333;
+				color: #121212;
 			}
 		}
 	}
@@ -96,13 +99,18 @@
 	@media (min-width: $sm) {
 		.converters {
 			display: flex;
+			
+			.converter .inputType {
+				inset-block-end: 1.1rem;
+			}
 		}
 		
 		.convertIcon {
 			display: block;
 			font-size: 1.5rem;
+			height: max-content;
 			padding: 1rem;
-			padding-block-start: 2.75rem;
+			padding-block-start: 2rem;
 		}
 	}
 }

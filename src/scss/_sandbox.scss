@@ -1,3 +1,5 @@
+@import "./mixins";
+
 .myExtenderClass {
   background-color: pink
 }
@@ -14,11 +16,11 @@
   @if ($isDarkMode) {
     background-color: black;
   } @else {
-    background-color: $lightBlue;
+    background-color: white;
   }
 }
 
-@mixin resetCss() {
+@mixin resetCss {
   all: initial;
 }
 
@@ -48,10 +50,10 @@
   }
   
   .printSection {
-    // background-color: $colorGreen;
-    margin: 0 auto;
+		@include shadow;
+    background-color: $gray900;
+    margin-inline: auto;
     border-radius: 3rem;
-		border: solid .3rem $colorRed;
     justify-content: space-between;
     width: 21rem;
     height: 5rem;
@@ -61,8 +63,7 @@
     padding-left: 2rem;
   
     button {
-      position: absolute;
-      right: 1.25rem;
+      margin-inline-end: 1.25rem;
       width: 7rem;
       height: 3rem;
 			border-radius: 25rem;
@@ -70,18 +71,17 @@
   }
   
   .testArea {
-    margin: 0 auto;
+		@include shadow;
+    background-color: $gray900;
+    margin-inline: auto;
     width: 40rem;
     height: 30rem;
     border-radius: .6rem;
     margin-top: 3rem;
-    $borderColor: $colorRed;
-    border: solid .3rem $borderColor;
     
     h2 {
       text-align: center;
       padding: .25rem;
-      border-bottom: solid .3rem $borderColor;
 			font-size: 2rem;
     }
     
@@ -90,7 +90,7 @@
       display: grid;
       grid-template-columns: repeat(3, 10rem);
       grid-auto-rows: 3rem;
-      gap: 1.25rem;
+      grid-gap: 1.25rem;
       justify-content: space-evenly;
     }
   }

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import RemConverter from "../components-index-content/RemConverter"
+import RemConverter from "../components-menu-content/RemConverter"
 import Logo from "../images/Logo.svg"
 import MenuIcon from "../images/Menu.svg"
 
@@ -52,7 +52,7 @@ export default function Menu() {
 		const prevPage: HTMLButtonElement | null = 
 			document.querySelector("#" + activePage.current)
 			
-		if (prevPage) prevPage.style.color = "#eee"
+		if (prevPage) prevPage.style.color = "#FAFAFA"
 		else console.error("prevPage was not found")
 		
 		page.style.color = colorPrimary
