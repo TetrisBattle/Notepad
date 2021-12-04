@@ -1,31 +1,31 @@
-ctrl + ö												# toggle terminal
-ctrl + '											 '# toggle comment
-(ctrl + k) + (ctrl + num)				# fold all (decide scope by number)
-(ctrl + k) + (ctrl + j)					# unfold all
+ctrl + ö                                                # toggle terminal
+ctrl + '                                               '# toggle comment
+(ctrl + k) + (ctrl + num)                               # fold all (decide scope by number)
+(ctrl + k) + (ctrl + j)                                 # unfold all
 
-ctrl + d												# highlight word (press again to select next occurrance)
-ctrl + shift + L								# highlight all words that match currently selected word
-ctrl + l												# highlight line
-alt + up/down arrow							# move line
-alt + shift + up/down arrow			# move & copy line
+ctrl + d                                                # highlight word (press again to select next occurrance)
+ctrl + shift + L                                        # highlight all words that match currently selected word
+ctrl + l                                                # highlight line
+alt + up/down arrow                                     # move line
+alt + shift + up/down arrow                             # move & copy line
 
-alt + click											# multiple cursors
-ctrl + alt + up/down						# multiple cursors
-shift + alt + click							# select as box from current cursor position, like with mouse in windows desktop
-ctrl + shift + alt + arrows			# select as box with arrows
+alt + click                                             # multiple cursors
+ctrl + alt + up/down                                    # multiple cursors
+shift + alt + click                                     # select as box from current cursor position, like with mouse in windows desktop
+ctrl + shift + alt + arrows                             # select as box with arrows
 
 
-node file.js										# run js file
+node file.js                                            # run js file
 
 
 # React
-yarn create react-app my-app --template typescript		# create react app with typescript template
-yarn start																						# start server
-yarn build																						# build project
-yarn test																							# run tests
-yarn upgrade																					# update dependecies
+yarn create react-app my-app --template typescript      # create react app with typescript template
+yarn start                                              # start server
+yarn build                                              # build project
+yarn test                                               # run tests
+yarn upgrade                                            # update dependecies
 
-useState 																							# re-render onChange
-useRef																								# no re-Render onChange
-useEffect																							# re-render onChange
-useMemo																								# no re-Render onChange
+useState                                                # re-render onChange
+useRef                                                  # no re-Render onChange
+useEffect                                               # re-render onChange
+useMemo                                                 # no re-Render onChange

@@ -27,7 +27,7 @@ export default function Sandbox() {
 	}
 
 	return (
-		<div id="Sandbox">
+		<div className="Sandbox">
 			<header><h1 className="title">Sandbox</h1></header>
 
 			<section className="printSection">

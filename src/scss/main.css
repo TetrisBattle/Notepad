@@ -4,7 +4,48 @@
   --solorSecondary: #18FFFF;
 }
 
-.Menu header {
+.Menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Menu h1 {
+  margin-block: 2rem 1rem;
+  margin-inline: auto;
+  inline-size: -webkit-fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
+  color: #ff8c02;
+  font-size: 3rem;
+}
+
+.Menu .container {
+  -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+          box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+  inline-size: clamp(25rem, 90vw, 40rem);
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #212121;
+  padding: 2rem;
+  border-radius: .5rem;
+}
+
+.Menu button {
+  -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+          box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  background-color: #292929;
+  color: #ff8c02;
+}
+
+.Random header {
   inline-size: 100vw;
   block-size: 3rem;
   background-color: #212121;
@@ -12,41 +53,41 @@
           border-block-end: solid 0.063rem #757575;
 }
 
-.Menu header img {
+.Random header img {
   inline-size: 3rem;
   block-size: 3rem;
   padding: .6rem;
-  margin-inline: .5rem;
+  padding-inline: .5rem;
   float: left;
 }
 
-.Menu header nav {
+.Random header nav {
   display: none;
 }
 
-.Menu header .menuIcon {
+.Random header .menuIcon {
   float: right;
 }
 
 @media (min-Width: 30rem) {
-  .Menu header nav {
+  .Random header nav {
     display: block;
     block-size: 100%;
   }
-  .Menu header nav ul {
+  .Random header nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     block-size: 100%;
   }
-  .Menu header nav ul li button {
+  .Random header nav ul li button {
     block-size: 100%;
     padding-inline: 1rem;
     font-size: 1.5rem;
     background-color: #212121;
     border-radius: 0;
   }
-  .Menu header .menuIcon {
+  .Random header .menuIcon {
     display: none;
   }
 }
@@ -127,26 +168,26 @@
   background-color: pink;
 }
 
-#Sandbox {
+.Sandbox {
   color: #FAFAFA;
   height: 100vh;
   overflow: auto;
 }
 
-#Sandbox header {
+.Sandbox header {
   color: #ff8c02;
 }
 
-#Sandbox header {
+.Sandbox header {
   padding: 1.25rem;
 }
 
-#Sandbox header .title {
+.Sandbox header .title {
   text-align: center;
   font-size: 3rem;
 }
 
-#Sandbox .printSection {
+.Sandbox .printSection {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
   background-color: #212121;
@@ -167,7 +208,7 @@
   padding-left: 2rem;
 }
 
-#Sandbox .printSection button {
+.Sandbox .printSection button {
   -webkit-margin-end: 1.25rem;
           margin-inline-end: 1.25rem;
   width: 7rem;
@@ -175,7 +216,7 @@
   border-radius: 25rem;
 }
 
-#Sandbox .testArea {
+.Sandbox .testArea {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
   background-color: #212121;
@@ -186,13 +227,13 @@
   margin-top: 3rem;
 }
 
-#Sandbox .testArea h2 {
+.Sandbox .testArea h2 {
   text-align: center;
   padding: .25rem;
   font-size: 2rem;
 }
 
-#Sandbox .testArea .testButtonsContainer {
+.Sandbox .testArea .testButtonsContainer {
   padding: 1.25rem;
   display: -ms-grid;
   display: grid;

@@ -1,0 +1,116 @@
+.Random {
+	header {
+		inline-size: 100vw;
+		block-size: 3rem;
+		background-color: $gray900;
+		border-block-end: solid .063rem $gray600;
+		
+		img {
+			inline-size: 3rem;
+			block-size: 3rem;
+			padding: .6rem;
+			padding-inline: .5rem;
+			float: left;
+		}
+		
+		nav {
+			display: none;
+		}
+		
+		.menuIcon {
+			float: right;
+		}
+		
+		@media (min-Width: $xs) {
+			nav {
+				display: block;
+				block-size: 100%;
+			
+				ul {
+					display: flex;
+					block-size: 100%;
+				
+					li button {
+						block-size: 100%;
+						padding-inline: 1rem;
+						font-size: 1.5rem;
+						background-color: $gray900;
+						border-radius: 0;
+					}
+				}
+			}
+		
+			.menuIcon {
+				display: none;
+			}
+		}
+	}
+}
+
+.RemConverter {
+	inline-size: clamp(13rem, 80vW, 45rem);
+	margin: 0 auto;
+	text-align: center;
+	
+	h1 {
+		padding-block: 3rem;
+	}
+	
+	.converters {
+		display: block;
+		justify-content: space-between;
+		position: relative;
+		block-size: 100%;
+	
+		.converter {
+			display: block;
+			inline-size: clamp(8rem, 80%, 20rem);
+			position: relative;
+			margin: 0 auto;
+			
+			label {
+				font-size: 1.5rem;
+				color: $gray200;
+			}
+			
+			input {
+				inline-size: 100%;
+				font-size: 2rem;
+				text-align: center;
+				font-weight: 600;
+				border-radius: .25rem;
+			}
+			
+			.inputType {
+				position: absolute;
+				inset-block-end: .55rem;
+				inset-inline-end: 1rem;
+				font-size: 1rem;
+				color: #121212;
+			}
+		}
+	}
+		
+	.convertIcon {
+		display: none;
+	}
+	
+	// @media (min-inline-size: $sm) {
+	@media (min-width: $sm) {
+		.converters {
+			display: flex;
+			
+			.converter .inputType {
+				inset-block-end: 1.1rem;
+			}
+		}
+		
+		.convertIcon {
+			display: block;
+			font-size: 1.5rem;
+			height: max-content;
+			padding: 1rem;
+			padding-block-start: 2rem;
+		}
+	}
+}

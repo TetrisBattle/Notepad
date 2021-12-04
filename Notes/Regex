@@ -1,60 +1,60 @@
 # Regular expression (Regex) is a way to match a certain area of a string
 # it starts and ends with /
-# /asd/ = match the first "asd" from string 
+# /asd/ = match the first "asd" from string
 # /asd/g = match all the "asd" from string, letter g make it match globally
 
 # Regular expression formats:
-//g									# global
-//i									# case sensitive (have to match perfecly, like with uppercase)
-//m									# multiline (target all lines in string)
-//gim								# global & case sensitive & multiline
+//g                                 # global
+//i                                 # case sensitive (have to match perfecly, like with uppercase)
+//m                                 # multiline (target all lines in string)
+//gim                               # global & case sensitive & multiline
 
-/asd+/g							# match "asd" and every "d" after it, like "asddddd"
-/asd?/g							# match "as" or "asd", "d" is optional
-/asd*/g							# match "as", "asd", "asddd", combination of + and ? expressions
-/asd./g							# match "asd" and any letter after it 
-/asd\./g						# match "asd.", special characters will be treated as string with "\" sign
+/asd+/g                             # match "asd" and every "d" after it, like "asddddd"
+/asd?/g                             # match "as" or "asd", "d" is optional
+/asd*/g                             # match "as", "asd", "asddd", combination of + and ? expressions
+/asd./g                             # match "asd" and any letter after it
+/asd\./g                            # match "asd.", special characters will be treated as string with "\" sign
 
-/.asd/g							# match "asd" and any letter before it except line break
-/asd./g							# match "asd" and any letter after it except line break
-/as.d/g							# match "as?d" and and question mark can be any character except line break
-/asd../g						# match "asd" and two letters after it, if its a line break then the match is not found
+/.asd/g                             # match "asd" and any letter before it except line break
+/asd./g                             # match "asd" and any letter after it except line break
+/as.d/g                             # match "as?d" and and question mark can be any character except line break
+/asd../g                            # match "asd" and two letters after it, if its a line break then the match is not found
 
-/\s/g								# match white spaces (spaces, tabs and line breaks)
-/\d/g								# match digits (numbers 0-9)
-/\D/g								# match everything except digits (numbers 0-9)
-/\w/g								# match alphanumeric and underscore "_"
-/\w/g								# match everything except alphanumeric and underscore "_"
+/\s/g                               # match white spaces (spaces, tabs and line breaks)
+/\d/g                               # match digits (numbers 0-9)
+/\D/g                               # match everything except digits (numbers 0-9)
+/\w/g                               # match alphanumeric and underscore "_"
+/\w/g                               # match everything except alphanumeric and underscore "_"
 
-/[cm]ode/g					# start by "c" or "m" and ends with "ode", like "code" or "mode"
-/[a-z]/g						# match lowercase letters between a-z
-/[a-zA-z]/g					# match lowercase and uppercase letters between a-z
-/[0-9]/g						# match numbers between 0-9
+/[cm]ode/g                          # start by "c" or "m" and ends with "ode", like "code" or "mode"
+/[a-z]/g                            # match lowercase letters between a-z
+/[a-zA-z]/g                         # match lowercase and uppercase letters between a-z
+/[0-9]/g                            # match numbers between 0-9
 
-/t|The/g						# match "t" or "The"
-/(t|T)he/g					# match "t" or "T" that ends with "he", like "the" or "The"
+/t|The/g                            # match "t" or "The"
+/(t|T)he/g                          # match "t" or "T" that ends with "he", like "the" or "The"
 
-/(a|s){2}/g					# have to contain 2x "a" or "s", like "as", "sa", "aa", "ss"
-/asd{2,3}/g					# match "asdd" or "asddd"
-/(asd){2,3}/g				# match "asdasd" or "asdasdasd"
+/(a|s){2}/g                         # have to contain 2x "a" or "s", like "as", "sa", "aa", "ss"
+/asd{2,3}/g                         # match "asdd" or "asddd"
+/(asd){2,3}/g                       # match "asdasd" or "asdasdasd"
 
-/^Asd/g							# String have to start with "Asd"
-/asd$/g							# String have to end with "asd"
+/^Asd/g                             # String have to start with "Asd"
+/asd$/g                             # String have to end with "asd"
 
-/(?<=asd)./g				# match character after "asd" (positive look behind)
-/(?<!asd)./g				# match everything except a character after "asd" (negative look behind)
+/(?<=asd)./g                        # match character after "asd" (positive look behind)
+/(?<!asd)./g                        # match everything except a character after "asd" (negative look behind)
 
-/.(?=asd)/g					# match character before "asd" (positive look ahead)
-/.(?!asd)/g					# match everything except a character before "asd" (negative look ahead)
+/.(?=asd)/g                         # match character before "asd" (positive look ahead)
+/.(?!asd)/g                         # match everything except a character before "asd" (negative look ahead)
 
-/\w{4}/g						# match alphanumeric that has 4 characters in a row
-/\w{4,}/g						# match alphanumeric that has 4 or more characters in a row
-/\w{4,5}/g					# match alphanumeric that has 4 or 5 characters in a row
+/\w{4}/g                            # match alphanumeric that has 4 characters in a row
+/\w{4,}/g                           # match alphanumeric that has 4 or more characters in a row
+/\w{4,5}/g                          # match alphanumeric that has 4 or 5 characters in a row
 
-/(asd)|(dsa)/g												# match "asd" or "dsa". "()" sign creates a group
-/(?<group1>asd)|?<group1>(dsa)/g			# groups can be named. (group1), (group2)
+/(asd)|(dsa)/g                      # match "asd" or "dsa". "()" sign creates a group
+/(?<group1>asd)|?<group1>(dsa)/g    # groups can be named. (group1), (group2)
 
 
 # Examples
-"music.mp4".replace(/\.mp4/g, "")			# replace ".mp4" with ""
-/asd/g.test(myString)									# boolean: string has "asd"
+"music.mp4".replace(/\.mp4/g, "")   # replace ".mp4" with ""
+/asd/g.test(myString)               # boolean: string has "asd"
