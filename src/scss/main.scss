@@ -1,9 +1,9 @@
-// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import "./variables";
-@import "./menu";
-@import "./random";
-@import "./sandbox";
+@import "./setup/variables";
+@import "./setup/mixins";
+
+@import "./pages/Menu";
+@import "./pages/Main";
+@import "./pages/Sandbox";
 
 * {
 	box-sizing: border-box;
@@ -17,6 +17,10 @@ body {
   color: $colorText;
 }
 
+header {
+	background-color: $colorHeader;
+}
+
 ul {
 	list-style-type: none;
 }
@@ -25,26 +29,6 @@ a {
 	text-decoration: none;
 }
 
-h1, h2, h3 {
-	// font-weight: 600;
-}
-
 button {
-	padding-block: .3rem;
-	padding-inline: 1rem;
-	background-color: $colorPrimary;
-	color: $colorText;
-	
-	// background-color: $gray900;
-	// color: $colorPrimary;
-	
-	font-size: 1.25rem;
-	font-weight: 600;
-  border: none;
-	border-radius: 0.25rem;
-  cursor: pointer;
-	
-	&:hover {
-		filter: brightness(1.2);
-	}
+	@include buttonStyle;
 }

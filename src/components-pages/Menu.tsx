@@ -5,8 +5,8 @@ export default function Menu() {
 		<div className="Menu">
 			<h1>xTrouble</h1>
 			<div className="container">
-				<Link to="/random">
-					<button>Random</button>
+				<Link to="/main">
+					<button>Main</button>
 				</Link>
 				<Link to="/sandbox">
 					<button>Sandbox</button>

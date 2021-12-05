@@ -1,45 +1,70 @@
 /* eslint-disable */ 
 import React, {useState, useRef, useEffect} from "react"
-// import Button from "../components/Button"
+import { Link } from "react-router-dom"
+import LeftArrow from "../images/LeftArrow.png"
 
 export default function Sandbox() {
-	const counter = React.useRef(0)
-	const [print, setPrint] = React.useState(`Counter: ${counter.current}`)
+	const [counter, setCounter] = useState(0)
+	const [output, setOutput] = useState(
+		"Press the test button to change this output..."
+	)
 
-	const printCounter = () => {
-		counter.current++
-		setPrint(() => `Counter: ${counter.current}`)
-		console.log(counter.current)
+	function testA() {
+		const object = {
+			name: "Donald",
+			lastname: "Duck",
+			age: 25
+		}
+		setOutput("Object: " + JSON.stringify(object))
+		console.log(object)
 	}
 
-	//init
-	// React.useEffect(() => {
-	// 	console.log("init")
-	// 	console.log("end of init")
-	// }, [])
-
-	const test1 = () => {
-		console.log("test1")
-		
-		
-
-		console.log("end of test1")
+	function testB() {
+		setOutput("Test B is empty")
 	}
+
+	function testC() {
+		setOutput("Test C is empty")
+	}
+
+	function testD() {
+		setOutput("Test D is empty")
+	}
+
+	function testE() {
+		setOutput("Test E is empty")
+	}
+
+	useEffect(() => {
+		// console.log("Render")
+	})
 
 	return (
 		<div className="Sandbox">
-			<header><h1 className="title">Sandbox</h1></header>
+			<Link to="/">
+				<img className="returnButton" src={LeftArrow} alt="Return" />
+			</Link>
+		
+			<h1>Sandbox</h1>
 
-			<section className="printSection">
-				<div><h2>{print}</h2></div>
-				<button onClick={printCounter}>Print</button>
+			<section className="counterContainer">
+				<div><p className="counterText">Counter: {counter}</p></div>
+				<button onClick={() => setCounter(counter + 1)}>Count</button>
 			</section>
 			
 			<section className="testArea">
-				<h2>Test buttons</h2>
+				<h2>Tests</h2>
 
 				<div className="testButtonsContainer">
-					<button onClick={test1}>Test1</button>
+					<button onClick={testA}>A</button>
+					<button onClick={testB}>B</button>
+					<button onClick={testC}>C</button>
+					<button onClick={testD}>D</button>
+					<button onClick={testE}>E</button>
+				</div>
+				
+				<div className="outputContainer">
+					<p>{output}</p>
 				</div>
 			</section>
 		</div>

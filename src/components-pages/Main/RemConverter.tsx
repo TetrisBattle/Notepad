@@ -39,27 +39,27 @@ export default function RemConverter() {
 		<div className="RemConverter">
 			<h1>PX - REM Converter</h1>
 			
-			<div className="converters">
+			<div className="container">
 				<div className="converter">
-					<label htmlFor="px">Pixels</label>
 					<input
 						id="px"
 						type="text"
 						value={px}
 						onChange={(e) => handleChange(e.currentTarget)}
+						autoComplete="off"
 					/>
 					<p className="inputType">px</p>
 				</div>
 				
-				<span className="convertIcon">⇄</span>
+				<p className="convertIcon">⇄</p>
 				
 				<div className="converter">
-					<label htmlFor="rem">REM</label>
 					<input
 						id="rem"
 						type="text"
 						value={rem}
-						onChange={(e) => handleChange(e.currentTarget)} 
+						onChange={(e) => handleChange(e.currentTarget)}
+						autoComplete="off"
 					/>
 					<p className="inputType">rem</p>
 				</div>

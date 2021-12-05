@@ -8,12 +8,12 @@ class DataHandler {
 	printData() { console.log(items) }
 
 	hasName(name) {
-	// const names = []
-	// items.forEach((item) => {
-	//   names.push(item.name)
-	// })
+		// const names = []
+		// items.forEach((item) => {
+		//   names.push(item.name)
+		// })
 
-	const names = this.getAllNames()
+		const names = this.getAllNames()
 		return names.includes(name)
 	}
 

@@ -1,0 +1,27 @@
+$xxs: 20rem; 	// 320px 	Small mobile devices
+$xs: 30rem; 	// 480px 	Mobile devices
+$sm: 48rem; 	// 768px 	iPads, Tablets
+$md: 64rem; 	// 1024px Small screens, laptops
+$lg: 75rem; 	// 1200px Desktops, large screens
+$xl: 100rem; 	// 1600px Extra large screens, TV
+
+$black0: hsl(180, 4%, 7%);
+$black1: hsl(180, 4%, 9%);
+$black2: hsl(180, 4%, 11%);
+$gray: #7D7D7D; // disabled color
+
+// $white0: #FFFFFF; // too bright
+// $white1: #E3E3E3; // main text color
+// $white2: #D8D8D8; // subtitle text color
+// $white3: #A9A9A9; // content text color
+
+$colorPrimary: hsl(30, 100%, 50%);
+$colorSecondary: hsl(194, 100%, 50%);
+$colorBackground: $black0;
+$colorText: #E3E3E3;
+$colorHeader: hsl(180, 4%, 8%);
+
+:root {
+	// --colorPrimary: hsl(30, 100%, 50%);
+	--colorSecondary: hsl(194, 100%, 50%);
+}

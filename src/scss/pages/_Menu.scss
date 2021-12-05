@@ -1,11 +1,9 @@
-@import "./mixins";
-
 .Menu {
-	// padding-block-start: 2rem;
 	align-items: center;
+	height: 100vh;
 	
 	h1 {
-		margin-block: 2rem 1rem;
+		padding-block: 2rem 1rem;
 		margin-inline: auto;
 		inline-size: fit-content;
 		color: $colorPrimary;
@@ -18,16 +16,8 @@
 		margin-inline: auto;
 		display: flex;
 		justify-content: space-evenly;
-		background-color: $gray900;
+		background-color: $black1;
 		padding: 2rem;
 		border-radius: .5rem;
-	}
-	
-	button {
-		@include shadow;
-		padding-block: 1rem;
-		padding-inline: 1rem;
-		background-color: $gray800;
-		color: $colorPrimary;
 	}
 }

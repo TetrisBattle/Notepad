@@ -1,0 +1,30 @@
+.myExtenderClass {
+  background-color: pink
+}
+
+@function sum($num1, $num2) {
+  @return $num1 + $num2;
+}
+
+@mixin setBackgroundColor($background) {
+  background-color: $background;
+}
+
+@mixin isDarkMode($isDarkMode: true) {
+  @if ($isDarkMode) {
+    background-color: black;
+  } @else {
+    background-color: white;
+  }
+}
+
+@mixin resetCss {
+  all: initial;
+}
+
+// body {
+//   @extend .myExtenderClass;
+//   font-size: sum(1rem, 2rem);
+//   @include setBackground(red);
+//   @include isDarkMode(false);
+// }

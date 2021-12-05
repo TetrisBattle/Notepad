@@ -1,22 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 :root {
-  --colorPrimary: #FF6D00;
-  --solorSecondary: #18FFFF;
+  --colorSecondary: hsl(194, 100%, 50%);
 }
 
 .Menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
 }
 
 .Menu h1 {
-  margin-block: 2rem 1rem;
+  padding-block: 2rem 1rem;
   margin-inline: auto;
   inline-size: -webkit-fit-content;
   inline-size: -moz-fit-content;
   inline-size: fit-content;
-  color: #ff8c02;
+  color: #ff8000;
   font-size: 3rem;
 }
 
@@ -31,166 +30,164 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #212121;
+  background-color: #161818;
   padding: 2rem;
   border-radius: .5rem;
 }
 
-.Menu button {
-  -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-          box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  padding-block: 1rem;
+.Main header {
+  block-size: 4rem;
+  -webkit-border-after: solid 0.063rem #7D7D7D;
+          border-block-end: solid 0.063rem #7D7D7D;
+}
+
+.Main header img {
+  max-inline-size: 4rem;
+  max-block-size: 100%;
+  padding: 1rem;
   padding-inline: 1rem;
-  background-color: #292929;
-  color: #ff8c02;
-}
-
-.Random header {
-  inline-size: 100vw;
-  block-size: 3rem;
-  background-color: #212121;
-  -webkit-border-after: solid 0.063rem #757575;
-          border-block-end: solid 0.063rem #757575;
-}
-
-.Random header img {
-  inline-size: 3rem;
-  block-size: 3rem;
-  padding: .6rem;
-  padding-inline: .5rem;
   float: left;
+  background-color: #141515;
 }
 
-.Random header nav {
+.Main header img:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.Main header nav {
   display: none;
 }
 
-.Random header .menuIcon {
+.Main header .menuIcon {
   float: right;
 }
 
 @media (min-Width: 30rem) {
-  .Random header nav {
+  .Main header nav {
     display: block;
     block-size: 100%;
   }
-  .Random header nav ul {
+  .Main header nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     block-size: 100%;
   }
-  .Random header nav ul li button {
+  .Main header nav ul li button {
     block-size: 100%;
-    padding-inline: 1rem;
     font-size: 1.5rem;
-    background-color: #212121;
+    background-color: #141515;
     border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #E3E3E3;
+    color: #fff;
   }
-  .Random header .menuIcon {
+  .Main header nav ul li button:hover {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  .Main header .menuIcon {
     display: none;
   }
 }
 
-.RemConverter {
-  inline-size: clamp(13rem, 80vW, 45rem);
+.Main .RemConverter {
+  inline-size: clamp(13rem, 80vW, 35rem);
   margin: 0 auto;
   text-align: center;
+  color: #ff8000;
 }
 
-.RemConverter h1 {
+.Main .RemConverter h1 {
   padding-block: 3rem;
 }
 
-.RemConverter .converters {
-  display: block;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  block-size: 100%;
-}
-
-.RemConverter .converters .converter {
-  display: block;
-  inline-size: clamp(8rem, 80%, 20rem);
-  position: relative;
-  margin: 0 auto;
-}
-
-.RemConverter .converters .converter label {
-  font-size: 1.5rem;
-  color: #EEEEEE;
-}
-
-.RemConverter .converters .converter input {
-  inline-size: 100%;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 600;
-  border-radius: .25rem;
-}
-
-.RemConverter .converters .converter .inputType {
-  position: absolute;
-  inset-block-end: .55rem;
-  inset-inline-end: 1rem;
-  font-size: 1rem;
-  color: #121212;
-}
-
-.RemConverter .convertIcon {
+.Main .RemConverter .container .convertIcon {
   display: none;
 }
 
+.Main .RemConverter .container .converter {
+  -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+          box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+  inline-size: clamp(10rem, 100%, 15rem);
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-margin-after: 1.5rem;
+          margin-block-end: 1.5rem;
+}
+
+.Main .RemConverter .container .converter input {
+  inline-size: 100%;
+  block-size: 3rem;
+  font-size: 1.75rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: .25rem;
+  color: #E3E3E3;
+  background-color: #1b1d1d;
+  border: none;
+  outline: none;
+}
+
+.Main .RemConverter .container .converter .inputType {
+  font-size: 1rem;
+  color: #E3E3E3;
+  line-height: 3rem;
+  position: absolute;
+  inset-inline-end: 1rem;
+  pointer-events: none;
+}
+
 @media (min-width: 48rem) {
-  .RemConverter .converters {
+  .Main .RemConverter .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 1rem;
   }
-  .RemConverter .converters .converter .inputType {
-    inset-block-end: 1.1rem;
-  }
-  .RemConverter .convertIcon {
+  .Main .RemConverter .container .convertIcon {
     display: block;
+    line-height: 3rem;
     font-size: 1.5rem;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    padding: 1rem;
-    -webkit-padding-before: 2rem;
-            padding-block-start: 2rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
-}
-
-.myExtenderClass {
-  background-color: pink;
 }
 
 .Sandbox {
-  color: #FAFAFA;
-  height: 100vh;
+  color: #E3E3E3;
   overflow: auto;
+  min-height: 100vh;
 }
 
-.Sandbox header {
-  color: #ff8c02;
-}
-
-.Sandbox header {
+.Sandbox h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #ff8000;
   padding: 1.25rem;
 }
 
-.Sandbox header .title {
-  text-align: center;
-  font-size: 3rem;
+.Sandbox .returnButton {
+  position: absolute;
+  inset-block-start: 1rem;
+  inset-inline-start: 1rem;
+  border-radius: 2rem;
+  block-size: 3.5rem;
+  inline-size: 5rem;
+  padding: .5rem 1rem;
 }
 
-.Sandbox .printSection {
+.Sandbox .counterContainer {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  background-color: #212121;
+  background-color: #161818;
   margin-inline: auto;
   border-radius: 3rem;
   -webkit-box-pack: justify;
@@ -208,42 +205,67 @@
   padding-left: 2rem;
 }
 
-.Sandbox .printSection button {
+.Sandbox .counterContainer .counterText {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.Sandbox .counterContainer button {
   -webkit-margin-end: 1.25rem;
           margin-inline-end: 1.25rem;
   width: 7rem;
-  height: 3rem;
   border-radius: 25rem;
 }
 
 .Sandbox .testArea {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  background-color: #212121;
+  background-color: #161818;
   margin-inline: auto;
   width: 40rem;
-  height: 30rem;
+  min-height: 30rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: .6rem;
   margin-top: 3rem;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
 .Sandbox .testArea h2 {
   text-align: center;
-  padding: .25rem;
+  -webkit-padding-after: 1.25rem;
+          padding-block-end: 1.25rem;
   font-size: 2rem;
 }
 
 .Sandbox .testArea .testButtonsContainer {
-  padding: 1.25rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (10rem)[3];
-      grid-template-columns: repeat(3, 10rem);
-  grid-auto-rows: 3rem;
-  grid-gap: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.Sandbox .testArea .testButtonsContainer button {
+  inline-size: 100%;
+}
+
+.Sandbox .testArea .outputContainer {
+  padding-block: 2rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 * {
@@ -255,8 +277,12 @@
 }
 
 body {
-  background-color: #121212;
-  color: #FAFAFA;
+  background-color: #111313;
+  color: #E3E3E3;
+}
+
+header {
+  background-color: #141515;
 }
 
 ul {
@@ -268,12 +294,14 @@ a {
 }
 
 button {
-  padding-block: .3rem;
+  -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+          box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+  padding-block: .75rem;
   padding-inline: 1rem;
-  background-color: #ff8c02;
-  color: #FAFAFA;
+  background-color: #1b1d1d;
+  color: #ff8000;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: bold;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
