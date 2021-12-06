@@ -5,34 +5,37 @@ export default function RemConverter() {
 	const [px, setPx] = useState(rootPx.toString())
 	const [rem, setRem] = useState("1")
 	
-	const handleChange = (e: HTMLInputElement) => {
-		if (e.value === "") {
-			setPx(e.value)
-			setRem(e.value)
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const value = e.currentTarget.value
+		const id = e.currentTarget.id
+		
+		// 0.00000 is allowed
+		if (value === "" || value === "0." || /0\.0+/.test(value)) {
+			setPx(value)
+			setRem(value)
 			return
 		}
 		
-		if (e.value === ".") {
-			if (e.id === "rem") {
-				setPx("0")
-				setRem("0" + e.value)
-				return
-			}
-			setPx("0" + e.value)
-			setRem("0")
+		if (value === ".") {
+			setPx("0.")
+			setRem("0.")
 			return
 		}
 		
-		if (isNaN(+e.value) || e.value === " ") return
+		if (
+			isNaN(+value)
+			|| value === "00"
+			|| /\s/.test(value) // whitespace is not allowed
+		) return
 		
-		if (e.id === "rem") {
-			setRem(e.value)
-			setPx((+e.value * rootPx).toString())
+		if (id === "rem") {
+			setRem(value)
+			setPx((+value * rootPx).toString())
 			return
 		}
 		
-		setPx(e.value)
-		setRem((+e.value / rootPx).toString())
+		setPx(value)
+		setRem((+value / rootPx).toString())
 	}
 	
 	return (
@@ -45,7 +48,7 @@ export default function RemConverter() {
 						id="px"
 						type="text"
 						value={px}
-						onChange={(e) => handleChange(e.currentTarget)}
+						onChange={handleChange}
 						autoComplete="off"
 					/>
 					<p className="inputType">px</p>
@@ -58,7 +61,7 @@ export default function RemConverter() {
 						id="rem"
 						type="text"
 						value={rem}
-						onChange={(e) => handleChange(e.currentTarget)}
+						onChange={handleChange}
 						autoComplete="off"
 					/>
 					<p className="inputType">rem</p>

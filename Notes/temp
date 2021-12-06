@@ -3,3 +3,13 @@ next:
 		menu dropbox on mobile
 	
 	input style
+
+
+// create copy of an object
+JSON.parse(JSON.stringify(object))
+
+
+npm test -- --coverage
+//__tests__/automocking.test.js
+
+enzyme mount need act() to keep up with render updates

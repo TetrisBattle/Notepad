@@ -13,10 +13,20 @@ export default function Sandbox() {
 		const object = {
 			name: "Donald",
 			lastname: "Duck",
-			age: 25
+			age: 25,
+			hobbies: [
+				"football",
+				"games",
+				"coding"
+			],
+			city: "Oulu"
 		}
 		setOutput("Object: " + JSON.stringify(object))
-		console.log(object)
+		// alert(JSON.stringify(object))
+		// console.log(JSON.stringify(object))
+		// console.log(object)
+		// console.dir(object)
+		console.table(object)
 	}
 
 	function testB() {

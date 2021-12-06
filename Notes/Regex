@@ -23,8 +23,8 @@
 /\s/g                               # match white spaces (spaces, tabs and line breaks)
 /\d/g                               # match digits (numbers 0-9)
 /\D/g                               # match everything except digits (numbers 0-9)
-/\w/g                               # match alphanumeric and underscore "_"
-/\w/g                               # match everything except alphanumeric and underscore "_"
+/\w/g                               # match words (alphanumeric and underscore "_")
+/\W/g                               # match everything except words (alphanumeric and underscore "_")
 
 /[cm]ode/g                          # start by "c" or "m" and ends with "ode", like "code" or "mode"
 /[a-z]/g                            # match lowercase letters between a-z

@@ -4,7 +4,7 @@ import RemConverter from "./RemConverter"
 import Logo from "../../images/Logo.png"
 import MenuIcon from "../../images/Menu.png"
 
-export default function Random() {
+export default function Main() {
 	const activePage = useRef<string | undefined>()
 	const [content, setContent] = useState(<RemConverter />)
 	
