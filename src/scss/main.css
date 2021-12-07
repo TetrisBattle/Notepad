@@ -1,5 +1,6 @@
 :root {
   --colorSecondary: hsl(194, 100%, 50%);
+  --colorText: #E3E3E3;
 }
 
 .Menu {
@@ -30,9 +31,13 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #161818;
+  background-color: #151719;
   padding: 2rem;
   border-radius: .5rem;
+}
+
+.Main button {
+  color: red;
 }
 
 .Main header {
@@ -47,7 +52,7 @@
   padding: 1rem;
   padding-inline: 1rem;
   float: left;
-  background-color: #141515;
+  background-color: #141618;
 }
 
 .Main header img:hover {
@@ -77,12 +82,11 @@
   .Main header nav ul li button {
     block-size: 100%;
     font-size: 1.5rem;
-    background-color: #141515;
+    background-color: #141618;
     border-radius: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
     color: #E3E3E3;
-    color: #fff;
   }
   .Main header nav ul li button:hover {
     -webkit-filter: brightness(1.2);
@@ -129,7 +133,7 @@
   font-weight: bold;
   border-radius: .25rem;
   color: #E3E3E3;
-  background-color: #1b1d1d;
+  background-color: #171a1c;
   border: none;
   outline: none;
 }
@@ -187,7 +191,7 @@
 .Sandbox .counterContainer {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  background-color: #161818;
+  background-color: #151719;
   margin-inline: auto;
   border-radius: 3rem;
   -webkit-box-pack: justify;
@@ -220,7 +224,7 @@
 .Sandbox .testArea {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  background-color: #161818;
+  background-color: #151719;
   margin-inline: auto;
   width: 40rem;
   min-height: 30rem;
@@ -277,12 +281,12 @@
 }
 
 body {
-  background-color: #111313;
+  background-color: #121416;
   color: #E3E3E3;
 }
 
 header {
-  background-color: #141515;
+  background-color: #141618;
 }
 
 ul {
@@ -298,7 +302,7 @@ button {
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
   padding-block: .75rem;
   padding-inline: 1rem;
-  background-color: #1b1d1d;
+  background-color: #171a1c;
   color: #ff8000;
   font-size: 1.25rem;
   font-weight: bold;

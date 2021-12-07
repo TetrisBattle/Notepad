@@ -1,4 +1,8 @@
 .Main {
+	button {
+		color: red;
+	}
+	
 	header {
 		block-size: 4rem;
 		border-block-end: solid .063rem $gray;
@@ -33,7 +37,6 @@
 							border-radius: 0;
 							box-shadow: none;
 							color: $colorText;
-							color: #fff;
 							&:hover { filter: brightness(1.2); }
 						}
 					}

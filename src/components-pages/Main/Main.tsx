@@ -5,17 +5,46 @@ import Logo from "../../images/Logo.png"
 import MenuIcon from "../../images/Menu.png"
 
 export default function Main() {
-	const activePage = useRef<string | undefined>()
+	const activePage = useRef<HTMLButtonElement>()
 	const [content, setContent] = useState(<RemConverter />)
-	
-	const colorSecondary = getComputedStyle(document.documentElement)
-		.getPropertyValue('--colorSecondary')
-		
+
+	const colorSelectedButton = getComputedStyle(
+		document.documentElement
+	).getPropertyValue("--colorSecondary")
+
+	const colorText = getComputedStyle(
+		document.documentElement
+	).getPropertyValue("--colorText")
+
 	const navButtonNames = useRef([
 		"RemConverter",
 		"Empty"
 	])
-	
+
+	useEffect(() => {
+		if (!activePage.current) {
+			activePage.current = document.querySelector(
+				"." + navButtonNames.current[0] + "Nav"
+			) as HTMLButtonElement
+			activePage.current.style.color = colorSelectedButton
+		}
+	}, [navButtonNames, colorSelectedButton])
+
+	const handleClick = (button: HTMLButtonElement) => {
+		if (button === activePage.current) return
+
+		if (activePage.current) activePage.current.style.color = colorText
+		button.style.color = colorSelectedButton
+		activePage.current = button
+
+		if (button.innerHTML === "RemConverter") {
+			setContent(<RemConverter />)
+			return
+		}
+
+		setContent(<div>{button.innerHTML}</div>)
+	}
+
 	const navBar = (
 		<nav>
 			<ul>
@@ -35,34 +64,6 @@ export default function Main() {
 		</nav>
 	)
 
-	function handleClick(page: HTMLButtonElement) {
-		if (page.innerHTML === activePage.current) return
-		
-		const prevPage: HTMLButtonElement | null = 
-			document.querySelector("." + activePage.current + "Nav")
-			
-		if (prevPage) prevPage.style.color = "#FAFAFA"
-		else console.error("prevPage was not found")
-		
-		page.style.color = colorSecondary
-		activePage.current = page.innerHTML
-				
-		if (page.innerHTML === "RemConverter") {
-			setContent(<RemConverter />)
-			return
-		}
-		
-		setContent(<div>{page.innerHTML}</div>)
-	}
-	
-	useEffect(() => {
-		const defaultPage: HTMLElement | null = 
-			document.querySelector("." + navButtonNames.current[0] + "Nav")
-		activePage.current = defaultPage?.innerHTML
-		
-		if (defaultPage) defaultPage.style.color = colorSecondary
-	}, [navButtonNames, colorSecondary])
-
 	return (
 		<div className="Main">
 			<header>
@@ -72,9 +73,7 @@ export default function Main() {
 				{navBar}
 				<img className="menuIcon" src={MenuIcon} alt="Menu" />
 			</header>
-			<main>
-				{content}
-			</main>
+			<main>{content}</main>
 		</div>
 	)
 }

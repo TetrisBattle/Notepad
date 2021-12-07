@@ -5,9 +5,9 @@ $md: 64rem; 	// 1024px Small screens, laptops
 $lg: 75rem; 	// 1200px Desktops, large screens
 $xl: 100rem; 	// 1600px Extra large screens, TV
 
-$black0: hsl(180, 4%, 7%);
-$black1: hsl(180, 4%, 9%);
-$black2: hsl(180, 4%, 11%);
+$black0: hsl(210%, 10%, 8%);
+$black1: hsl(210%, 10%, 9%);
+$black2: hsl(210%, 10%, 10%);
 $gray: #7D7D7D; // disabled color
 
 // $white0: #FFFFFF; // too bright
@@ -19,9 +19,10 @@ $colorPrimary: hsl(30, 100%, 50%);
 $colorSecondary: hsl(194, 100%, 50%);
 $colorBackground: $black0;
 $colorText: #E3E3E3;
-$colorHeader: hsl(180, 4%, 8%);
+$colorHeader: hsl(210, 10%, 8.5%);
 
 :root {
 	// --colorPrimary: hsl(30, 100%, 50%);
 	--colorSecondary: hsl(194, 100%, 50%);
+	--colorText: #E3E3E3;
 }
