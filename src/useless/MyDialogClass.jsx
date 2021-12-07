@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import {
 	Box,
 	Dialog,
@@ -7,15 +7,15 @@ import {
 	Paper,
 	Typography,
 	IconButton,
-} from "@mui/material"
-import Draggable from "react-draggable"
-import MyButton from "../../components-MUI/MyButton.jsx"
-import CloseIcon from "@mui/icons-material/Close"
+} from '@mui/material'
+import Draggable from 'react-draggable'
+import MyButton from '../../components-MUI/MyButton.jsx'
+import CloseIcon from '@mui/icons-material/Close'
 
 // enable dragable dialog
 const PaperComponent = (props) => {
 	return (
-		<Draggable handle=".dialogHeader">
+		<Draggable handle='.dialogHeader'>
 			<Paper {...props} />
 		</Draggable>
 	)
@@ -33,16 +33,16 @@ export default class MyDialog extends React.Component {
   }
 	
 	componentDidMount() {
-		console.log("mount")
+		console.log('mount')
 	}
 	
 	componentDidUpdate() {
-		if (this.state.dialogState === true) window.addEventListener("resize", this.handleResize)
-		else window.removeEventListener("resize", this.handleResize)
+		if (this.state.dialogState === true) window.addEventListener('resize', this.handleResize)
+		else window.removeEventListener('resize', this.handleResize)
 	}
 	
 	componentWillUnmount() {
-		console.log("unmount")
+		console.log('unmount')
 	}
 	
 	openDialog() {
@@ -75,10 +75,10 @@ export default class MyDialog extends React.Component {
 				onClose={() => this.setState({ dialogState: false })}
 				PaperComponent={this.usePaperComponent()}
 			>
-				<Box className="dialogHeader">
-					<Typography variant="h1">{headerTitle}</Typography>
+				<Box className='dialogHeader'>
+					<Typography variant='h1'>{headerTitle}</Typography>
 					<IconButton onClick={() => this.setState({ dialogState: false })}>
-						<CloseIcon color="white" />
+						<CloseIcon color='white' />
 					</IconButton>
 				</Box>
 
@@ -86,13 +86,13 @@ export default class MyDialog extends React.Component {
 
 				<DialogActions>
 					<MyButton
-						text="Peruuta"
-						color="gray"
-						variant="outlined"
+						text='Peruuta'
+						color='gray'
+						variant='outlined'
 						onClick={() => this.setState({ dialogState: false })}
 					/>
 					<MyButton
-						text="OK"
+						text='OK'
 						onClick={actionsOkButtonOnClick()}
 					/>
 				</DialogActions>

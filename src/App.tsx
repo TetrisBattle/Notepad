@@ -7,9 +7,9 @@ export default function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/" element={<Menu />} />
-				<Route path="/main" element={<Main />} />
-				<Route path="/sandbox" element={<Sandbox />} />
+				<Route path='/' element={<Menu />} />
+				<Route path='/main' element={<Main />} />
+				<Route path='/sandbox' element={<Sandbox />} />
 			</Routes>
 		</Router>
 	)

@@ -16,5 +16,5 @@ test('Buttons are rendered (enzyme)', () => {
 	expect(wrapper.find('.Menu').debug()).toContain('<Link to="/sandbox">')
 	
 	const firstButton = wrapper.find('button').hostNodes().at(0)
-	expect(firstButton.text()).toContain("Main")
+	expect(firstButton.text()).toContain('Main')
 })

@@ -21,7 +21,7 @@ export function toggleClass(name, className) {
 
 export function getCssVarValue(cssVar) {
 	return getComputedStyle(document.documentElement)
-		.getPropertyValue("--" + cssVar)
+		.getPropertyValue('--' + cssVar)
 }
 
 export function setCssVarValue(cssVar, newValue) {
@@ -29,5 +29,5 @@ export function setCssVarValue(cssVar, newValue) {
 }
 
 export function hideNode(name) {
-	document.querySelector(name).style.display = "none"
+	document.querySelector(name).style.display = 'none'
 }

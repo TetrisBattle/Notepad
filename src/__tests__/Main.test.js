@@ -12,7 +12,7 @@ beforeEach(() => {
 		firstButton.props().onClick({ 
 			currentTarget: { 
 				innerHTML: firstButton.text(),
-				style: { color: "#fff" }
+				style: { color: '#fff' }
 			} 
 		})
 	}
@@ -22,7 +22,7 @@ beforeEach(() => {
 		secondButton.props().onClick({ 
 			currentTarget: { 
 				innerHTML: secondButton.text(),
-				style: { color: "#fff" }
+				style: { color: '#fff' }
 			} 
 		})
 	}

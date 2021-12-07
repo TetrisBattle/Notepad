@@ -17,5 +17,5 @@ echo "text" >> [file]           # add "text" to file
 cp [file] [dir]                 # copy file to directory
 cp [file] [dir]/[newName]       # copy file to directory with different name
 
-mv [file] [dir]                 # movei file to dir
+mv [file] [dir]                 # move file to dir
 ren [file] [newName]            # rename

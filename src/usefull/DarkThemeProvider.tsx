@@ -3,12 +3,12 @@
  * <DarkThemeProvider content={<App />}>
  * 
  * How to use:
- * import { useDarkTheme, useDarkThemeUpdate } from "./DarkThemeProvider"
+ * import { useDarkTheme, useDarkThemeUpdate } from './DarkThemeProvider'
  * const isDarkTheme = useDarkTheme()
  * const toggleDarkTheme = useDarkThemeUpdater()
  */
 
-import { useState, createContext, useContext } from "react"
+import { useState, createContext, useContext } from 'react'
 
 const DarkThemeContext = createContext<Boolean|null>(null)
 const UpdateDarkThemeContext = createContext<Function|null>(null)

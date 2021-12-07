@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from "react"
-import { Link } from "react-router-dom"
-import RemConverter from "./RemConverter"
-import Logo from "../../images/Logo.png"
-import MenuIcon from "../../images/Menu.png"
+import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import RemConverter from './RemConverter'
+import Logo from '../../images/Logo.png'
+import MenuIcon from '../../images/Menu.png'
 
 export default function Main() {
 	const activePage = useRef<HTMLButtonElement>()
@@ -10,21 +10,21 @@ export default function Main() {
 
 	const colorSelectedButton = getComputedStyle(
 		document.documentElement
-	).getPropertyValue("--colorSecondary")
+	).getPropertyValue('--colorSecondary')
 
 	const colorText = getComputedStyle(
 		document.documentElement
-	).getPropertyValue("--colorText")
+	).getPropertyValue('--colorText')
 
 	const navButtonNames = useRef([
-		"RemConverter",
-		"Empty"
+		'RemConverter',
+		'Empty'
 	])
 
 	useEffect(() => {
 		if (!activePage.current) {
 			activePage.current = document.querySelector(
-				"." + navButtonNames.current[0] + "Nav"
+				'.' + navButtonNames.current[0] + 'Nav'
 			) as HTMLButtonElement
 			activePage.current.style.color = colorSelectedButton
 		}
@@ -37,7 +37,7 @@ export default function Main() {
 		button.style.color = colorSelectedButton
 		activePage.current = button
 
-		if (button.innerHTML === "RemConverter") {
+		if (button.innerHTML === 'RemConverter') {
 			setContent(<RemConverter />)
 			return
 		}
@@ -52,7 +52,7 @@ export default function Main() {
 					return (
 						<li key={navButtonName}>
 							<button
-								className={navButtonName + "Nav"}
+								className={navButtonName + 'Nav'}
 								onClick={(e) => handleClick(e.currentTarget)}
 							>
 								{navButtonName}
@@ -65,13 +65,13 @@ export default function Main() {
 	)
 
 	return (
-		<div className="Main">
+		<div className='Main'>
 			<header>
-				<Link to="/">
-					<img className="logo" src={Logo} alt="Logo" />
+				<Link to='/'>
+					<img className='logo' src={Logo} alt='Logo' />
 				</Link>
 				{navBar}
-				<img className="menuIcon" src={MenuIcon} alt="Menu" />
+				<img className='menuIcon' src={MenuIcon} alt='Menu' />
 			</header>
 			<main>{content}</main>
 		</div>

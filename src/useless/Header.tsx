@@ -9,12 +9,12 @@ const Header: React.FC<IProps> = ({ setContent }) => {
 	}
 	
 	return (
-		<div className="Header">
+		<div className='Header'>
 			<header>
 				<nav>
 					<ul>
-						<li><button onClick={() => handleClick("one")}>One</button></li>
-						<li><button onClick={() => handleClick("two")}>Two</button></li>
+						<li><button onClick={() => handleClick('one')}>One</button></li>
+						<li><button onClick={() => handleClick('two')}>Two</button></li>
 					</ul>
 				</nav>
 			</header>
