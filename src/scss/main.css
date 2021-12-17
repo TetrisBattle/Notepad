@@ -36,10 +36,6 @@
   border-radius: .5rem;
 }
 
-.Main button {
-  color: red;
-}
-
 .Main header {
   block-size: 4rem;
   -webkit-border-after: solid 0.063rem #7D7D7D;
@@ -78,6 +74,9 @@
     display: -ms-flexbox;
     display: flex;
     block-size: 100%;
+  }
+  .Main header nav ul li:first-child button {
+    color: #00c4ff;
   }
   .Main header nav ul li button {
     block-size: 100%;
@@ -304,6 +303,8 @@ button {
   padding-inline: 1rem;
   background-color: #171a1c;
   color: #ff8000;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   font-size: 1.25rem;
   font-weight: bold;
   border: none;
@@ -312,7 +313,6 @@ button {
 }
 
 button:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+  background-color: #191c1f;
 }
 /*# sourceMappingURL=main.css.map */

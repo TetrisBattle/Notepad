@@ -1,8 +1,4 @@
 .Main {
-	button {
-		color: red;
-	}
-	
 	header {
 		block-size: 4rem;
 		border-block-end: solid .063rem $gray;
@@ -30,6 +26,8 @@
 					block-size: 100%;
 				
 					li {
+						&:first-child button { color: $colorSecondary; }
+						
 						button {
 							block-size: 100%;
 							font-size: 1.5rem;

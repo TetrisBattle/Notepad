@@ -28,14 +28,6 @@ beforeEach(() => {
 	}
 })
 
-test('set active button color on init', () => {
-	const firstButton = wrapper.find('button').get(0)
-	
-	console.log(firstButton)
-	
-	// console.log(wrapper.debug())
-})
-
 test('nothing happens when active button is pressed', () => {
 	let currentContent = wrapper.find('main').text()
 	clickFirstButton()
@@ -56,4 +48,3 @@ test('switch content', () => {
 	clickFirstButton()
 	expect(wrapper.find('main').text()).not.toBe(currentContent)
 })
-

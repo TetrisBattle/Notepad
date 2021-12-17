@@ -19,8 +19,9 @@
 	@include shadow;
 	padding-block: .75rem;
 	padding-inline: 1rem;
-	background-color: $black2;
+	background-color: $colorButton;
 	color: $colorPrimary;
+	transition: all .2s ease-in-out;
 	
 	font-size: 1.25rem;
 	font-weight: bold;
@@ -29,6 +30,7 @@
   cursor: pointer;
 	
 	&:hover {
-		filter: brightness(1.2);
+		// filter: brightness(1.2);
+		background-color: lighten($colorButton, 1%);
 	}
 }

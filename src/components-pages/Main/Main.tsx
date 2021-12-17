@@ -22,13 +22,9 @@ export default function Main() {
 	])
 
 	useEffect(() => {
-		if (!activePage.current) {
-			activePage.current = document.querySelector(
-				'.' + navButtonNames.current[0] + 'Nav'
-			) as HTMLButtonElement
-			activePage.current.style.color = colorSelectedButton
-		}
-	}, [navButtonNames, colorSelectedButton])
+		if (!activePage.current)
+			activePage.current = document.querySelector('button') as HTMLButtonElement
+	}, [])
 
 	const handleClick = (button: HTMLButtonElement) => {
 		if (button === activePage.current) return
@@ -51,10 +47,7 @@ export default function Main() {
 				{navButtonNames.current.map((navButtonName) => {
 					return (
 						<li key={navButtonName}>
-							<button
-								className={navButtonName + 'Nav'}
-								onClick={(e) => handleClick(e.currentTarget)}
-							>
+							<button onClick={(e) => handleClick(e.currentTarget)}>
 								{navButtonName}
 							</button>
 						</li>

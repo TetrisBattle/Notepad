@@ -21,7 +21,9 @@ git branch [new branch]                     # create new branch
 git branch -m [prevName] [newName]          # rename branch
 git push --set-upstream origin [branch]     # push branch to remote
 git checkout [branch / commit]              # checkout branch or commit
+
 git merge [branch]                          # merge from branch
+git merge --squash [branch]                 # merge as single commit
 
 git commit -am “[message]”                  # git add . + git commit
 git commit --amend -m  “[message]”          # rewrite last commit message
