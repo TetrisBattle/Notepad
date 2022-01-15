@@ -9,7 +9,7 @@ import {
 	IconButton,
 } from '@mui/material'
 import Draggable from 'react-draggable'
-import MyButton from '../../components-MUI/MyButton.jsx'
+import MuiButton from '../../components-MUI/MyButton.jsx'
 import CloseIcon from '@mui/icons-material/Close'
 
 // enable dragable dialog
@@ -21,7 +21,7 @@ const PaperComponent = (props) => {
 	)
 }
 
-export default class MyDialog extends React.Component {
+export default class MuiDialog extends React.Component {
 	constructor(props) {
     super(props);
 		
@@ -85,13 +85,13 @@ export default class MyDialog extends React.Component {
 				<DialogContent>{content}</DialogContent>
 
 				<DialogActions>
-					<MyButton
+					<MuiButton
 						text='Peruuta'
 						color='gray'
 						variant='outlined'
 						onClick={() => this.setState({ dialogState: false })}
 					/>
-					<MyButton
+					<MuiButton
 						text='OK'
 						onClick={actionsOkButtonOnClick()}
 					/>

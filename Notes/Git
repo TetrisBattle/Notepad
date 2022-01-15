@@ -1,7 +1,7 @@
 # Exit from git log by pressin q
-git bisect [start / bad / good / reset]	    # binary search from commits to find a bug
+git bisect [start / bad / good / reset]     # binary search from commits to find a bug
 git config --global alias.ca 'commit -am'   # create alias (shortcut for commands)
-git ca 'new commit'	                        # shortcut from alias: git commit -am 'new commit'
+git ca 'new commit'                         # shortcut from alias: git commit -am 'new commit'
 
 git init [repository name]                  # init git
 git clone [GitHub]                          # get GitHub repository

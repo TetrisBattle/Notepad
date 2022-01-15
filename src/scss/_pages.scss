@@ -1,0 +1,174 @@
+.Menu {
+	align-items: center;
+	height: 100vh;
+	
+	h1 {
+		padding-block: 2rem 1rem;
+		margin-inline: auto;
+		inline-size: fit-content;
+		color: $colorPrimary;
+		font-size: 3rem;
+	}
+	
+	.container {
+		@include shadow;
+		inline-size: clamp(25rem, 90vw, 40rem);
+		margin-inline: auto;
+		display: flex;
+		justify-content: space-evenly;
+		background-color: $black1;
+		padding: 2rem;
+		border-radius: .5rem;
+
+		a {
+			@include buttonStyle;
+			block-size: 3.5rem;
+			line-height: 3.5rem;
+			padding-block: 0;
+		}
+	}
+}
+
+.RemConverter {
+	inline-size: clamp(13rem, 80vW, 35rem);
+	margin: 0 auto;
+	text-align: center;
+	color: $colorPrimary;
+	
+	h1 { padding-block: 3rem; }
+	
+	.container {
+		.convertIcon { display: none; }
+		
+		.converter {
+			@include shadow;
+			inline-size: clamp(10rem, 100%, 15rem);
+			position: relative;
+			margin: 0 auto;
+			display: flex;
+			margin-block-end: 1.5rem;
+			
+			input {
+				inline-size: 100%;
+				block-size: 3rem;
+				font-size: 1.75rem;
+				text-align: center;
+				font-weight: bold;
+				border-radius: .25rem;
+				color: $colorText;
+				background-color: $black2;
+				border: none;
+				outline: none;
+			}
+			
+			.inputType {
+				font-size: 1rem;
+				color: $colorText;
+				line-height: 3rem;
+				position: absolute;
+				inset-inline-end: 1rem;
+				pointer-events: none; 
+			}
+		}
+	}
+	
+	// @media (min-inline-size: $sm) {
+	@media (min-width: $sm) {
+		.container {
+			display: flex;
+			gap: 1rem;
+		
+			.convertIcon {
+				display: block;
+				line-height: 3rem;
+				font-size: 1.5rem;
+				user-select: none;
+			}
+		}
+	}
+}
+
+.Sandbox {
+  color: $colorText;
+  overflow: auto;
+	min-height: 100vh;
+    
+	h1 {
+		text-align: center;
+		font-size: 3rem;
+		color: $colorPrimary;
+    padding: 1.25rem;
+	}
+	
+	.returnButton {
+		position: absolute;
+		inset-block-start: 1rem;
+		inset-inline-start: 1rem;
+		border-radius: 2rem;
+		
+		block-size: 3.5rem;
+		inline-size: 5rem;
+		padding: .5rem 1rem;
+	}
+  
+  .counterContainer {
+		@include shadow;
+    background-color: $black1;
+    margin-inline: auto;
+    border-radius: 3rem;
+    justify-content: space-between;
+    width: 21rem;
+    height: 5rem;
+    align-items: center;
+    position: relative;
+    display: flex;
+    padding-left: 2rem;
+		
+		.counterText {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+  
+    button {
+      margin-inline-end: 1.25rem;
+      width: 7rem;
+			border-radius: 25rem;
+    }
+  }
+  
+  .testArea {
+		@include shadow;
+    background-color: $black1;
+    margin-inline: auto;
+    width: 40rem;
+    min-height: 30rem;
+    height: max-content;
+    border-radius: .6rem;
+    margin-top: 3rem;
+		padding: 1.25rem;
+		display: flex;
+		flex-flow: column;
+    
+    h2 {
+      text-align: center;
+      padding-block-end: 1.25rem;
+			font-size: 2rem;
+    }
+    
+    .testButtonsContainer {
+			display: flex;
+			gap: 1.25rem;
+      justify-content: space-evenly;
+			
+			button {
+				inline-size: 100%;
+			}
+    }
+		
+		.outputContainer {
+			padding-block: 2rem;
+			text-align: center;
+			flex: 1;
+		}
+  }
+}

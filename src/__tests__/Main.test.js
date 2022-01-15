@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme'
-import Main from '../components-pages/Main/Main'
+import Main from '../useless/MainPage'
 
 let wrapper
 let clickFirstButton

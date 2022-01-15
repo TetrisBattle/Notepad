@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Menu from './components-pages/Menu'
-import Main from './components-pages/Main/Main'
+import Notepad from './components-pages/Notepad'
+import RemConverter from './components-pages/RemConverter'
 import Sandbox from './components-pages/Sandbox'
 
 export default function App() {
@@ -8,7 +9,8 @@ export default function App() {
 		<Router>
 			<Routes>
 				<Route path='/' element={<Menu />} />
-				<Route path='/main' element={<Main />} />
+				<Route path='/notepad' element={<Notepad />} />
+				<Route path='/RemConverter' element={<RemConverter />} />
 				<Route path='/sandbox' element={<Sandbox />} />
 			</Routes>
 		</Router>

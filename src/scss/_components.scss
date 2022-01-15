@@ -1,0 +1,35 @@
+header {
+	block-size: 4rem;
+	border-block-end: solid .063rem $gray;
+	display: flex;
+	background-color: $colorHeader;
+	
+	img {
+		block-size: 100%;
+		padding: 1rem;
+		background-color: $colorHeader;
+		&:hover { filter: brightness(1.2); }
+	}
+	
+	button { display: none; }
+	.menuIcon { margin-inline-start: auto; }
+	
+	@media (min-Width: $xs) {
+		button {
+			display: block;
+			block-size: 100%;
+			font-size: 1.5rem;
+			background-color: $colorHeader;
+			border-radius: 0;
+			box-shadow: none;
+			color: $colorText;
+			&:hover { filter: brightness(1.2); }
+		}
+		
+		button.selected {
+			color: $colorPrimary
+		}
+		
+		.menuIcon { display: none; }
+	}
+}

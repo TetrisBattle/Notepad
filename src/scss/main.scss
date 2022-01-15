@@ -1,9 +1,8 @@
 @import "./setup/variables";
 @import "./setup/mixins";
 
-@import "./pages/Menu";
-@import "./pages/Main";
-@import "./pages/Sandbox";
+@import "./components";
+@import "./pages";
 
 * {
 	box-sizing: border-box;
@@ -17,17 +16,7 @@ body {
   color: $colorText;
 }
 
-header {
-	background-color: $colorHeader;
-}
-
-ul {
-	list-style-type: none;
-}
-
-a {
-	text-decoration: none;
-}
+a { text-decoration: none; }
 
 button {
 	@include buttonStyle;
