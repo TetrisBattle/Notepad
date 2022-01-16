@@ -11,25 +11,11 @@ header {
 		&:hover { filter: brightness(1.2); }
 	}
 	
-	button { display: none; }
+	.navbar { display: none; }
 	.menuIcon { margin-inline-start: auto; }
 	
 	@media (min-Width: $xs) {
-		button {
-			display: block;
-			block-size: 100%;
-			font-size: 1.5rem;
-			background-color: $colorHeader;
-			border-radius: 0;
-			box-shadow: none;
-			color: $colorText;
-			&:hover { filter: brightness(1.2); }
-		}
-		
-		button.selected {
-			color: $colorPrimary
-		}
-		
+		.navbar { @include verticalNavbar($colorHeader); }
 		.menuIcon { display: none; }
 	}
 }

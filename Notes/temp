@@ -3,6 +3,7 @@ next:
 		menu dropbox on mobile
 	
 	input style
+	HTML <dialog> tag style
 
 
 // create copy of an object

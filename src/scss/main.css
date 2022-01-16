@@ -24,7 +24,7 @@ header img:hover {
           filter: brightness(1.2);
 }
 
-header button {
+header .navbar {
   display: none;
 }
 
@@ -34,21 +34,24 @@ header .menuIcon {
 }
 
 @media (min-Width: 30rem) {
-  header button {
-    display: block;
-    block-size: 100%;
+  header .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #141618;
+  }
+  header .navbar button {
+    padding-inline: 1rem;
     font-size: 1.5rem;
     background-color: #141618;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
     color: #E3E3E3;
+    border: none;
   }
-  header button:hover {
+  header .navbar button:hover {
     -webkit-filter: brightness(1.2);
             filter: brightness(1.2);
   }
-  header button.selected {
+  header .navbar button.selected {
     color: #ff8000;
   }
   header .menuIcon {
@@ -96,12 +99,12 @@ header .menuIcon {
   padding-inline: 1rem;
   background-color: #171a1c;
   color: #ff8000;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
   font-size: 1.25rem;
   font-weight: bold;
   border: none;
   border-radius: 0.25rem;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   cursor: pointer;
   block-size: 3.5rem;
   line-height: 3.5rem;
@@ -109,7 +112,81 @@ header .menuIcon {
 }
 
 .Menu .container a:hover {
-  background-color: #191c1f;
+  background-color: #1c1f22;
+}
+
+.Notepad .notFound {
+  padding: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #ff8000;
+}
+
+.Notepad .git {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Notepad .git .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  inline-size: 8rem;
+  block-size: calc(100vh - 4rem);
+  background-color: #151719;
+}
+
+.Notepad .git .navbar button {
+  block-size: 5rem;
+  font-size: 1.25rem;
+  background-color: #151719;
+  color: #E3E3E3;
+  border: none;
+}
+
+.Notepad .git .navbar button:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.Notepad .git .navbar button.selected {
+  color: #ff8000;
+}
+
+.Notepad .git main {
+  inline-size: calc(100vw - 8rem);
+  padding: 2rem;
+}
+
+.Notepad .git main h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff8000;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+
+.Notepad .git main section {
+  font-size: 1.5rem;
+}
+
+.Notepad .git main .note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.Notepad .git main .note p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .RemConverter {
@@ -184,6 +261,26 @@ header .menuIcon {
   color: #E3E3E3;
   overflow: auto;
   min-height: 100vh;
+}
+
+.Sandbox button {
+  -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+          box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
+  padding-block: .75rem;
+  padding-inline: 1rem;
+  background-color: #171a1c;
+  color: #ff8000;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.25rem;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.Sandbox button:hover {
+  background-color: #1c1f22;
 }
 
 .Sandbox h1 {
@@ -302,25 +399,5 @@ body {
 
 a {
   text-decoration: none;
-}
-
-button {
-  -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-          box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  padding-block: .75rem;
-  padding-inline: 1rem;
-  background-color: #171a1c;
-  color: #ff8000;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  font-size: 1.25rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #191c1f;
 }
 /*# sourceMappingURL=main.css.map */

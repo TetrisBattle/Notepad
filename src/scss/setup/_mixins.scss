@@ -11,8 +11,9 @@
 	// 	0 .94rem .75rem rgba(0,0,0,0.22);
 }
 
+// show shadow on hover for float animation
 @mixin shadowAnim {
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 @mixin buttonStyle {
@@ -21,16 +22,52 @@
 	padding-inline: 1rem;
 	background-color: $colorButton;
 	color: $colorPrimary;
-	transition: all .2s ease-in-out;
 	
 	font-size: 1.25rem;
 	font-weight: bold;
   border: none;
 	border-radius: 0.25rem;
+	transition: all .2s ease-in-out;
   cursor: pointer;
 	
 	&:hover {
 		// filter: brightness(1.2);
-		background-color: lighten($colorButton, 1%);
+		background-color: lighten($colorButton, 2%);
+		// background-color: darken($colorButton, 2%);
 	}
+}
+
+@mixin verticalNavbar($backgroundColor: $black1) {
+	display: flex;
+	background-color: $backgroundColor;
+	
+	button {
+		padding-inline: 1rem;
+		font-size: 1.5rem;
+		background-color: $backgroundColor;
+		color: $colorText;
+		border: none;
+		&:hover { filter: brightness(1.2); }
+	}
+	
+	button.selected { color: $colorPrimary }
+}
+
+@mixin horizontalNavbar($backgroundColor: $black1) {
+	display: flex;
+	flex-flow: column;
+	inline-size: 8rem;
+	block-size: calc(100vh - 4rem);
+	background-color: $backgroundColor;
+	
+	button {
+		block-size: 5rem;
+		font-size: 1.25rem;
+		background-color: $backgroundColor;
+		color: $colorText;
+		border: none;
+		&:hover { filter: brightness(1.2); }
+	}
+	
+	button.selected { color: $colorPrimary }
 }

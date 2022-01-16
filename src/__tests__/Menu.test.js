@@ -5,16 +5,16 @@ import Menu from '../components-pages/Menu'
 
 test('Buttons are rendered (jest)', () => {
 	render(<Router><Menu /></Router>)
-	expect(screen.getByRole('button', { name: /Main/i })).toBeInTheDocument()
-	expect(screen.getByRole('button', { name: /Sandbox/i })).toBeInTheDocument()
+	expect(screen.getByRole('link', { name: /Notepad/i })).toBeInTheDocument()
+	expect(screen.getByRole('link', { name: /Sandbox/i })).toBeInTheDocument()
 })
 
 test('Buttons are rendered (enzyme)', () => {
 	const wrapper = shallow(<Menu />)
-	expect(wrapper.find('Link button').length).toBeGreaterThan(1)
-	expect(wrapper.find('.Menu').debug()).toContain('<Link to="/main">')
+	expect(wrapper.find('Link').length).toBeGreaterThan(1)
+	expect(wrapper.find('.Menu').debug()).toContain('<Link to="/notepad">')
 	expect(wrapper.find('.Menu').debug()).toContain('<Link to="/sandbox">')
 	
-	const firstButton = wrapper.find('button').hostNodes().at(0)
-	expect(firstButton.text()).toContain('Main')
+	const firstButton = wrapper.find('Link').at(0)
+	expect(firstButton.text()).toContain('Notepad')
 })

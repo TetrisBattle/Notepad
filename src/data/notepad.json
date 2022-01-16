@@ -1,0 +1,16 @@
+{
+	"git": [
+		{
+			"command": "git bisect [start / bad / good / reset]",
+			"description": "binary search from commits to find a bug"
+		},
+		{
+			"command": "git init [repository name]",
+			"description": "init git"
+		},
+		{
+			"command": "git clone [GitHub]  ",
+			"description": "get GitHub repository"
+		}
+	]
+}
