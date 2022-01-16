@@ -197,15 +197,7 @@
 			font-size: 2rem;
     }
     
-    .testButtonsContainer {
-			display: flex;
-			gap: 1.25rem;
-      justify-content: space-evenly;
-			
-			button {
-				inline-size: 100%;
-			}
-    }
+    .testButtonsContainer { @include grid(5, 1) }
 		
 		.outputContainer {
 			padding-block: 2rem;

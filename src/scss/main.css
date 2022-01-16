@@ -103,9 +103,9 @@ header .menuIcon {
   font-weight: bold;
   border: none;
   border-radius: 0.25rem;
+  cursor: pointer;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  cursor: pointer;
   block-size: 3.5rem;
   line-height: 3.5rem;
   padding-block: 0;
@@ -274,9 +274,9 @@ header .menuIcon {
   font-weight: bold;
   border: none;
   border-radius: 0.25rem;
+  cursor: pointer;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  cursor: pointer;
 }
 
 .Sandbox button:hover {
@@ -363,17 +363,13 @@ header .menuIcon {
 }
 
 .Sandbox .testArea .testButtonsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.25rem;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.Sandbox .testArea .testButtonsContainer button {
-  inline-size: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  gap: 1rem;
 }
 
 .Sandbox .testArea .outputContainer {
