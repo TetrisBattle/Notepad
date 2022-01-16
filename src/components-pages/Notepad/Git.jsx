@@ -4,23 +4,36 @@ import { git } from '../../data/notepad.json'
 
 export default function Git() {
 	const pages = [
-		'All',
 		'Init',
 		'Branch',
 		'Commit',
+		'Extra'
 	]
 	
 	const [selectedPage, setSelectedPage] = useState(pages[0])
 	
 	const getCommands = () => {
-		return git.map(({ command, description }) => {
-			return (
-				<div key={command} className='note'>
-					<p className='command'>{command}</p>
-					<p className='description'>{description}</p>
-				</div>
-			)
-		})
+		const getCommands = (commands) => {
+			return commands?.map(({ command, description }) => {
+				return (
+					<div key={command} className='note'>
+						<p className='command'>{command}</p>
+						<p className='description'>{description}</p>
+					</div>
+				)
+			})
+		}
+		
+		switch (selectedPage) {
+			case 'All':
+				return getCommands(git.init)
+			case 'Init':
+				return getCommands(git.init)
+			case 'Extra':
+				return getCommands(git.extra)
+			default:
+				return null
+		}
 	}
 	
 	return (

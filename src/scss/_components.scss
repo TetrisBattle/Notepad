@@ -11,11 +11,11 @@ header {
 		&:hover { filter: brightness(1.2); }
 	}
 	
-	.navbar { display: none; }
+	nav { display: none; }
 	.menuIcon { margin-inline-start: auto; }
 	
 	@media (min-Width: $xs) {
-		.navbar { @include verticalNavbar($colorHeader); }
+		nav { @include verticalNavbar($colorHeader); }
 		.menuIcon { display: none; }
 	}
 }

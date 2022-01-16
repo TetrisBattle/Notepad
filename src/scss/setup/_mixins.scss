@@ -72,10 +72,10 @@
 		background-color: $backgroundColor;
 		color: $colorText;
 		border: none;
-		&:hover { filter: brightness(1.2); }
+		&:hover { color: lighten($colorPrimary, 20%); }
 	}
 	
-	button.selected { color: $colorPrimary }
+	button.selected { color: $colorPrimary; }
 }
 
 @mixin horizontalNavbar($backgroundColor: $black1) {
@@ -91,8 +91,8 @@
 		background-color: $backgroundColor;
 		color: $colorText;
 		border: none;
-		&:hover { filter: brightness(1.2); }
+		&:hover { color: lighten($colorPrimary, 20%); }
 	}
 	
-	button.selected { color: $colorPrimary }
+	button.selected { color: $colorPrimary; }
 }

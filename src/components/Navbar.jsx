@@ -3,10 +3,8 @@
 export default function Navbar({ 
 	pages,
 	selectedPage,
-	setSelectedPage,
-	variant
+	setSelectedPage
 }) {
-	
 	const getPages = () => {
 		return pages.map((page) => {
 			return (
@@ -22,9 +20,6 @@ export default function Navbar({
 	}
 	
 	return (
-		// <nav className={variant ? '.navbar ' + variant : '.navbar'}>
-		<nav className='navbar'>
-			{getPages()}
-		</nav>
+		<nav>{getPages()}</nav>
 	)
 }

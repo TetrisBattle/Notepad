@@ -24,7 +24,7 @@ header img:hover {
           filter: brightness(1.2);
 }
 
-header .navbar {
+header nav {
   display: none;
 }
 
@@ -34,24 +34,23 @@ header .menuIcon {
 }
 
 @media (min-Width: 30rem) {
-  header .navbar {
+  header nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background-color: #141618;
   }
-  header .navbar button {
+  header nav button {
     padding-inline: 1rem;
     font-size: 1.5rem;
     background-color: #141618;
     color: #E3E3E3;
     border: none;
   }
-  header .navbar button:hover {
-    -webkit-filter: brightness(1.2);
-            filter: brightness(1.2);
+  header nav button:hover {
+    color: #ffb366;
   }
-  header .navbar button.selected {
+  header nav button.selected {
     color: #ff8000;
   }
   header .menuIcon {
@@ -128,7 +127,7 @@ header .menuIcon {
   display: flex;
 }
 
-.Notepad .git .navbar {
+.Notepad .git nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,7 +140,7 @@ header .menuIcon {
   background-color: #151719;
 }
 
-.Notepad .git .navbar button {
+.Notepad .git nav button {
   block-size: 5rem;
   font-size: 1.25rem;
   background-color: #151719;
@@ -149,12 +148,11 @@ header .menuIcon {
   border: none;
 }
 
-.Notepad .git .navbar button:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+.Notepad .git nav button:hover {
+  color: #ffb366;
 }
 
-.Notepad .git .navbar button.selected {
+.Notepad .git nav button.selected {
   color: #ff8000;
 }
 

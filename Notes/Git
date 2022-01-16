@@ -3,17 +3,20 @@ git bisect [start / bad / good / reset]     # binary search from commits to find
 git config --global alias.ca 'commit -am'   # create alias (shortcut for commands)
 git ca 'new commit'                         # shortcut from alias: git commit -am 'new commit'
 
+git config --get remote.origin.url          # get current remote url
+git remote set-url origin [GitHub]          # change remote url
+
 git init [repository name]                  # init git
 git clone [GitHub]                          # get GitHub repository
 git remote add origin [GitHub]              # add new remote
 git push -u origin main	                    # connect local repository to origin and push to main
 
-git config --get remote.origin.url          # get current remote url
-git remote set-url origin [GitHub]          # change remote url
-
 git fetch                                   # fetch changes
+git merge [branch]                          # merge from branch
+git merge --squash [branch]                 # merge as single commit
 git pull                                    # fetch and merge
 git pull --rebase                           # add changes
+? git pull -r                               # git pull --rebase
 
 git branch                                  # list local branches
 git branch -a                               # list all branches
@@ -22,13 +25,10 @@ git branch -m [prevName] [newName]          # rename branch
 git push --set-upstream origin [branch]     # push branch to remote
 git checkout [branch / commit]              # checkout branch or commit
 
-git merge [branch]                          # merge from branch
-git merge --squash [branch]                 # merge as single commit
-
 git commit -am “[message]”                  # git add . + git commit
 git commit --amend -m  “[message]”          # rewrite last commit message
 
-git stash save                              # stash current changes
+git stash                                   # stash current changes
 git stash list                              # list all stashes
 git stash pop                               # restore most recent stash
 git stash drop                              # delete most recent stash

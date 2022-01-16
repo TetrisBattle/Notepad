@@ -1,16 +1,44 @@
 {
-	"git": [
-		{
-			"command": "git bisect [start / bad / good / reset]",
-			"description": "binary search from commits to find a bug"
-		},
-		{
-			"command": "git init [repository name]",
-			"description": "init git"
-		},
-		{
-			"command": "git clone [GitHub]  ",
-			"description": "get GitHub repository"
-		}
-	]
+	"git": {
+		"init": [
+			{
+				"command": "git init [repository name]",
+				"description": "init git"
+			},
+			{
+				"command": "git clone [GitHub]  ",
+				"description": "get GitHub repository"
+			},
+			{
+				"command": "git remote add origin [GitHub]",
+				"description": "add new remote"
+			},
+			{
+				"command": "git push -u origin main",
+				"description": "connect local repository to origin and push to main"
+			}
+		],
+		"extra": [
+			{
+				"command": "git bisect [start / bad / good / reset]",
+				"description": "binary search from commits to find a bug"
+			},
+			{
+				"command": "git config --global alias.ca 'commit -am'",
+				"description": "create alias (shortcut for commands)"
+			},
+			{
+				"command": "git ca 'new commit' ",
+				"description": "shortcut from alias: git commit -am 'new commit'"
+			},
+			{
+				"command": "git config --get remote.origin.url",
+				"description": "get current remote url"
+			},
+			{
+				"command": "git remote set-url origin [GitHub]",
+				"description": "change remote url"
+			}
+		]
+	}
 }

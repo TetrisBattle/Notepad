@@ -39,7 +39,7 @@
 	
 	.git {
 		display: flex;
-		.navbar { @include horizontalNavbar(); }
+		nav { @include horizontalNavbar(); }
 		
 		main {
 			inline-size: calc(100vw - 8rem);
