@@ -3,7 +3,41 @@
   --colorText: #E3E3E3;
 }
 
-header {
+.circle {
+  background-color: lightblue;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #121416;
+  color: #E3E3E3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.returnButton {
+  position: absolute;
+  inset-inline-start: 1rem;
+  inset-block-start: 1rem;
+  border-radius: 2rem;
+  inline-size: 5rem;
+  block-size: 3.5rem;
+  padding: .5rem 1rem;
+}
+
+.mainHeader {
   block-size: 4rem;
   -webkit-border-after: solid 0.063rem #7D7D7D;
           border-block-end: solid 0.063rem #7D7D7D;
@@ -13,47 +47,47 @@ header {
   background-color: #141618;
 }
 
-header img {
+.mainHeader img {
   block-size: 100%;
   padding: 1rem;
   background-color: #141618;
 }
 
-header img:hover {
+.mainHeader img:hover {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
 }
 
-header nav {
+.mainHeader nav {
   display: none;
 }
 
-header .menuIcon {
+.mainHeader .menuIcon {
   -webkit-margin-start: auto;
           margin-inline-start: auto;
 }
 
 @media (min-Width: 30rem) {
-  header nav {
+  .mainHeader nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background-color: #141618;
   }
-  header nav button {
+  .mainHeader nav button {
     padding-inline: 1rem;
     font-size: 1.5rem;
     background-color: #141618;
     color: #E3E3E3;
     border: none;
   }
-  header nav button:hover {
+  .mainHeader nav button:hover {
     color: #ffb366;
   }
-  header nav button.selected {
+  .mainHeader nav button.selected {
     color: #ff8000;
   }
-  header .menuIcon {
+  .mainHeader .menuIcon {
     display: none;
   }
 }
@@ -288,16 +322,6 @@ header .menuIcon {
   padding: 1.25rem;
 }
 
-.Sandbox .returnButton {
-  position: absolute;
-  inset-block-start: 1rem;
-  inset-inline-start: 1rem;
-  border-radius: 2rem;
-  block-size: 3.5rem;
-  inline-size: 5rem;
-  padding: .5rem 1rem;
-}
-
 .Sandbox .counterContainer {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
@@ -376,22 +400,5 @@ header .menuIcon {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background-color: #121416;
-  color: #E3E3E3;
-}
-
-a {
-  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,39 @@
+.Notepad {
+	.notFound {
+		padding: 2rem;
+		font-size: 3rem;
+		text-align: center;
+		color: $colorPrimary;
+	}
+	
+	.git {
+		display: flex;
+		nav { @include horizontalNavbar(); }
+		
+		main {
+			inline-size: calc(100vw - 8rem);
+			padding: 2rem;
+			
+			h1 {
+				font-size: 2.5rem;
+				text-align: center;
+				color: $colorPrimary;
+				margin-block-end: 2rem;
+			}
+			
+			section {
+				font-size: 1.5rem;
+			}
+			
+			.note {
+				display: flex;
+				width: 80%;
+				margin: auto;
+				
+				p {
+					flex: 1;
+				}
+			}
+		}
+	}
+}

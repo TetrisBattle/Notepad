@@ -20,15 +20,13 @@ export default function Notepad() {
 	}
 	
 	return (
-		<>
+		<div className='Notepad'>
 			<Header
 				pages={pages}
 				selectedPage={selectedPage} 
 				setSelectedPage={setSelectedPage} 
 			/>
-			<div className='Notepad'>
-				{getContent()}
-			</div>
-		</>
+			{getContent()}
+		</div>
 	)
 }

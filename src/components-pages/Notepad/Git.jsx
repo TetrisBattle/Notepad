@@ -7,6 +7,8 @@ export default function Git() {
 		'Init',
 		'Branch',
 		'Commit',
+		'Stash',
+		'Info',
 		'Extra'
 	]
 	
@@ -25,8 +27,6 @@ export default function Git() {
 		}
 		
 		switch (selectedPage) {
-			case 'All':
-				return getCommands(git.init)
 			case 'Init':
 				return getCommands(git.init)
 			case 'Extra':

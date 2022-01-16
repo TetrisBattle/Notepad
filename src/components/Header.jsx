@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 
 export default function Header({ pages, selectedPage, setSelectedPage }) {
 	return (
-		<header>
+		<header className='mainHeader'>
 			<Link to='/'><img className='logo' src={Logo} alt='Logo' /></Link>
 			<Navbar
 				pages={pages}

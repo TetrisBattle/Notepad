@@ -1,7 +1,6 @@
 /* eslint-disable */ 
 import React, {useState, useRef, useEffect} from 'react'
-import { Link } from 'react-router-dom'
-import LeftArrow from '../images/LeftArrow.png'
+import ReturnButton from '../components/ReturnButton'
 
 export default function Sandbox() {
 	const [counter, setCounter] = useState(0)
@@ -51,10 +50,7 @@ export default function Sandbox() {
 
 	return (
 		<div className='Sandbox'>
-			<Link to='/'>
-				<img className='returnButton' src={LeftArrow} alt='Return' />
-			</Link>
-		
+			<ReturnButton />
 			<h1>Sandbox</h1>
 
 			<section className='counterContainer'>

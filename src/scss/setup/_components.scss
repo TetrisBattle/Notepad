@@ -1,4 +1,15 @@
-header {
+.returnButton {
+	position: absolute;
+	inset-inline-start: 1rem;
+	inset-block-start: 1rem;
+	border-radius: 2rem;
+	
+	inline-size: 5rem;
+	block-size: 3.5rem;
+	padding: .5rem 1rem;
+}
+
+.mainHeader {
 	block-size: 4rem;
 	border-block-end: solid .063rem $gray;
 	display: flex;
