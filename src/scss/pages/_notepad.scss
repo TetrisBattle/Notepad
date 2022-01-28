@@ -8,7 +8,7 @@
 	
 	.git {
 		display: flex;
-		nav { @include horizontalNavbar(); }
+		nav { @include navbarHorizontal(); }
 		
 		main {
 			inline-size: calc(100vw - 8rem);

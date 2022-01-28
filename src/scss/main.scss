@@ -1,13 +1,13 @@
-@import "./setup/variables";
-// @import "./mixins/animations";
-@import "./mixins/components";
-@import "./mixins/shapes";
-@import "./mixins/styles";
+@import './setup/variables';
+// @import './mixins/animations';
+@import './mixins/components';
+@import './mixins/shapes';
+@import './mixins/styles';
 
-@import "./setup/global";
-@import "./setup/components";
+@import './setup/global';
+@import './setup/components';
 
-@import "./pages/menu";
-@import "./pages/notepad";
-@import "./pages/remConverter";
-@import "./pages/sandbox";
+@import './pages/menu';
+@import './pages/notepad';
+@import './pages/remConverter';
+@import './pages/sandbox';

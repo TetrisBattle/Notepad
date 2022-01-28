@@ -4,11 +4,10 @@
 	padding-inline: 1rem;
 	background-color: $colorButton;
 	color: $colorPrimary;
-	
 	font-size: 1.25rem;
 	font-weight: bold;
-  border: none;
 	border-radius: 0.25rem;
+  border: none;
   cursor: pointer;
 	transition: all .2s ease-in-out;
 	
@@ -19,7 +18,22 @@
 	}
 }
 
-@mixin verticalNavbar($backgroundColor: $black1) {
+@mixin iconButton($size: 1.5rem) {
+	block-size: $size;
+	inline-size: $size;
+	background-color: transparent;
+	border-radius: 50%;
+	
+	svg {
+		padding: 10%;
+		block-size: $size;
+		inline-size: $size;
+		border-radius: 50%;
+		&:hover { background-color: rgba(255, 255, 255, 0.1); }
+	}
+}
+
+@mixin navbarVertical($backgroundColor: $black1) {
 	display: flex;
 	background-color: $backgroundColor;
 	
@@ -28,14 +42,13 @@
 		font-size: 1.5rem;
 		background-color: $backgroundColor;
 		color: $colorText;
-		border: none;
 		&:hover { color: lighten($colorPrimary, 20%); }
 	}
 	
 	button.selected { color: $colorPrimary; }
 }
 
-@mixin horizontalNavbar($backgroundColor: $black1) {
+@mixin navbarHorizontal($backgroundColor: $black1) {
 	display: flex;
 	flex-flow: column;
 	inline-size: 8rem;
@@ -47,7 +60,6 @@
 		font-size: 1.25rem;
 		background-color: $backgroundColor;
 		color: $colorText;
-		border: none;
 		&:hover { color: lighten($colorPrimary, 20%); }
 	}
 	

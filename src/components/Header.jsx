@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom'
-import Logo from '../images/Logo.png'
-import MenuIcon from '../images/Menu.png'
+import { ReactComponent as Logo } from '../images/Logo.svg'
+import { ReactComponent as MenuIcon } from '../images/Menu.svg'
 import Navbar from './Navbar'
 
 export default function Header({ pages, selectedPage, setSelectedPage }) {
 	return (
 		<header className='mainHeader'>
-			<Link to='/'><img className='logo' src={Logo} alt='Logo' /></Link>
+			<Link className='iconButton' to='/'><Logo /></Link>
 			<Navbar
 				pages={pages}
 				selectedPage={selectedPage} 
 				setSelectedPage={setSelectedPage} 
 			/>
-			<img className='menuIcon' src={MenuIcon} alt='Menu' />
+			<button className="iconButton menuIcon">
+				<MenuIcon />
+			</button>
 		</header>
 	)
 }
