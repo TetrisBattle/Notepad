@@ -24,6 +24,8 @@ git branch [new branch]                     # create new branch
 git branch -m [prevName] [newName]          # rename branch
 git push --set-upstream origin [branch]     # push branch to remote
 git checkout [branch / commit]              # checkout branch or commit
+git switch -                                # return to head
+git switch -c [banch]                       # switch to branch or create a new one and switch to it
 
 git commit -am “[message]”                  # git add . + git commit
 git commit --amend -m  “[message]”          # rewrite last commit message
@@ -32,6 +34,7 @@ git stash                                   # stash current changes
 git stash list                              # list all stashes
 git stash pop                               # restore most recent stash
 git stash drop                              # delete most recent stash
+git stash clear                             # clear all stashes
 
 git restore .                               # discard all changes
 git reset [commit]                          # reset to commit and keep changes

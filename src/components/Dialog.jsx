@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ReactComponent as CloseIcon } from '../images/Close.svg'
 
 export default function Dialog({ 
@@ -8,16 +7,17 @@ export default function Dialog({
 	onClose,
 	title = 'Dialog',
 	content,
-	actions 
+	actions,
+	cancelButton,
+	actionButton,
+	actionButtons
 }) {
-	const [open, setOpen] = useState(true)
-	const classes = `container ${className}`
-	
 	const closeDialog = () => {
-		if (setDialogState) setDialogState(false)
-		else setOpen(false)
+		setDialogState(false)
 		onClose?.()
 	}
+	
+	const classes = className ? `container ${className}` : 'container'
 	
 	const header = (
 		<header draggable='true'>
@@ -30,13 +30,16 @@ export default function Dialog({
 		</header>
 	)
 	
+	cancelButton = cancelButton ?? <button onClick={closeDialog}>Cancel</button>
+	
 	actions = actions ?? <>
-		<button onClick={closeDialog}>Cancel</button>
-		<button>OK</button>
+		{cancelButton}
+		{actionButton}
+		{actionButtons}
 	</>
 	
 	return (
-		<dialog open={dialogState ?? open}>
+		<dialog open={dialogState}>
 			<div className='background' onClick={closeDialog} />
 			
 			<div className={classes}>
