@@ -330,15 +330,13 @@ dialog .container .actions button {
   font-size: 1.5rem;
 }
 
-.Notepad .git main .note {
+.Notepad .git main section .note {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  margin: auto;
 }
 
-.Notepad .git main .note p {
+.Notepad .git main section .note p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

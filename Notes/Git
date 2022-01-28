@@ -11,13 +11,6 @@ git clone [GitHub]                          # get GitHub repository
 git remote add origin [GitHub]              # add new remote
 git push -u origin main	                    # connect local repository to origin and push to main
 
-git fetch                                   # fetch changes
-git merge [branch]                          # merge from branch
-git merge --squash [branch]                 # merge as single commit
-git pull                                    # fetch and merge
-git pull --rebase                           # add changes
-? git pull -r                               # git pull --rebase
-
 git branch                                  # list local branches
 git branch -a                               # list all branches
 git branch [new branch]                     # create new branch
@@ -25,10 +18,7 @@ git branch -m [prevName] [newName]          # rename branch
 git push --set-upstream origin [branch]     # push branch to remote
 git checkout [branch / commit]              # checkout branch or commit
 git switch -                                # return to head
-git switch -c [banch]                       # switch to branch or create a new one and switch to it
-
-git commit -am “[message]”                  # git add . + git commit
-git commit --amend -m  “[message]”          # rewrite last commit message
+git switch -c [branch]                      # switch to branch or create a new one and switch to it
 
 git stash                                   # stash current changes
 git stash list                              # list all stashes
@@ -47,13 +37,25 @@ git show [commit]                           # show commit info
 git show (branch)                           # show last commit info
 git diff (branch)                           # show diff between current to selected branch
 git diff [first branch] [second branch]     # show diff between branches
-git log --oneline --graph                   # git log one liner with graph
+git log --oneline --graph                   # git log oneliner with graph
+
+git fetch                                   # fetch changes
+git merge [branch]                          # merge from branch
+git merge --squash [branch]                 # merge as single commit
+git merge --abort                           # abort in-progress merge
+
+git pull                                    # fetch and merge
+git pull -r                                 # add changes from head (rebase)
+git pull --squash                           # pull as single commit
+
+git commit -am “[message]”                  # git add . + git commit
+git commit --amend -m  “[message]”          # rewrite last commit message
 
 #   !* DANGER *!
 git branch -d [branch]                      # delete branch
 git branch -D [branch]                      # delete branch even if it hasn't merged to main
 git push origin :[branch]                   # delete branch from remote
 
-git push --f                                # force push to local branch (overwrite git history)
+git push -f                                 # force push to local branch (overwrite git history)
 git push origin [branch]                    # push to branch
-git push origin [branch] --f                # overwrite git history
+git push origin [branch] -f                 # overwrite git history

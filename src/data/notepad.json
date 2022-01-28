@@ -18,6 +18,184 @@
 				"description": "connect local repository to origin and push to main"
 			}
 		],
+		"branch": [
+			{
+				"command": "git branch",
+				"description": "list local branches"
+			},
+			{
+				"command": "git branch -a",
+				"description": "list all branches"
+			},
+			{
+				"command": "git branch [new branch]",
+				"description": "create new branch"
+			},
+			{
+				"command": "git branch -m [prevName] [newName]",
+				"description": "rename branch"
+			},
+			{
+				"command": "git push --set-upstream origin [branch]",
+				"description": "push branch to remote"
+			},
+			{
+				"command": "git checkout [branch / commit]",
+				"description": "checkout branch or commit"
+			},
+			{
+				"command": "git switch -",
+				"description": "return to head"
+			},
+			{
+				"command": "git switch -c [branch]",
+				"description": "switch to branch or create a new one and switch to it"
+			}
+		],
+		"pull": [
+			{
+				"command": "git fetch",
+				"description": "fetch changes"
+			},
+			{
+				"command": "git merge [branch]",
+				"description": "merge from branch"
+			},
+			{
+				"command": "git merge --squash [branch]",
+				"description": "merge as single commit"
+			},
+			{
+				"command": "git merge --abort",
+				"description": "abort in-progress merge"
+			},
+			{
+				"command": "git pull",
+				"description": "fetch and merge"
+			},
+			{
+				"command": "git pull -r",
+				"description": "add changes from head (rebase)"
+			},
+			{
+				"command": "git pull --squash",
+				"description": "pull as single commit"
+			}
+		],
+		"commit": [
+			{
+				"command": "git add .",
+				"description": "stage all changes"
+			},
+			{
+				"command": "git commit -m “[message]”",
+				"description": "commit changes with message"
+			},
+			{
+				"command": "git commit -am “[message]”",
+				"description": "git add . + git commit with message"
+			},
+			{
+				"command": "git commit --amend -m  “[message]”",
+				"description": "rewrite last commit message"
+			}
+		],
+		"stash": [
+			{
+				"command": "git stash",
+				"description": "stash current changes"
+			},
+			{
+				"command": "git stash list",
+				"description": "list all stashes"
+			},
+			{
+				"command": "git stash pop",
+				"description": "restore most recent stash"
+			},
+			{
+				"command": "git stash drop",
+				"description": "delete most recent stash"
+			},
+			{
+				"command": "git stash clear",
+				"description": "clear all stashes"
+			}
+		],
+		"reset": [
+			{
+				"command": "git restore .",
+				"description": "discard all changes"
+			},
+			{
+				"command": "git reset [commit]",
+				"description": "reset to commit and keep changes"
+			},
+			{
+				"command": "git reset --hard [commit]",
+				"description": "reset to commit and discard changes"
+			},
+			{
+				"command": "git reset --hard origin/master",
+				"description": "reset to master and discard changes"
+			},
+			{
+				"command": "git revert [commit]",
+				"description": "undo commit and add the changes to current branch"
+			}
+		],
+		"info": [
+			{
+				"command": "git status",
+				"description": "show current status"
+			},
+			{
+				"command": "git show [commit]",
+				"description": "show commit info"
+			},
+			{
+				"command": "git show [branch]",
+				"description": "show last commit info"
+			},
+			{
+				"command": "git diff (branch)",
+				"description": "show diff between current to selected branch"
+			},
+			{
+				"command": "git diff [first branch] [second branch]",
+				"description": "show diff between branches"
+			},
+			{
+				"command": "git log --oneline --graph",
+				"description": "git log oneliner with graph"
+			}
+		],
+		"danger": [
+			{
+				"command": "git branch -d [branch]",
+				"description": "delete branch"
+			},
+			{
+				"command": "git branch -D [branch]",
+				"description": "delete branch even if it hasn't merged to main"
+			},
+			{
+				"command": "git push origin :[branch]",
+				"description": "delete branch from remote"
+			},
+			{
+				"command": "git push -f",
+				"description": "force push to local branch (overwrite git history)"
+			},
+			{
+				"command": "git push origin [branch]",
+				"description": "push to branch"
+			},
+			{
+				"command": "git push origin [branch] -f",
+				"description": "overwrite git history"
+			}
+		],
 		"extra": [
 			{
 				"command": "git bisect [start / bad / good / reset]",

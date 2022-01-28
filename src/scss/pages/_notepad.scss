@@ -23,15 +23,13 @@
 			
 			section {
 				font-size: 1.5rem;
-			}
-			
-			.note {
-				display: flex;
-				width: 80%;
-				margin: auto;
 				
-				p {
-					flex: 1;
+				.note {
+					display: flex;
+					
+					p {
+						flex: 1;
+					}
 				}
 			}
 		}

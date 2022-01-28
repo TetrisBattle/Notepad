@@ -6,9 +6,12 @@ export default function Git() {
 	const pages = [
 		'Init',
 		'Branch',
+		'Pull',
 		'Commit',
 		'Stash',
+		'Reset',
 		'Info',
+		'Danger',
 		'Extra'
 	]
 	
@@ -29,6 +32,20 @@ export default function Git() {
 		switch (selectedPage) {
 			case 'Init':
 				return getCommands(git.init)
+			case 'Branch':
+				return getCommands(git.branch)
+			case 'Pull':
+				return getCommands(git.pull)
+			case 'Commit':
+				return getCommands(git.commit)
+			case 'Stash':
+				return getCommands(git.stash)
+			case 'Reset':
+				return getCommands(git.reset)
+			case 'Info':
+				return getCommands(git.info)
+			case 'Danger':
+				return getCommands(git.danger)
 			case 'Extra':
 				return getCommands(git.extra)
 			default:
