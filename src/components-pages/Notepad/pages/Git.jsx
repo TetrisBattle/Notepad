@@ -5,14 +5,14 @@ import { git } from '../../../data/notepad.json'
 export default function Git() {
 	const pages = [
 		'Init',
+		'Remote',
 		'Branch',
 		'Pull',
+		'Push',
 		'Commit',
 		'Stash',
 		'Reset',
-		'Info',
-		'Danger',
-		'Extra'
+		'Info'
 	]
 	
 	const [selectedPage, setSelectedPage] = useState(pages[0])
@@ -32,10 +32,14 @@ export default function Git() {
 		switch (selectedPage) {
 			case 'Init':
 				return getCommands(git.init)
+			case 'Remote':
+				return getCommands(git.remote)
 			case 'Branch':
 				return getCommands(git.branch)
 			case 'Pull':
 				return getCommands(git.pull)
+			case 'Push':
+				return getCommands(git.push)
 			case 'Commit':
 				return getCommands(git.commit)
 			case 'Stash':
@@ -44,10 +48,6 @@ export default function Git() {
 				return getCommands(git.reset)
 			case 'Info':
 				return getCommands(git.info)
-			case 'Danger':
-				return getCommands(git.danger)
-			case 'Extra':
-				return getCommands(git.extra)
 			default:
 				return null
 		}
