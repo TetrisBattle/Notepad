@@ -4,7 +4,7 @@
 			{
 				"command": "git init",
 				"description": "Create an empty Git repository",
-				"detail": "You can also use git init [repository name] to init git in child repository."
+				"details": "You can also use git init [repository name] to init git in child repository."
 			},
 			{
 				"command": "git clone [GitHub]",
@@ -39,12 +39,12 @@
 			{
 				"command": "git remote rename origin [new name]",
 				"description": "Rename remote",
-				"detail": "Changes remote origin to [new name]"
+				"details": "This command renames remote named origin to a new name"
 			},
 			{
 				"command": "git remote rm origin",
 				"description": "Remove remote",
-				"detail": "git remote rm does not delete the remote repository from the server. It simply removes the remote and its references from your local repository."
+				"details": "This command do not delete the remote repository from the server. It simply removes the remote and its references from your local repository."
 			}
 		],
 		"branch": [
@@ -67,7 +67,7 @@
 			{
 				"command": "git push -u origin [branch]",
 				"description": "Push branch to remote",
-				"detail": "git push --set-upstream origin [branch]"
+				"details": "git push --set-upstream origin [branch]"
 			},
 			{
 				"command": "git branch -d [branch]",
@@ -115,11 +115,11 @@
 			},
 			{
 				"command": "git merge [branch]",
-				"description": "Merge from branch"
+				"description": "Merge from local branch"
 			},
 			{
 				"command": "git merge --squash [branch]",
-				"description": "Merge from branch as single commit"
+				"description": "Merge from local branch as single commit"
 			},
 			{
 				"command": "git merge --abort",
@@ -127,7 +127,13 @@
 			},
 			{
 				"command": "git pull",
-				"description": "Fetch and merge from remote"
+				"description": "Fetch and merge from remote",
+				"details": "git merge get changes from local branch and git pull get changes from remote"
+			},
+			{
+				"command": "git pull origin [branch]",
+				"description": "Pull from remote branch",
+				"details": "git merge get changes from local branch and git pull get changes from remote"
 			},
 			{
 				"command": "git pull --squash",
@@ -135,7 +141,7 @@
 			},
 			{
 				"command": "git pull -r",
-				"description": "Add changes to HEAD from remote (rebase)"
+				"description": "Local changes are reapplied on top of the remote changes (rebase)"
 			},
 			{
 				"command": "git push",
@@ -197,7 +203,8 @@
 		"info": [
 			{
 				"command": "git status",
-				"description": "Show current status"
+				"description": "Show current status",
+				"details": "Status: \n  Branch is up to date, ahead or behind.\n  Files are created, modified or deleted.\n  Files are staged, unstaged, untracked."
 			},
 			{
 				"command": "git show [commit]",
@@ -230,7 +237,7 @@
 					{
 						"command": "git switch [branch]",
 						"description": "Switch to branch",
-						"detail": "Switch command cannot switch to commit. It can only switch to branches"
+						"details": "Switch command cannot switch to commit. It can only switch to branches"
 					},
 					{
 						"command": "git switch -",

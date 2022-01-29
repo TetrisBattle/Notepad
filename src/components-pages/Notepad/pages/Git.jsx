@@ -18,9 +18,9 @@ export default function Git() {
 	
 	const getCommands = () => {
 		const getCommands = (commands) => {
-			return commands?.map(({ command, description }) => {
+			return commands?.map(({ command, description, details }) => {
 				return (
-					<div key={command} className='note'>
+					<div key={command} className='note' title={details}>
 						<p className='command'>{command}</p>
 						<p className='description'>{description}</p>
 					</div>
