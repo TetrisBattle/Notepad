@@ -26,9 +26,13 @@
 				
 				.note {
 					display: flex;
+					border: solid $gray 0.05rem;
+					margin-bottom: 1rem;
+					padding: 0.5rem;
 					
 					p {
 						flex: 1;
+						font-size: 1.25rem;
 					}
 				}
 			}

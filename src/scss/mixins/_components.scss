@@ -42,7 +42,7 @@
 		font-size: 1.5rem;
 		background-color: $backgroundColor;
 		color: $colorText;
-		&:hover { color: lighten($colorPrimary, 20%); }
+		&:hover { background-color: lighten($backgroundColor, 10%); }
 	}
 	
 	button.selected { color: $colorPrimary; }
@@ -60,7 +60,7 @@
 		font-size: 1.25rem;
 		background-color: $backgroundColor;
 		color: $colorText;
-		&:hover { color: lighten($colorPrimary, 20%); }
+		&:hover { background-color: lighten($backgroundColor, 10%); }
 	}
 	
 	button.selected { color: $colorPrimary; }

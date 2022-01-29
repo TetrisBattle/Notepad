@@ -6,8 +6,8 @@ $lg: 75rem; 	// 1200px Desktops, large screens
 $xl: 100rem; 	// 1600px Extra large screens, TV
 
 $black0: hsl(210%, 10%, 8%);
-$black1: hsl(210%, 10%, 9%);
-$black2: hsl(210%, 10%, 10%);
+$black1: lighten($black0, 1%);
+$black2: lighten($black0, 2%);
 $gray: #7D7D7D; // disabled color
 
 // $white0: #FFFFFF; // too bright

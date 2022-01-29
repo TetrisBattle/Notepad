@@ -99,7 +99,7 @@ button {
     color: #E3E3E3;
   }
   .mainHeader nav button:hover {
-    color: #ffb366;
+    background-color: #2a2f34;
   }
   .mainHeader nav button.selected {
     color: #ff8000;
@@ -306,7 +306,7 @@ dialog .container .actions button {
 }
 
 .Notepad .git nav button:hover {
-  color: #ffb366;
+  background-color: #2c3035;
 }
 
 .Notepad .git nav button.selected {
@@ -334,12 +334,16 @@ dialog .container .actions button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: solid #7D7D7D 0.05rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 .Notepad .git main section .note p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.25rem;
 }
 
 .RemConverter {
