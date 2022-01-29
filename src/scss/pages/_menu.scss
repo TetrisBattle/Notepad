@@ -12,13 +12,15 @@
 	
 	.container {
 		@include shadow;
-		inline-size: clamp(25rem, 90vw, 40rem);
+		inline-size: clamp(30rem, 90vw, 40rem);
+		
 		margin-inline: auto;
+		background-color: $black1;
+		padding-block: 2rem;
+		border-radius: .5rem;
+		
 		display: flex;
 		justify-content: space-evenly;
-		background-color: $black1;
-		padding: 2rem;
-		border-radius: .5rem;
 
 		a {
 			@include defaultButton;

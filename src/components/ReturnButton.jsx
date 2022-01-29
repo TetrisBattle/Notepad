@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ReactComponent as LeftArrow } from '../images/LeftArrow.svg'
+import { ReactComponent as LeftArrow } from '../icons/LeftArrow.svg'
 
 export default function ReturnButton() {
 	return (

@@ -101,6 +101,9 @@ button {
   .mainHeader nav button:hover {
     background-color: #2a2f34;
   }
+  .mainHeader nav button:focus {
+    z-index: 1;
+  }
   .mainHeader nav button.selected {
     color: #ff8000;
   }
@@ -236,17 +239,17 @@ dialog .container .actions button {
 .Menu .container {
   -webkit-box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
           box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  inline-size: clamp(25rem, 90vw, 40rem);
+  inline-size: clamp(30rem, 90vw, 40rem);
   margin-inline: auto;
+  background-color: #151719;
+  padding-block: 2rem;
+  border-radius: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #151719;
-  padding: 2rem;
-  border-radius: .5rem;
 }
 
 .Menu .container a {
@@ -314,6 +317,10 @@ dialog .container .actions button {
 
 .Notepad .git nav button:hover {
   background-color: #2c3035;
+}
+
+.Notepad .git nav button:focus {
+  z-index: 1;
 }
 
 .Notepad .git nav button.selected {

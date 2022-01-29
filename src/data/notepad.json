@@ -192,7 +192,7 @@
 			},
 			{
 				"command": "git reset --hard origin/main",
-				"description": "Reset to main and discard changes"
+				"description": "Reset to main branch from remote and discard changes"
 			},
 			{
 				"command": "git revert [commit]",

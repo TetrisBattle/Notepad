@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { ReactComponent as Logo } from '../images/Logo.svg'
-import { ReactComponent as MenuIcon } from '../images/Menu.svg'
+import { ReactComponent as Logo } from '../icons/Logo.svg'
+import { ReactComponent as MenuIcon } from '../icons/Menu.svg'
 import Navbar from './Navbar'
 
 export default function Header({ pages, selectedPage, setSelectedPage }) {

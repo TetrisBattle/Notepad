@@ -1,4 +1,4 @@
-import { ReactComponent as CloseIcon } from '../images/Close.svg'
+import { ReactComponent as CloseIcon } from '../icons/Close.svg'
 
 export default function Dialog({ 
 	className,
