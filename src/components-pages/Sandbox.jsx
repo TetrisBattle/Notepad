@@ -1,6 +1,7 @@
 /* eslint-disable */ 
 import React, {useState, useRef, useEffect} from 'react'
 import ReturnButton from '../components/ReturnButton'
+import { binarySearch } from '../usefull/Functions'
 
 export default function Sandbox() {
 	const [counter, setCounter] = useState(0)
@@ -20,7 +21,7 @@ export default function Sandbox() {
 			],
 			city: 'Oulu'
 		}
-		setOutput('Object: ' + JSON.stringify(object))
+		setOutput('Checkout console.log')
 		// alert(JSON.stringify(object))
 		// console.log(JSON.stringify(object))
 		// console.log(object)
@@ -29,7 +30,8 @@ export default function Sandbox() {
 	}
 
 	function testB() {
-		setOutput('Test B is empty')
+		const array = [1,3,5,7,9]
+		setOutput(`BinarySearch: ${binarySearch(array, 2)}`)
 	}
 
 	function testC() {

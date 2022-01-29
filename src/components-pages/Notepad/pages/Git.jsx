@@ -7,9 +7,8 @@ export default function Git() {
 		'Init',
 		'Remote',
 		'Branch',
-		'Pull',
-		'Push',
 		'Commit',
+		'Changes',
 		'Stash',
 		'Reset',
 		'Info'
@@ -29,28 +28,7 @@ export default function Git() {
 			})
 		}
 		
-		switch (selectedPage) {
-			case 'Init':
-				return getCommands(git.init)
-			case 'Remote':
-				return getCommands(git.remote)
-			case 'Branch':
-				return getCommands(git.branch)
-			case 'Pull':
-				return getCommands(git.pull)
-			case 'Push':
-				return getCommands(git.push)
-			case 'Commit':
-				return getCommands(git.commit)
-			case 'Stash':
-				return getCommands(git.stash)
-			case 'Reset':
-				return getCommands(git.reset)
-			case 'Info':
-				return getCommands(git.info)
-			default:
-				return null
-		}
+		return getCommands(git[selectedPage.toLowerCase()])
 	}
 	
 	return (

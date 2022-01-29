@@ -65,8 +65,9 @@
 				"description": "Rename branch"
 			},
 			{
-				"command": "git push --set-upstream origin [branch]",
-				"description": "Push branch to remote"
+				"command": "git push -u origin [branch]",
+				"description": "Push branch to remote",
+				"detail": "git push --set-upstream origin [branch]"
 			},
 			{
 				"command": "git branch -d [branch]",
@@ -89,7 +90,25 @@
 				"description": "Return to HEAD"
 			}
 		],
-		"pull": [
+		"commit": [
+			{
+				"command": "git add .",
+				"description": "Stage all changes"
+			},
+			{
+				"command": "git commit -m \"[message]\"",
+				"description": "Commit changes with message"
+			},
+			{
+				"command": "git commit -am \"[message]\"",
+				"description": "git add . + git commit with message"
+			},
+			{
+				"command": "git commit --amend -m  \"[message]\"",
+				"description": "Rewrite last commit message"
+			}
+		],
+		"changes": [
 			{
 				"command": "git fetch",
 				"description": "Fetch new changes from remote"
@@ -117,9 +136,7 @@
 			{
 				"command": "git pull -r",
 				"description": "Add changes to HEAD from remote (rebase)"
-			}
-		],
-		"push": [
+			},
 			{
 				"command": "git push",
 				"description": "Push commits to remote"
@@ -127,32 +144,6 @@
 			{
 				"command": "git push -f",
 				"description": "Force push to remote (overwrite git history)"
-			},
-			{
-				"command": "git push origin [branch]",
-				"description": "Push commits to remote branch"
-			},
-			{
-				"command": "git push origin [branch] -f",
-				"description": "Force push to remote branch (overwrite git history)"
-			}
-		],
-		"commit": [
-			{
-				"command": "git add .",
-				"description": "Stage all changes"
-			},
-			{
-				"command": "git commit -m \"[message]\"",
-				"description": "Commit changes with message"
-			},
-			{
-				"command": "git commit -am \"[message]\"",
-				"description": "git add . + git commit with message"
-			},
-			{
-				"command": "git commit --amend -m  \"[message]\"",
-				"description": "Rewrite last commit message"
 			}
 		],
 		"stash": [
@@ -179,10 +170,6 @@
 		],
 		"reset": [
 			{
-				"command": "git restore .",
-				"description": "Discard all changes"
-			},
-			{
 				"command": "git reset [commit]",
 				"description": "Reset to commit and keep changes"
 			},
@@ -193,6 +180,14 @@
 			{
 				"command": "git reset --hard origin/main",
 				"description": "Reset to main branch from remote and discard changes"
+			},
+			{
+				"command": "git restore .",
+				"description": "Discard all changes"
+			},
+			{
+				"command": "git restore --staged .",
+				"description": "Unstage all staged"
 			},
 			{
 				"command": "git revert [commit]",
@@ -267,7 +262,7 @@
 		"learn": [
 			{
 				"command": "git bisect [start / bad / good / reset]",
-				"description": "binary search from commits to find a bug"
+				"description": "Binary search between commits to find when a bug was created"
 			}
 		]
 	}

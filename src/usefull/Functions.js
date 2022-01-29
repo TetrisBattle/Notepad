@@ -1,15 +1,19 @@
-function binarySearch(array, target) {
+export function binarySearch(array, target) {
 	let min = 0
 	let max = array.length - 1
 
 	while (true) {
-		let mid = Math.round((min + max) / 2)
+		const mid = Math.round((min + max) / 2)
 		
 		if (target === array[mid]) return mid
 		
 		if (target < array[mid]) max = mid - 1
 		else min = mid + 1
 		
-		if (min > max) return -1
+		if (min > max) return false
 	}
+}
+
+export function firstLetterToUpperCase(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1)
 }

@@ -56,7 +56,7 @@
 			font-size: 2rem;
     }
     
-    .testButtonsContainer { @include grid(5, 1) }
+    .testButtonsContainer { @include grid(5) }
 		
 		.outputContainer {
 			padding-block: 2rem;

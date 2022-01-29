@@ -29,9 +29,9 @@
 	box-shadow: map-get($map: $shadows, $key: $select);
 }
 
-@mixin grid($x, $y) {
+@mixin grid($x) {
 	display: grid;
 	grid-template-columns: repeat($x, 1fr);
-	grid-template-rows: repeat($y, 1fr);
+	grid-auto-rows: 1fr;
 	gap: 1rem;
 }
