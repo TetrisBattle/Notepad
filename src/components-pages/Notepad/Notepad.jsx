@@ -1,11 +1,14 @@
 import { useState } from 'react'
-import Header from '../components/Header'
-import Git from './Notepad/Git'
+import Header from '../../components/Header'
+import NotFound from './pages/NotFound'
+import Git from './pages/Git'
 
 export default function Notepad() {
 	const pages = [
 		'Git',
 		'Terminal',
+		'Regex',
+		'VS Code',
 	]
 	
 	const [selectedPage, setSelectedPage] = useState(pages[0])
@@ -15,7 +18,7 @@ export default function Notepad() {
 			case 'Git':
 				return <Git />
 			default:
-				return <h1 className='notFound'>Error 404</h1>
+				return <NotFound />
 		}
 	}
 	

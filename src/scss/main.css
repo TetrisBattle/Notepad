@@ -273,10 +273,17 @@ dialog .container .actions button {
 }
 
 .Notepad .notFound {
-  padding: 2rem;
-  font-size: 3rem;
   text-align: center;
   color: #ff8000;
+}
+
+.Notepad .notFound h1 {
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.Notepad .notFound p {
+  font-size: 2rem;
 }
 
 .Notepad .git {

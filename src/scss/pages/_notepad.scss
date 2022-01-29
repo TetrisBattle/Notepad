@@ -1,9 +1,14 @@
 .Notepad {
 	.notFound {
-		padding: 2rem;
-		font-size: 3rem;
 		text-align: center;
 		color: $colorPrimary;
+		
+		h1 {
+			padding: 2rem;
+			font-size: 4rem;
+		}
+		
+		p { font-size: 2rem; }
 	}
 	
 	.git {

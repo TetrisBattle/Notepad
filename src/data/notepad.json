@@ -198,9 +198,15 @@
 		],
 		"extra": [
 			{
-				"command": "git bisect [start / bad / good / reset]",
-				"description": "binary search from commits to find a bug"
+				"command": "git config --get remote.origin.url",
+				"description": "get current remote url"
 			},
+			{
+				"command": "git remote set-url origin [GitHub]",
+				"description": "change remote url"
+			}
+		],
+		"hidden": [
 			{
 				"command": "git config --global alias.ca 'commit -am'",
 				"description": "create alias (shortcut for commands)"
@@ -208,14 +214,12 @@
 			{
 				"command": "git ca 'new commit' ",
 				"description": "shortcut from alias: git commit -am 'new commit'"
-			},
+			}
+		],
+		"learn": [
 			{
-				"command": "git config --get remote.origin.url",
-				"description": "get current remote url"
-			},
-			{
-				"command": "git remote set-url origin [GitHub]",
-				"description": "change remote url"
+				"command": "git bisect [start / bad / good / reset]",
+				"description": "binary search from commits to find a bug"
 			}
 		]
 	}

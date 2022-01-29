@@ -1,0 +1,12 @@
+Notes:
+	// create copy of an object
+	JSON.parse(JSON.stringify(object))
+
+
+ToDo:
+	Notepad: menu dropbox on mobile
+	input style
+
+
+Next:
+	Notepad: Git page

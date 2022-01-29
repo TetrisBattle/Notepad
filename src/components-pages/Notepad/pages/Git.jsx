@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Navbar from '../../components/Navbar'
-import { git } from '../../data/notepad.json'
+import Navbar from '../../../components/Navbar'
+import { git } from '../../../data/notepad.json'
 
 export default function Git() {
 	const pages = [

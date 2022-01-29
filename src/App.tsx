@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Notepad from './components-pages/Notepad'
+import Notepad from './components-pages/Notepad/Notepad'
 import RemConverter from './components-pages/RemConverter'
 import Sandbox from './components-pages/Sandbox'
 
