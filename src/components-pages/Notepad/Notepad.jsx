@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Header from '../../components/Header'
 import NotFound from './pages/NotFound'
 import Git from './pages/Git'
-import Terminal from './pages/Terminal'
+// import Terminal from './pages/Terminal'
 
 export default function Notepad() {
 	const pages = [
