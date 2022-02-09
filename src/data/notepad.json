@@ -272,5 +272,23 @@
 				"description": "Binary search between commits to find when a bug was created"
 			}
 		]
-	}
+	},
+	"terminal": [
+		{
+			"command": "start [file / dir]",
+			"description": "Open file or directory"
+		},
+		{
+			"command": "dir > file.txt",
+			"description": "Create file"
+		},
+		{
+			"command": "mkdir [dirName]",
+			"description": "Create directory"
+		},
+		{
+			"command": "del [file / dir]",
+			"description": "Delete directory"
+		}
+	]
 }

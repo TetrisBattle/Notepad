@@ -1,7 +1,7 @@
 start [file / dir]              # open file or directory
 dir > file.txt                  # create file
 mkdir [dirName]                 # create directory
-del [file / dir]
+del [file / dir]								# delete directory
 
 dir | findstr "asd"             # dir | grep
 dir *.png                       # list all png files

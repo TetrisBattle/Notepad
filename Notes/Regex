@@ -25,6 +25,7 @@
 /\D/g                               # match everything except digits (numbers 0-9)
 /\w/g                               # match words (alphanumeric and underscore "_")
 /\W/g                               # match everything except words (alphanumeric and underscore "_")
+/\b/g                               # ?
 
 /[cm]ode/g                          # start by "c" or "m" and ends with "ode", like "code" or "mode"
 /[a-z]/g                            # match lowercase letters between a-z

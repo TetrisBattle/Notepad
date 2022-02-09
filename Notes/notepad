@@ -10,3 +10,5 @@ ToDo:
 
 Next:
 	Notepad: Git page
+	delete extra branch
+all: unset;

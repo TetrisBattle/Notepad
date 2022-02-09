@@ -2,6 +2,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import ReturnButton from '../components/ReturnButton'
 import { binarySearch } from '../usefull/Functions'
+import Render from '../useless/Render'
 
 export default function Sandbox() {
 	const [counter, setCounter] = useState(0)
@@ -74,6 +75,7 @@ export default function Sandbox() {
 				<div className='outputContainer'>
 					<p>{output}</p>
 				</div>
+				<Render />
 			</section>
 		</div>
 	)
