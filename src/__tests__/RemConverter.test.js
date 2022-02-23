@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme'
-import RemConverter from '../components-pages/RemConverter'
+import RemConverter from '../pages/RemConverter'
 
 let wrapper
 let px

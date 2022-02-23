@@ -61,6 +61,10 @@
 				"description": "Create new branch"
 			},
 			{
+				"command": "git branch -b [branch]",
+				"description": "???"
+			},
+			{
 				"command": "git branch -m [prevName] [newName]",
 				"description": "Rename branch"
 			},

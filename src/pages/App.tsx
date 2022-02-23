@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Notepad from './components-pages/Notepad/Notepad'
-import RemConverter from './components-pages/RemConverter'
-import Sandbox from './components-pages/Sandbox'
+import Notepad from './Notepad/Notepad'
+import RemConverter from './RemConverter'
+import Sandbox from './Sandbox'
 
 export default function App() {
 	function Menu() {

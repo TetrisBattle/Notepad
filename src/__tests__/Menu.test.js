@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { shallow } from 'enzyme'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Menu from '../components-pages/Menu'
+import Menu from '../pages/Menu'
 
 test('Buttons are rendered (jest)', () => {
 	render(<Router><Menu /></Router>)

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import RemConverter from '../components-pages/RemConverter'
+import RemConverter from '../pages/RemConverter'
 import Logo from '../../images/Logo.png'
 import MenuIcon from '../../images/Menu.png'
 
