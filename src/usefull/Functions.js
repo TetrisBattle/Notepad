@@ -13,7 +13,3 @@ export function binarySearch(array, target) {
 		if (min > max) return false
 	}
 }
-
-export function firstLetterToUpperCase(string) {
-	return string.charAt(0).toUpperCase() + string.slice(1)
-}

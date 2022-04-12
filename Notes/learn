@@ -15,3 +15,5 @@ automation
 Gatsby (static site)
 Headless CMS (strapi)
 Jamstack?
+
+Docker, container to run apps in any system

@@ -1,5 +1,19 @@
 {
 	"git": {
+		"onHold": [
+			{
+				"command": "git log -p [file path]",
+				"description": "Git log changes and commits related to this file."
+			},
+			{
+				"command": "git rebase",
+				"description": "?"
+			},
+			{
+				"command": "git rebase --force-with-lease",
+				"description": "Makes sure you didn't change anything harmful? Doog for rewriting commit message of pushed commit. Shouldn't be dangerous?"
+			}
+		],
 		"init": [
 			{
 				"command": "git init",
@@ -69,6 +83,11 @@
 				"description": "Rename branch"
 			},
 			{
+				"command": "git branch -M main",
+				"description": "Rename master branch to main",
+				"details": "GitHubs default branch name is main and Gits default is master"
+			},
+			{
 				"command": "git push -u origin [branch]",
 				"description": "Push branch to remote",
 				"details": "git push --set-upstream origin [branch]"
@@ -92,6 +111,10 @@
 			{
 				"command": "git checkout -",
 				"description": "Return to HEAD"
+			},
+			{
+				"command": "git checkout -- [files]",
+				"description": "Remove unstaged changes?"
 			}
 		],
 		"commit": [
@@ -192,6 +215,18 @@
 				"description": "Reset to main branch from remote and discard changes"
 			},
 			{
+				"command": "git reset HEAD^",
+				"description": "Undo last local commit"
+			},
+			{
+				"command": "git reset HEAD~[n]",
+				"description": "Undo n amount of local commits"
+			},
+			{
+				"command": "git reset HEAD~[n] --hard",
+				"description": "Undo n amount of local commits and discard the changes"
+			},
+			{
 				"command": "git restore .",
 				"description": "Discard all changes"
 			},
@@ -228,7 +263,11 @@
 			},
 			{
 				"command": "git log --oneline --graph",
-				"description": "Show commits in oneline with graph"
+				"description": "Show commit history in oneline with graph"
+			},
+			{
+				"command": "git log --reverse",
+				"description": "Show commit history in reverse"
 			}
 		],
 		"useless": [

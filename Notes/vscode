@@ -16,6 +16,11 @@ ctrl + alt + up/down                                    # multiple cursors
 shift + alt + click                                     # select as box from current cursor position, like with mouse in windows desktop
 ctrl + shift + alt + arrows                             # select as box with arrows
 
+ctrl + shift + f                                        # search from directory
+ctrl + b                                                # show/hide directories panel
+ctrl + .                                                # extract highlighted code
+ctrl + ,                                                # open settings
+
 
 node file.js                                            # run js file
 

@@ -5,9 +5,14 @@ $md: 64rem; 	// 1024px Small screens, laptops
 $lg: 75rem; 	// 1200px Desktops, large screens
 $xl: 100rem; 	// 1600px Extra large screens, TV
 
-$black0: hsl(210%, 10%, 8%);
-$black1: lighten($black0, 1%);
-$black2: lighten($black0, 2%);
+// Opacity
+// $colorActive: #FFFFFFDE; // 87%
+// $colorInactive: #FFFFFF99; // 60%
+// $colorDisabled: #FFFFFF61; // 38%
+
+$colorBackground: #121212;
+$black1: lighten($colorBackground, 1%);
+$black2: lighten($colorBackground, 2%);
 $gray: #7D7D7D; // disabled color
 
 // $white0: #FFFFFF; // too bright
@@ -15,15 +20,10 @@ $gray: #7D7D7D; // disabled color
 // $white2: #D8D8D8; // subtitle text color
 // $white3: #A9A9A9; // content text color
 
-$colorPrimary: hsl(30, 100%, 50%);
+$colorPrimary: hsl(30, 95%, 45%);
 $colorSecondary: hsl(194, 100%, 50%);
-$colorBackground: $black0;
-$colorText: #E3E3E3;
+$colorText: #E0E0E0;
 $colorButton: $black2;
-$colorHeader: hsl(210, 10%, 8.5%);
+$colorHeader: $black1;
 
-// :root {
-// 	--colorPrimary: hsl(30, 100%, 50%);
-// 	--colorSecondary: hsl(194, 100%, 50%);
-// 	--colorText: #E3E3E3;
-// }
+// $colorError: #B00020;
