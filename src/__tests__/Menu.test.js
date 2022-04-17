@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { shallow } from 'enzyme'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Menu from '../pages/Menu'
+import Menu from 'pages/Menu'
 
 test('Buttons are rendered (jest)', () => {
 	render(<Router><Menu /></Router>)
@@ -14,7 +14,7 @@ test('Buttons are rendered (enzyme)', () => {
 	expect(wrapper.find('Link').length).toBeGreaterThan(1)
 	expect(wrapper.find('.Menu').debug()).toContain('<Link to="/notepad">')
 	expect(wrapper.find('.Menu').debug()).toContain('<Link to="/sandbox">')
-	
+
 	const firstButton = wrapper.find('Link').at(0)
 	expect(firstButton.text()).toContain('Notepad')
 })

@@ -1,6 +1,6 @@
-/* eslint-disable */ 
+/* eslint-disable */
 import React, { useState, useRef, useEffect } from 'react'
-import ReturnButton from '../../components/ReturnButton'
+import ReturnButton from 'components/ReturnButton'
 import Playground, * as test from './Random'
 
 export default function Sandbox() {
@@ -13,7 +13,7 @@ export default function Sandbox() {
 	function onTestButtonClick(e) {
 		const buttonText = e.target.innerText
 		setOutput(`Test ${buttonText}`)
-		
+
 		switch (buttonText) {
 			case 'A':
 				playground.testA()
@@ -42,7 +42,7 @@ export default function Sandbox() {
 				<div><p className='counterText'>Counter: {counter}</p></div>
 				<button onClick={() => setCounter(counter + 1)}>Count</button>
 			</section>
-			
+
 			<section className='testArea'>
 				<h2>Tests</h2>
 
@@ -53,7 +53,7 @@ export default function Sandbox() {
 					<button onClick={onTestButtonClick}>D</button>
 					<button onClick={onTestButtonClick}>E</button>
 				</div>
-				
+
 				<div className='outputContainer'>
 					<p>{output}</p>
 				</div>

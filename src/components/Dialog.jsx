@@ -1,6 +1,6 @@
-import { ReactComponent as CloseIcon } from '../icons/Close.svg'
+import { ReactComponent as CloseIcon } from 'icons/Close.svg'
 
-export default function Dialog({ 
+export default function Dialog({
 	className,
 	dialogState,
 	setDialogState,
@@ -16,9 +16,9 @@ export default function Dialog({
 		setDialogState(false)
 		onClose?.()
 	}
-	
+
 	const classes = className ? `container ${className}` : 'container'
-	
+
 	const header = (
 		<header draggable='true'>
 			<h1>{title}</h1>
@@ -29,19 +29,19 @@ export default function Dialog({
 			</div>
 		</header>
 	)
-	
+
 	cancelButton = cancelButton ?? <button onClick={closeDialog}>Cancel</button>
-	
+
 	actions = actions ?? <>
 		{cancelButton}
 		{actionButton}
 		{actionButtons}
 	</>
-	
+
 	return (
 		<dialog open={dialogState}>
 			<div className='background' onClick={closeDialog} />
-			
+
 			<div className={classes}>
 				{header}
 				<div className='content'>{content}</div>

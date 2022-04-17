@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
-import App from '../pages/App'
+import Menu from 'pages/Menu'
 
-test('App should render without crashing', () => {
+test('Menu should render without crashing', () => {
 	const div = document.createElement('div')
-	ReactDOM.render(<App />, div)
+	ReactDOM.render(<Menu />, div)
 })

@@ -8,7 +8,7 @@
  * const toggleDarkTheme = useDarkThemeUpdater()
  */
 
-import { useState, createContext, useContext } from 'react'
+import { useState, createContext, useContext, ReactNode } from 'react'
 
 const DarkThemeContext = createContext<Boolean | null>(null)
 const UpdateDarkThemeContext = createContext<Function | null>(null)
@@ -21,9 +21,13 @@ export function useDarkThemeUpdater() {
 	return useContext(UpdateDarkThemeContext)
 }
 
-export function DarkThemeProvider({ content }: any) {
+interface IProps {
+	children: ReactNode
+}
+
+export function DarkThemeProvider({ children }: IProps) {
 	const [isDarkTheme, setIsDarkTheme] = useState(true)
-	
+
 	function toggleDarkTheme() {
 		setIsDarkTheme((previousValue) => !previousValue)
 	}
@@ -31,7 +35,7 @@ export function DarkThemeProvider({ content }: any) {
 	return (
 		<DarkThemeContext.Provider value={isDarkTheme}>
 			<UpdateDarkThemeContext.Provider value={toggleDarkTheme}>
-				{content}
+				{children}
 			</UpdateDarkThemeContext.Provider>
 		</DarkThemeContext.Provider>
 	)
