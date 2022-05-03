@@ -9,6 +9,7 @@
 }
 .returnButton:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 .returnButton svg {
   padding: 10%;
@@ -28,10 +29,10 @@
   background-color: transparent;
   border-radius: 50%;
   border-radius: 0;
-  cursor: pointer;
 }
 .mainHeader .iconButton:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 .mainHeader .iconButton svg {
   padding: 10%;
@@ -125,6 +126,7 @@ dialog .container header .iconButton {
 }
 dialog .container header .iconButton:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 dialog .container header .iconButton svg {
   padding: 10%;
@@ -191,6 +193,7 @@ dialog .container .actions button {
 }
 .Menu .container a:hover {
   background-color: #1b1e21;
+  cursor: pointer;
 }
 
 .Notepad .notFound {
@@ -324,6 +327,7 @@ dialog .container .actions button {
 }
 .Sandbox button:hover {
   background-color: #1b1e21;
+  cursor: pointer;
 }
 .Sandbox h1 {
   text-align: center;

@@ -10,7 +10,10 @@
   border: none;
   cursor: pointer;
 	transition: all .2s ease-in-out;
-	&:hover { background-color: lighten($colorButton, 2%); }
+	&:hover {
+		background-color: lighten($colorButton, 2%);
+		cursor: pointer;
+	}
 }
 
 @mixin iconButton($size: 1.5rem) {
@@ -18,7 +21,10 @@
 	inline-size: $size;
 	background-color: transparent;
 	border-radius: 50%;
-	&:hover { background-color: rgba(255, 255, 255, 0.1); }
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+		cursor: pointer;
+	}
 
 	svg {
 		padding: 10%;
