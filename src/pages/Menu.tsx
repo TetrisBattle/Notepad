@@ -6,9 +6,9 @@ export default function Menu() {
 			<h1>TetrisBattle</h1>
 
 			<div className='container'>
-				<Link to='/notepad'>Notepad</Link>
+				<Link to='/Notepad'>Notepad</Link>
 				<Link to='/RemConverter'>RemConverter</Link>
-				<Link to='/sandbox'>Sandbox</Link>
+				<Link to='/Sandbox'>Sandbox</Link>
 			</div>
 		</div>
 	)
