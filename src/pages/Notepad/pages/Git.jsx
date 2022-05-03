@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Navbar from '../../../components/Navbar'
-import { git } from '../../../data/notepad.json'
+import Navbar from 'components/Navbar'
+import { git } from '../data/git.json'
 
 export default function Git() {
 	const pages = [
@@ -13,9 +13,9 @@ export default function Git() {
 		'Reset',
 		'Info'
 	]
-	
+
 	const [selectedPage, setSelectedPage] = useState(pages[0])
-	
+
 	const getCommands = () => {
 		const getCommands = (commands) => {
 			return commands?.map(({ command, description, details }) => {
@@ -27,16 +27,16 @@ export default function Git() {
 				)
 			})
 		}
-		
+
 		return getCommands(git[selectedPage.toLowerCase()])
 	}
-	
+
 	return (
 		<div className="git">
 			<Navbar
 				pages={pages}
-				selectedPage={selectedPage} 
-				setSelectedPage={setSelectedPage} 
+				selectedPage={selectedPage}
+				setSelectedPage={setSelectedPage}
 			/>
 			<main>
 				<h1>Git commands</h1>

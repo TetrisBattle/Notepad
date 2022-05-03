@@ -1,4 +1,4 @@
-import { terminal } from '../../../data/notepad.json'
+import { terminal } from '../data/terminal.json'
 
 export default function Terminal() {
 	const getCommands = () => {
@@ -12,10 +12,10 @@ export default function Terminal() {
 				)
 			})
 		}
-		
+
 		return getCommands(terminal)
 	}
-	
+
 	return (
 		<main className="terminal">
 			<h1>Terminal commands</h1>
