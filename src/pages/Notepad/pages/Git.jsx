@@ -1,4 +1,11 @@
 import { useState } from 'react'
+import {
+	Accordion,
+	AccordionSummary,
+	AccordionDetails
+} from '@mui/material'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+
 import Navbar from 'components/Navbar'
 import { git } from '../data/git.json'
 
@@ -15,18 +22,36 @@ export default function Git() {
 	]
 
 	const [selectedPage, setSelectedPage] = useState(pages[0])
+  const [expanded, setExpanded] = useState(false);
 
 	const getCommands = () => {
-		const getCommands = (commands) => {
-			return commands?.map(({ command, description, details }) => {
-				return (
-					<div key={command} className='note' title={details}>
-						<p className='command'>{command}</p>
-						<p className='description'>{description}</p>
-					</div>
+		const getCommands = (commands) => (
+			commands?.map(({ command, description, details }) => (
+					<Accordion
+						key={command}
+						expanded={expanded === details}
+						onChange={() => {
+							if (details) setExpanded(expanded === details ? false : details)
+						}}
+						disableGutters
+					>
+						<AccordionSummary
+							expandIcon={<ExpandMoreIcon />}
+							sx={{
+								'svg': { visibility: details ? 'visible': 'hidden' },
+								':hover': { cursor: details ? 'pointer': 'default !important' }
+							}}
+						>
+							<p>{command}</p>
+							<p>{description}</p>
+						</AccordionSummary>
+						<AccordionDetails>
+							<p>{details}</p>
+						</AccordionDetails>
+					</Accordion>
 				)
-			})
-		}
+			)
+		)
 
 		return getCommands(git[selectedPage.toLowerCase()])
 	}

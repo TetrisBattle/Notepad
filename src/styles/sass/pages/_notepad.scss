@@ -2,42 +2,44 @@
 	.notFound {
 		text-align: center;
 		color: $colorPrimary;
-		
+
 		h1 {
 			padding: 2rem;
 			font-size: 4rem;
 		}
-		
+
 		p { font-size: 2rem; }
 	}
-	
+
 	.git {
 		display: flex;
 		nav { @include navbarHorizontal(); }
-		
+
 		main {
 			inline-size: calc(100vw - 8rem);
 			padding: 2rem;
-			
+
 			h1 {
 				font-size: 2.5rem;
 				text-align: center;
 				color: $colorPrimary;
 				margin-block-end: 2rem;
 			}
-			
+
 			section {
-				font-size: 1.5rem;
-				
-				.note {
-					display: flex;
-					border: solid $gray 0.05rem;
-					margin-bottom: 1rem;
-					padding: 0.5rem;
-					
-					p {
-						flex: 1;
-						font-size: 1.25rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+
+				.MuiAccordionSummary-root {
+					font-size: 1.5rem;
+
+					.MuiAccordionSummary-content {
+						// p { margin-right: 5rem; }
+						// justify-content: space-between;
+						// display: grid;
+						// grid-template-columns: repeat(5, 1fr);
+						p { width: 50%; }
 					}
 				}
 			}

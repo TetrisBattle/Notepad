@@ -241,17 +241,15 @@ dialog .container .actions button {
   margin-block-end: 2rem;
 }
 .Notepad .git main section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Notepad .git main section .MuiAccordionSummary-root {
   font-size: 1.5rem;
 }
-.Notepad .git main section .note {
-  display: flex;
-  border: solid #7D7D7D 0.05rem;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-}
-.Notepad .git main section .note p {
-  flex: 1;
-  font-size: 1.25rem;
+.Notepad .git main section .MuiAccordionSummary-root .MuiAccordionSummary-content p {
+  width: 50%;
 }
 
 .RemConverter {
