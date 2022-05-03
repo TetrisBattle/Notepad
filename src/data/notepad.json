@@ -109,6 +109,10 @@
 				"description": "Checkout branch or commit"
 			},
 			{
+				"command": "git checkout -b [branch]",
+				"description": "Create branch and checkout to it"
+			},
+			{
 				"command": "git checkout -",
 				"description": "Return to HEAD"
 			},

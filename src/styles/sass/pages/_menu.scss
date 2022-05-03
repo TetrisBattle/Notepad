@@ -1,7 +1,7 @@
 .Menu {
 	align-items: center;
 	height: 100vh;
-	
+
 	h1 {
 		padding-block: 2rem 1rem;
 		margin-inline: auto;
@@ -9,16 +9,16 @@
 		color: $colorPrimary;
 		font-size: 3rem;
 	}
-	
+
 	.container {
 		@include shadow;
 		inline-size: clamp(30rem, 90vw, 40rem);
-		
+
 		margin-inline: auto;
 		background-color: $black1;
 		padding-block: 2rem;
 		border-radius: .5rem;
-		
+
 		display: flex;
 		justify-content: space-evenly;
 

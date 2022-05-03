@@ -10,7 +10,7 @@ body {
   color: $colorText;
 }
 
-a { text-decoration: none; }
+a { all: unset; }
 
 button {
   border: none;
