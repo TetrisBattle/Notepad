@@ -7,14 +7,13 @@
   inset-inline-start: 1rem;
   inset-block-start: 1rem;
 }
+.returnButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 .returnButton svg {
   padding: 10%;
   block-size: 3rem;
   inline-size: 3rem;
-  border-radius: 50%;
-}
-.returnButton svg:hover {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mainHeader {
@@ -28,15 +27,16 @@
   inline-size: 4rem;
   background-color: transparent;
   border-radius: 50%;
+  border-radius: 0;
+  cursor: pointer;
+}
+.mainHeader .iconButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .mainHeader .iconButton svg {
   padding: 10%;
   block-size: 4rem;
   inline-size: 4rem;
-  border-radius: 50%;
-}
-.mainHeader .iconButton svg:hover {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 .mainHeader nav {
   display: none;
@@ -123,14 +123,13 @@ dialog .container header .iconButton {
   border-radius: 50%;
   float: right;
 }
+dialog .container header .iconButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 dialog .container header .iconButton svg {
   padding: 10%;
   block-size: 3rem;
   inline-size: 3rem;
-  border-radius: 50%;
-}
-dialog .container header .iconButton svg:hover {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 dialog .container .content {
   block-size: 100%;

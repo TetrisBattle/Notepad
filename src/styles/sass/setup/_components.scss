@@ -11,7 +11,11 @@
 	display: flex;
 	background-color: $colorHeader;
 
-	.iconButton { @include iconButton(4rem); }
+	.iconButton {
+		@include iconButton(4rem);
+		border-radius: 0;
+		cursor: pointer;
+	}
 
 	nav { display: none; }
 	.menuIcon { margin-inline-start: auto; }
