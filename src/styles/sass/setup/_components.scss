@@ -10,13 +10,13 @@
 	border-block-end: solid .063rem $gray;
 	display: flex;
 	background-color: $colorHeader;
-	
+
 	.iconButton { @include iconButton(4rem); }
-	
+
 	nav { display: none; }
 	.menuIcon { margin-inline-start: auto; }
-	
-	@media (min-Width: $xs) {
+
+	@media (min-Width: 30rem) {
 		nav { @include navbarVertical($colorHeader); }
 		.menuIcon { display: none; }
 	}
@@ -29,13 +29,13 @@ dialog {
 	inline-size: 100vw;
 	block-size: 100vh;
 	background-color: transparent;
-	
+
 	.background {
 		inline-size: 100%;
 		block-size: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
-	
+
 	.container {
 		position: absolute;
 		inset-inline-start: 0;
@@ -45,52 +45,52 @@ dialog {
   	transform: translate(-50%, -50%);
 		display: flex;
 		flex-flow: column;
-		
+
 		inline-size: 40rem;
 		block-size: 30rem;
 		background-color: #E3E3E3;
 		border-radius: .5rem;
 		border: none;
-		
+
 		header {
 			$headerHeight: 3rem;
-			
+
 			inline-size: 100%;
 			block-size: $headerHeight;
 			background-color: teal;
 			border-top-left-radius: .5rem;
 			border-top-right-radius: .5rem;
-			
+
 			&[draggable = true] { cursor: grab; }
-			
+
 			h1 {
 				position: absolute;
 				inset-inline-start: 50%;
 				transform: translateX(-50%);
-				
+
 				text-align: center;
 				color: $colorText;
 				line-height: $headerHeight;
 				font-size: 1.75rem;
 			}
-			
+
 			.iconButton {
 				@include iconButton(3rem);
 				float: right;
 			}
 		}
-		
+
 		.content {
 			block-size: 100%;
 			padding: .5rem;
 		}
-		
+
 		.actions {
 			padding: .75rem;
 			display: flex;
 			gap: .5rem;
 			justify-content: flex-end;
-			
+
 			button {
 				min-width: 6rem;
 				font-size: 1rem;

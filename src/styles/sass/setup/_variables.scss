@@ -1,30 +1,18 @@
-$xxs: 20rem; 	// 320px 	Small mobile devices
-$xs: 30rem; 	// 480px 	Mobile devices
-$sm: 48rem; 	// 768px 	iPads, Tablets
-$md: 64rem; 	// 1024px Small screens, laptops
-$lg: 75rem; 	// 1200px Desktops, large screens
-$xl: 100rem; 	// 1600px Extra large screens, TV
+// $xxs: 20rem; 	// 320px 	Small mobile devices
+// $xs: 30rem; 		// 480px 	Mobile devices
+// $sm: 48rem; 		// 768px 	iPads, Tablets
+// $md: 64rem; 		// 1024px Small screens, laptops
+// $lg: 75rem; 		// 1200px Desktops, large screens
+// $xl: 100rem; 	// 1600px Extra large screens, TV
 
-// Opacity
-// $colorActive: #FFFFFFDE; // 87%
-// $colorInactive: #FFFFFF99; // 60%
-// $colorDisabled: #FFFFFF61; // 38%
-
-// $colorBackground: #121416; // this was better
 $colorBackground: #121212;
+$colorBackground: #121416;
 $black1: lighten($colorBackground, 1%);
 $black2: lighten($colorBackground, 2%);
 $gray: #7D7D7D; // disabled color
-
-// $white0: #FFFFFF; // too bright
-// $white1: #E3E3E3; // main text color
-// $white2: #D8D8D8; // subtitle text color
-// $white3: #A9A9A9; // content text color
 
 $colorPrimary: #e07306;
 $colorSecondary: #00c3ff;
 $colorText: #E0E0E0;
 $colorButton: $black2;
 $colorHeader: $black1;
-
-// $colorError: #B00020;

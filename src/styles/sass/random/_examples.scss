@@ -19,7 +19,7 @@
 }
 
 @mixin resetCss {
-  all: initial;
+  all: unset;
 }
 
 // body {

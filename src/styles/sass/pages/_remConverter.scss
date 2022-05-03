@@ -3,12 +3,12 @@
 	margin: 0 auto;
 	text-align: center;
 	color: $colorPrimary;
-	
+
 	h1 { padding-block: 3rem; }
-	
+
 	.container {
 		.convertIcon { display: none; }
-		
+
 		.converter {
 			@include shadow;
 			inline-size: clamp(10rem, 100%, 15rem);
@@ -16,7 +16,7 @@
 			margin: 0 auto;
 			display: flex;
 			margin-block-end: 1.5rem;
-			
+
 			input {
 				inline-size: 100%;
 				block-size: 3rem;
@@ -29,24 +29,23 @@
 				border: none;
 				outline: none;
 			}
-			
+
 			.inputType {
 				font-size: 1rem;
 				color: $colorText;
 				line-height: 3rem;
 				position: absolute;
 				inset-inline-end: 1rem;
-				pointer-events: none; 
+				pointer-events: none;
 			}
 		}
 	}
-	
-	// @media (min-inline-size: $sm) {
-	@media (min-width: $sm) {
+
+	@media (min-width: 48rem) {
 		.container {
 			display: flex;
 			gap: 1rem;
-		
+
 			.convertIcon {
 				display: block;
 				line-height: 3rem;
