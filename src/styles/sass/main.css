@@ -1,6 +1,6 @@
 .returnButton {
-  block-size: 3rem;
-  inline-size: 3rem;
+  block-size: 4rem;
+  inline-size: 4rem;
   background-color: transparent;
   border-radius: 50%;
   position: absolute;
@@ -13,8 +13,8 @@
 }
 .returnButton svg {
   padding: 10%;
-  block-size: 3rem;
-  inline-size: 3rem;
+  block-size: 4rem;
+  inline-size: 4rem;
 }
 
 .mainHeader {
