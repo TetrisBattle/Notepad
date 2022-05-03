@@ -59,6 +59,7 @@
 	button {
 		block-size: 5rem;
 		font-size: 1.25rem;
+		font-weight: bold;
 		background-color: $backgroundColor;
 		color: $colorText;
 		&:hover { background-color: lighten($backgroundColor, 10%); }

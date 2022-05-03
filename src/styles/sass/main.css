@@ -220,6 +220,7 @@ dialog .container .actions button {
 .Notepad .git nav button {
   block-size: 5rem;
   font-size: 1.25rem;
+  font-weight: bold;
   background-color: #141719;
   color: #E0E0E0;
 }
