@@ -1,6 +1,6 @@
 .Sandbox {
-  color: $colorText;
-  overflow: auto;
+	color: $colorText;
+	overflow: auto;
 	min-height: 100vh;
 
 	button { @include defaultButton; }
@@ -9,64 +9,64 @@
 		text-align: center;
 		font-size: 3rem;
 		color: $colorPrimary;
-    padding: 1.25rem;
+		padding: 1.25rem;
 	}
 
-  .counterContainer {
+	.counterContainer {
 		@include shadow;
-    background-color: $black1;
-    margin-inline: auto;
-    border-radius: 3rem;
-    justify-content: space-between;
-    width: 21rem;
-    height: 5rem;
-    align-items: center;
-    position: relative;
-    display: flex;
-    padding-left: 2rem;
+		background-color: $black1;
+		margin-inline: auto;
+		border-radius: 3rem;
+		justify-content: space-between;
+		width: 21rem;
+		height: 5rem;
+		align-items: center;
+		position: relative;
+		display: flex;
+		padding-left: 2rem;
 
 		.counterText {
 			font-size: 1.5rem;
 			font-weight: bold;
 		}
 
-    button {
-      margin-inline-end: 1.25rem;
-      width: 7rem;
+		button {
+			margin-inline-end: 1.25rem;
+			width: 7rem;
 			border-radius: 25rem;
-    }
-  }
+		}
+	}
 
-  .testArea {
+	.testArea {
 		@include shadow;
-    background-color: $black1;
-    margin-inline: auto;
-    width: 40rem;
-    min-height: 30rem;
-    height: max-content;
-    border-radius: .6rem;
-    margin-top: 3rem;
+		background-color: $black1;
+		margin-inline: auto;
+		width: 40rem;
+		min-height: 30rem;
+		height: max-content;
+		border-radius: .6rem;
+		margin-top: 3rem;
 		padding: 1.25rem;
 		display: flex;
 		flex-flow: column;
 
-    h2 {
-      text-align: center;
-      padding-block-end: 1.25rem;
+		h2 {
+			text-align: center;
+			padding-block-end: 1.25rem;
 			font-size: 2rem;
-    }
+		}
 
-    .testButtonsContainer {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-auto-rows: 1fr;
-      gap: 1rem;
-    }
+		.testButtonsContainer {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-auto-rows: 1fr;
+			gap: 1rem;
+		}
 
 		.outputContainer {
 			padding-block: 2rem;
 			text-align: center;
 			flex: 1;
 		}
-  }
+	}
 }

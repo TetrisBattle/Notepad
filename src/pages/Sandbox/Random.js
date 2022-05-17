@@ -1,10 +1,10 @@
 export default class Playground {
 	// constructor() {}
-	
+
 	testA() {
-		
+
 	}
-	
+
 	testB() {}
 	testC() {}
 	testD() {}
@@ -21,7 +21,7 @@ export class Printer {
 		f()
 		console.timeEnd('printDuration')
 	}
-	
+
 	alert(str) { alert(str) }
 }
 

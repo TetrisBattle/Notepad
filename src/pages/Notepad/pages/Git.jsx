@@ -22,7 +22,7 @@ export default function Git() {
 	]
 
 	const [selectedPage, setSelectedPage] = useState(pages[0])
-  const [expanded, setExpanded] = useState(false);
+	const [expanded, setExpanded] = useState(false);
 
 	const getCommands = () => {
 		const getCommands = (commands) => (
