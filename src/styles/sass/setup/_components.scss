@@ -25,6 +25,66 @@
 	}
 }
 
+.ExpandBars {
+	display: flex;
+	flex-flow: column;
+	gap: 1rem;
+
+	.ExpandBar {
+		$padding: .5rem;
+		$borderRadius: .25rem;
+
+		.bar {
+			background-color: lighten($colorBackground, 5%);
+			border-radius: $borderRadius;
+			display: flex;
+			align-items: center;
+			font-size: 1.25rem;
+			transition: border-radius 150ms;
+
+			p {
+				width: 50%;
+				padding: $padding;
+			}
+
+			svg {
+				height: 3rem;
+				width: 3rem;
+				padding: .75rem;
+				flex-shrink: 0;
+				cursor: pointer;
+				transition: transform 150ms;
+			}
+		}
+
+		.content {
+			background-color: lighten($colorBackground, 10%);
+			border-bottom-left-radius: $borderRadius;
+			border-bottom-right-radius: $borderRadius;
+			font-size: 1rem;
+
+			padding: 0 $padding;
+			height: 0;
+			transition: 300ms;
+			p { display: none; }
+		}
+
+		&.expanded {
+			.bar {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				svg { transform: rotate(180deg); }
+			}
+
+			.content {
+				padding: $padding;
+				height: auto;
+				p { display: block; }
+			}
+		}
+	}
+}
+
 dialog {
 	position: absolute;
 	inset-inline-start: 0;

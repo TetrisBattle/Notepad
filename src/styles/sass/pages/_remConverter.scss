@@ -25,7 +25,7 @@
 				font-weight: bold;
 				border-radius: .25rem;
 				color: $colorText;
-				background-color: $black2;
+				background-color: lighten($colorBackground, 2%);
 				border: none;
 				outline: none;
 			}

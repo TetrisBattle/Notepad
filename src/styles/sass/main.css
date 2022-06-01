@@ -70,6 +70,58 @@
   }
 }
 
+.ExpandBars {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+.ExpandBars .ExpandBar .bar {
+  background-color: #1d2124;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  transition: border-radius 150ms;
+}
+.ExpandBars .ExpandBar .bar p {
+  width: 50%;
+  padding: 0.5rem;
+}
+.ExpandBars .ExpandBar .bar svg {
+  height: 3rem;
+  width: 3rem;
+  padding: 0.75rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 150ms;
+}
+.ExpandBars .ExpandBar .content {
+  background-color: #292e32;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  height: 0;
+  transition: 300ms;
+}
+.ExpandBars .ExpandBar .content p {
+  display: none;
+}
+.ExpandBars .ExpandBar.expanded .bar {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ExpandBars .ExpandBar.expanded .bar svg {
+  transform: rotate(180deg);
+}
+.ExpandBars .ExpandBar.expanded .content {
+  padding: 0.5rem;
+  height: auto;
+}
+.ExpandBars .ExpandBar.expanded .content p {
+  display: block;
+}
+
 dialog {
   position: absolute;
   inset-inline-start: 0;

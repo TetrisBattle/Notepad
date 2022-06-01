@@ -14,7 +14,7 @@
 
 	.counterContainer {
 		@include shadow;
-		background-color: $black1;
+		background-color: lighten($colorBackground, 1%);
 		margin-inline: auto;
 		border-radius: 3rem;
 		justify-content: space-between;
@@ -39,7 +39,7 @@
 
 	.testArea {
 		@include shadow;
-		background-color: $black1;
+		background-color: lighten($colorBackground, 1%);
 		margin-inline: auto;
 		width: 40rem;
 		min-height: 30rem;

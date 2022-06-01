@@ -15,7 +15,7 @@
 		inline-size: clamp(30rem, 90vw, 40rem);
 
 		margin-inline: auto;
-		background-color: $black1;
+		background-color: lighten($colorBackground, 1%);
 		padding-block: 2rem;
 		border-radius: .5rem;
 

@@ -33,7 +33,7 @@
 	}
 }
 
-@mixin navbarVertical($backgroundColor: $black1) {
+@mixin navbarVertical($backgroundColor: lighten($colorBackground, 1%)) {
 	display: flex;
 	background-color: $backgroundColor;
 
@@ -49,7 +49,7 @@
 	button.selected { color: $colorPrimary; }
 }
 
-@mixin navbarHorizontal($backgroundColor: $black1) {
+@mixin navbarHorizontal($backgroundColor: lighten($colorBackground, 1%)) {
 	display: flex;
 	flex-flow: column;
 	inline-size: 8rem;

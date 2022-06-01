@@ -5,14 +5,11 @@
 // $lg: 75rem; 		// 1200px Desktops, large screens
 // $xl: 100rem; 	// 1600px Extra large screens, TV
 
-$colorBackground: #121212;
 $colorBackground: #121416;
-$black1: lighten($colorBackground, 1%);
-$black2: lighten($colorBackground, 2%);
 $gray: #7D7D7D; // disabled color
 
 $colorPrimary: #e07306;
 $colorSecondary: #00c3ff;
 $colorText: #E0E0E0;
-$colorButton: $black2;
-$colorHeader: $black1;
+$colorButton: lighten($colorBackground, 2%);
+$colorHeader: lighten($colorBackground, 1%);
