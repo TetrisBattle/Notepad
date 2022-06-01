@@ -79,13 +79,9 @@
 				"description": "???"
 			},
 			{
-				"command": "git branch -m [prevName] [newName]",
-				"description": "Rename branch"
-			},
-			{
-				"command": "git branch -M main",
-				"description": "Rename master branch to main",
-				"details": "GitHubs default branch name is main and Gits default is master"
+				"command": "git branch -m [newName]",
+				"description": "Rename branch",
+				"details": "You can also rename another branch with: git branch -m [prevName] [newName]"
 			},
 			{
 				"command": "git push -u origin [branch]",
