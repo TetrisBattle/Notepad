@@ -16,7 +16,7 @@
 		nav { @include navbarHorizontal(); }
 
 		main {
-			inline-size: calc(100vw - 8rem);
+			inline-size: 100%;
 			padding: 2rem;
 
 			h1 {

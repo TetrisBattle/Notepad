@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import { ReactComponent as Logo } from 'icons/Logo.svg'
-import { ReactComponent as MenuIcon } from 'icons/Menu.svg'
+import { MenuItem } from '@mui/material'
 import Navbar from 'components/Navbar'
+import MuiMenu from 'components/MuiMenu'
 
 export default function Header({ pages, selectedPage, setSelectedPage }) {
 	return (
@@ -12,9 +13,14 @@ export default function Header({ pages, selectedPage, setSelectedPage }) {
 				selectedPage={selectedPage}
 				setSelectedPage={setSelectedPage}
 			/>
-			<button className="iconButton menuIcon">
-				<MenuIcon />
-			</button>
+			<MuiMenu>
+				{pages.map((page) => (
+					<MenuItem
+						key={page}
+						onClick={() => setSelectedPage(page)}
+					>{page}</MenuItem>
+				))}
+			</MuiMenu>
 		</header>
 	)
 }

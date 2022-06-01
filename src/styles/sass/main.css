@@ -42,10 +42,14 @@
 .mainHeader nav {
   display: none;
 }
-.mainHeader .menuIcon {
+.mainHeader .MuiButton-root {
   margin-inline-start: auto;
+  height: 4rem;
 }
-@media (min-Width: 30rem) {
+.mainHeader .MuiButton-root .MuiSvgIcon-root {
+  font-size: 2.5rem;
+}
+@media (min-Width: 34rem) {
   .mainHeader nav {
     display: flex;
     background-color: #141719;
@@ -65,7 +69,7 @@
   .mainHeader nav button.selected {
     color: #e07306;
   }
-  .mainHeader .menuIcon {
+  .mainHeader .MuiSvgIcon-root {
     display: none;
   }
 }
@@ -286,7 +290,7 @@ dialog .container .actions button {
   color: #e07306;
 }
 .Notepad .git main {
-  inline-size: calc(100vw - 8rem);
+  inline-size: 100%;
   padding: 2rem;
 }
 .Notepad .git main h1 {

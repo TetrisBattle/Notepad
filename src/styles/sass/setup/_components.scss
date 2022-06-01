@@ -6,22 +6,30 @@
 }
 
 .mainHeader {
-	block-size: 4rem;
+	$headerHeight: 4rem;
+
+	block-size: $headerHeight;
 	border-block-end: solid .063rem $gray;
 	display: flex;
 	background-color: $colorHeader;
 
 	.iconButton {
-		@include iconButton(4rem);
+		@include iconButton($headerHeight);
 		border-radius: 0;
 	}
 
 	nav { display: none; }
-	.menuIcon { margin-inline-start: auto; }
+	.MuiButton-root {
+		margin-inline-start: auto;
+		height: $headerHeight;
+		.MuiSvgIcon-root {
+			font-size: 2.5rem;
+		}
+	}
 
-	@media (min-Width: 30rem) {
+	@media (min-Width: 34rem) {
 		nav { @include navbarVertical($colorHeader); }
-		.menuIcon { display: none; }
+		.MuiSvgIcon-root { display: none; }
 	}
 }
 

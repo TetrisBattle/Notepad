@@ -3,21 +3,15 @@ export default function Navbar({
 	selectedPage,
 	setSelectedPage
 }) {
-	const getPages = () => {
-		return pages.map((page) => {
-			return (
+	return (
+		<nav>
+			{pages.map((page) => (
 				<button
 					key={page}
 					className={page === selectedPage ? 'selected' : null}
 					onClick={() => setSelectedPage(page)}
-				>
-					{page}
-				</button>
-			)
-		})
-	}
-
-	return (
-		<nav>{getPages()}</nav>
+				>{page}</button>
+			))}
+		</nav>
 	)
 }
