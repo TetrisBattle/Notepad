@@ -211,11 +211,10 @@ dialog .container .actions button {
 }
 
 .Menu {
-  align-items: center;
-  height: 100vh;
+  padding: 2rem;
 }
 .Menu h1 {
-  padding-block: 2rem 1rem;
+  padding-bottom: 1rem;
   margin-inline: auto;
   inline-size: fit-content;
   color: #e07306;
@@ -223,13 +222,15 @@ dialog .container .actions button {
 }
 .Menu .container {
   box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
-  inline-size: clamp(30rem, 90vw, 40rem);
+  width: fit-content;
+  background-color: #191c1e;
   margin-inline: auto;
-  background-color: #141719;
-  padding-block: 2rem;
+  padding: 2rem;
   border-radius: 0.5rem;
   display: flex;
-  justify-content: space-evenly;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .Menu .container a {
   box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
@@ -241,11 +242,11 @@ dialog .container .actions button {
   font-weight: bold;
   border-radius: 0.25rem;
   border: none;
+  text-align: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  block-size: 3.5rem;
-  line-height: 3.5rem;
-  padding-block: 0;
+  background-color: #1b1e21;
+  width: fit-content;
 }
 .Menu .container a:hover {
   background-color: #1b1e21;
@@ -368,6 +369,7 @@ dialog .container .actions button {
   color: #E0E0E0;
   overflow: auto;
   min-height: 100vh;
+  padding: 1rem;
 }
 .Sandbox button {
   box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
@@ -379,6 +381,7 @@ dialog .container .actions button {
   font-weight: bold;
   border-radius: 0.25rem;
   border: none;
+  text-align: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -390,7 +393,7 @@ dialog .container .actions button {
   text-align: center;
   font-size: 3rem;
   color: #e07306;
-  padding: 1.25rem;
+  padding-bottom: 1.5rem;
 }
 .Sandbox .counterContainer {
   box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
@@ -418,7 +421,8 @@ dialog .container .actions button {
   box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.38rem 0.38rem rgba(0, 0, 0, 0.23);
   background-color: #141719;
   margin-inline: auto;
-  width: 40rem;
+  min-width: fit-content;
+  max-width: 40rem;
   min-height: 30rem;
   height: max-content;
   border-radius: 0.6rem;
@@ -431,6 +435,7 @@ dialog .container .actions button {
   text-align: center;
   padding-block-end: 1.25rem;
   font-size: 2rem;
+  color: #e07306;
 }
 .Sandbox .testArea .testButtonsContainer {
   display: grid;

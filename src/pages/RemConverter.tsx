@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import ReturnButton from 'components/ReturnButton'
 
 export default function RemConverter() {
 	const rootPx = 16
@@ -41,7 +40,6 @@ export default function RemConverter() {
 
 	return (
 		<div className='RemConverter'>
-			<ReturnButton />
 			<h1>PX - REM Converter</h1>
 
 			<div className='container'>

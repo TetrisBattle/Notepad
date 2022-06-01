@@ -2,6 +2,7 @@
 	color: $colorText;
 	overflow: auto;
 	min-height: 100vh;
+	padding: 1rem;
 
 	button { @include defaultButton; }
 
@@ -9,7 +10,7 @@
 		text-align: center;
 		font-size: 3rem;
 		color: $colorPrimary;
-		padding: 1.25rem;
+		padding-bottom: 1.5rem;
 	}
 
 	.counterContainer {
@@ -41,7 +42,8 @@
 		@include shadow;
 		background-color: lighten($colorBackground, 1%);
 		margin-inline: auto;
-		width: 40rem;
+		min-width: fit-content;
+		max-width: 40rem;
 		min-height: 30rem;
 		height: max-content;
 		border-radius: .6rem;
@@ -54,6 +56,7 @@
 			text-align: center;
 			padding-block-end: 1.25rem;
 			font-size: 2rem;
+			color: $colorPrimary;
 		}
 
 		.testButtonsContainer {
