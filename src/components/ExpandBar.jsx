@@ -10,7 +10,7 @@ export default function ExpandBars({ commands }) {
 				const isExpanded = expanded === details
 
 				return (
-					<div className={'ExpandBar' + (isExpanded ? ' expanded' : '')}>
+					<div key={command} className={'ExpandBar' + (isExpanded ? ' expanded' : '')}>
 						<div className='bar'>
 							<p>{command}</p>
 							<p>{description}</p>
