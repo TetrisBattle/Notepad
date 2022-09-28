@@ -4,7 +4,13 @@ import { commands } from './data/terminal'
 
 const Terminal = () => {
 	return (
-		<Box p={2}>
+		<Box
+			sx={{
+				p: 2,
+				maxWidth: (theme) => theme.breakpoints.values.md,
+				mx: 'auto',
+			}}
+		>
 			<Typography
 				variant='h1'
 				color='primary'

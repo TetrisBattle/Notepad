@@ -34,7 +34,15 @@ const Git = () => {
 					</Button>
 				))}
 			</Toolbar>
-			<Box p={2} display='flex' flexDirection='column'>
+			<Box
+				sx={{
+					p: 2,
+					display: 'flex',
+					flexDirection: 'column',
+					maxWidth: (theme) => theme.breakpoints.values.md,
+					mx: 'auto'
+				}}
+			>
 				<Typography
 					variant='h1'
 					color='primary'
