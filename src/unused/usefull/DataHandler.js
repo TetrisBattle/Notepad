@@ -1,11 +1,17 @@
 class DataHandler {
 	constructor(items) {
 		if (items) this.items = items
-		else console.log('%cERROR: DataHandler needs array of data', 
-			'color: red; font-size: 24px;')
+		else {
+			console.log(
+				'%cERROR: DataHandler needs array of data',
+				'color: red; font-size: 24px;'
+			)
+		}
 	}
 
-	printData() { console.log(items) }
+	printData() {
+		console.log(items)
+	}
 
 	hasName(name) {
 		// const names = []
@@ -45,11 +51,11 @@ class DataHandler {
 }
 
 const items = [
-	{ name: 'A',  value: 1 },
-	{ name: 'B',  value: 2 },
-	{ name: 'C',  value: 3 },
-	{ name: 'D',  value: 4 },
-	{ name: 'E',  value: 5 }
+	{ name: 'A', value: 1 },
+	{ name: 'B', value: 2 },
+	{ name: 'C', value: 3 },
+	{ name: 'D', value: 4 },
+	{ name: 'E', value: 5 },
 ]
 
 const dataHandler = new DataHandler(items)

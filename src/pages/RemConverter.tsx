@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { Box, InputAdornment, TextField, Typography } from '@mui/material'
 
-export default function RemConverter() {
+const RemConverter = () => {
 	const rootPx = 16
 	const [px, setPx] = useState(rootPx.toString())
 	const [rem, setRem] = useState('1')
@@ -22,11 +23,10 @@ export default function RemConverter() {
 			return
 		}
 
-		if (
-			isNaN(+value)
-			|| value === '00'
-			|| /\s/.test(value) // whitespace is not allowed
-		) return
+		// value must a number
+		// value can't start with 00
+		// whitespace is not allowed
+		if (isNaN(+value) || value === '00' || /\s/.test(value)) return
 
 		if (id === 'rem') {
 			setRem(value)
@@ -39,34 +39,60 @@ export default function RemConverter() {
 	}
 
 	return (
-		<div className='RemConverter'>
-			<h1>PX - REM Converter</h1>
-
-			<div className='container'>
-				<div className='converter'>
-					<input
-						id='px'
-						type='text'
-						value={px}
-						onChange={handleChange}
-						autoComplete='off'
-					/>
-					<p className='inputType'>px</p>
-				</div>
-
-				<p className='convertIcon'>⇄</p>
-
-				<div className='converter'>
-					<input
-						id='rem'
-						type='text'
-						value={rem}
-						onChange={handleChange}
-						autoComplete='off'
-					/>
-					<p className='inputType'>rem</p>
-				</div>
-			</div>
-		</div>
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: 'center',
+				gap: 6,
+			}}
+		>
+			<Typography
+				component='h1'
+				variant='h2'
+				color='primary'
+				fontWeight='bold'
+				mt={4}
+			>
+				PX - REM Converter
+			</Typography>
+			<Box
+				sx={(theme) => ({
+					display: 'flex',
+					gap: 2,
+					[theme.breakpoints.down('sm')]: {
+						flexDirection: 'column',
+						'.arrows': { display: 'none' },
+					},
+					[theme.breakpoints.up('sm')]: {
+						alignItems: 'center',
+					},
+				})}
+			>
+				<TextField
+					id='px'
+					value={px}
+					onChange={handleChange}
+					InputProps={{
+						endAdornment: <InputAdornment position='start'>px</InputAdornment>,
+					}}
+					autoComplete='off'
+				/>
+				<Typography className='arrows' color='primary' fontSize={24}>
+					⇄
+				</Typography>
+				<TextField
+					id='rem'
+					value={rem}
+					onChange={handleChange}
+					InputProps={{
+						endAdornment: <InputAdornment position='start'>rem</InputAdornment>,
+					}}
+					autoComplete='off'
+				/>
+			</Box>
+		</Box>
 	)
 }
+
+export default RemConverter

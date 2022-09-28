@@ -1,13 +1,13 @@
 // Good for small datasets
 // Time complexity O(n2)
 // In-Place Algorithm
-const quickSort = (array) => {
+export const quickSort = (array) => {
 	const swap = (array, i, j) => {
 		const temp = array[i]
 		array[i] = array[j]
 		array[j] = temp
 	}
-	
+
 	const sort = (array, start, end) => {
 		if (start >= end) return
 
@@ -37,11 +37,11 @@ const quickSort = (array) => {
 // Good for large datasets
 // Time complexity O(n log n)
 // Space complexity O(n)
-const mergeSort = (array) => {
+export const mergeSort = (array) => {
 	const merge = (array, start, end, middle) => {
 		const leftArrayLength = middle - start + 1
 		const rightArrayLength = end - middle
-		
+
 		const leftArray = array.slice(start, leftArrayLength + start)
 		const rightArray = array.slice(middle + 1, rightArrayLength + middle + 1)
 
@@ -72,7 +72,7 @@ const mergeSort = (array) => {
 			mergeIndex++
 		}
 	}
-	
+
 	const sort = (array, start, end) => {
 		if (start >= end) return
 		const middle = start + parseInt((end - start) / 2)
