@@ -1,9 +1,16 @@
 import { makeAutoObservable } from 'mobx'
 import { commands } from 'pages/Notepad/data/git'
+import Git from 'pages/Notepad/Git'
+import Terminal from 'pages/Notepad/Terminal'
+import Regex from 'pages/Notepad/Regex'
+import { Page } from './AppStore'
 
 export default class NotepadStore {
-	private _pages = ['Git', 'Terminal', 'Regex']
-	private _selectedPage = this._pages[0]
+	private _pages: Page[] = [
+		{ id: 'Git', path: '/Notepad/Git', defaultPath: '/Notepad/Git/Init', element: <Git /> },
+		{ id: 'Terminal', path: '/Notepad/Terminal', element: <Terminal /> },
+		{ id: 'Regex', path: '/Notepad/Regex', element: <Regex /> },
+	]
 	private _gitPages: string[] = []
 	private _selectedGitPage = ''
 
@@ -18,14 +25,6 @@ export default class NotepadStore {
 
 	get pages() {
 		return this._pages
-	}
-
-	get selectedPage() {
-		return this._selectedPage
-	}
-
-	set selectedPage(value) {
-		this._selectedPage = value
 	}
 
 	get gitPages() {

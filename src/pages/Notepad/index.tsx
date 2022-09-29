@@ -1,26 +1,16 @@
 import { observer } from 'mobx-react-lite'
 import { Box, Button, Toolbar } from '@mui/material'
 import { useStoreContext } from 'contexts/StoreContext'
-import Git from './Git'
-import Terminal from './Terminal'
-import Regex from './Regex'
-import NotFound from './NotFound'
+import {
+	Routes,
+	Route,
+	Link,
+	useLocation,
+} from 'react-router-dom'
 
 const Notepad = () => {
 	const { notepadStore } = useStoreContext()
-
-	const getPageContent = () => {
-		switch (notepadStore.selectedPage) {
-			case 'Git':
-				return <Git />
-			case 'Terminal':
-				return <Terminal />
-			case 'Regex':
-				return <Regex />
-			default:
-				return <NotFound />
-		}
-	}
+	const location = useLocation()
 
 	return (
 		<Box>
@@ -32,17 +22,22 @@ const Notepad = () => {
 			>
 				{notepadStore.pages.map((page) => (
 					<Button
-						key={page}
+						key={page.id}
 						variant='text'
-						color={notepadStore.selectedPage === page ? 'primary' : 'inherit'}
-						onClick={() => (notepadStore.selectedPage = page)}
+						color={page.path === location.pathname ? 'primary' : 'inherit'}
+						component={Link}
+						to={page.path}
 						sx={{ fontSize: 20 }}
 					>
-						{page}
+						{page.id}
 					</Button>
 				))}
 			</Toolbar>
-			{getPageContent()}
+			<Routes>
+				{notepadStore.pages.map((page) => (
+					<Route key={page.path} path={page.id} element={page.element} />
+				))}
+			</Routes>
 		</Box>
 	)
 }

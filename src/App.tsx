@@ -17,10 +17,19 @@ export default function App() {
 			<Routes>
 				<Route
 					path='/'
-					element={<Navigate replace to={appStore.pages[0].path} />}
+					element={
+						<Navigate
+							replace
+							to={appStore.pages[0].defaultPath ?? appStore.pages[0].path}
+						/>
+					}
 				/>
 				{appStore.pages.map((page) => (
-					<Route key={page.path} path={page.path} element={page.element} />
+					<Route
+						key={page.path}
+						path={page.defaultPath ? page.path + '/*' : page.path}
+						element={page.element}
+					/>
 				))}
 			</Routes>
 

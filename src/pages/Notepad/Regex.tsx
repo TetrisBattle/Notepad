@@ -18,7 +18,7 @@ const Regex = () => {
 				textAlign='center'
 				mb={2}
 			>
-				Regex Expressions
+				Regex
 			</Typography>
 
 			<Paper sx={{ width: 'fit-content', p: 2, mx: 'auto' }}>
