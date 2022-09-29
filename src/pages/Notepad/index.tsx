@@ -3,6 +3,7 @@ import { Box, Button, Toolbar } from '@mui/material'
 import { useStoreContext } from 'contexts/StoreContext'
 import Git from './Git'
 import Terminal from './Terminal'
+import Regex from './Regex'
 import NotFound from './NotFound'
 
 const Notepad = () => {
@@ -14,6 +15,8 @@ const Notepad = () => {
 				return <Git />
 			case 'Terminal':
 				return <Terminal />
+			case 'Regex':
+				return <Regex />
 			default:
 				return <NotFound />
 		}

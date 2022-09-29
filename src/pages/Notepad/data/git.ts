@@ -233,7 +233,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			command: 'git status',
 			description: 'Show current status',
 			details:
-				'Status: \n  Branch is up to date, ahead or behind.\n  Files are created, modified or deleted.\n  Files are staged, unstaged, untracked.',
+				'Status: Branch is up to date, ahead or behind. Files are created, modified or deleted. Files are staged, unstaged, untracked.',
 		},
 		{
 			command: 'git show [commit]',

@@ -13,6 +13,10 @@ class DataHandler {
 		console.log(items)
 	}
 
+	copyObject(object) {
+		return JSON.parse(JSON.stringify(object))
+	}
+
 	hasName(name) {
 		// const names = []
 		// items.forEach((item) => {

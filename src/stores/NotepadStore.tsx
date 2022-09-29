@@ -2,7 +2,7 @@ import { makeAutoObservable } from 'mobx'
 import { commands } from 'pages/Notepad/data/git'
 
 export default class NotepadStore {
-	private _pages = ['Git', 'Terminal', 'Regex', 'VS Code']
+	private _pages = ['Git', 'Terminal', 'Regex']
 	private _selectedPage = this._pages[0]
 	private _gitPages: string[] = []
 	private _selectedGitPage = ''
