@@ -18,6 +18,7 @@ const CommandItem = ({ command, description, details }: CommandInfo) => {
 				border: 'solid 1px #444',
 				borderRadius: '4px !important',
 				'&:before': { display: 'none' },
+				'&.Mui-expanded': { margin: 0 },
 			}}
 		>
 			<Box
