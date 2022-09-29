@@ -141,14 +141,10 @@ export const commands: { [key: string]: CommandInfo[] } = {
 		{
 			command: 'git pull',
 			description: 'Fetch and merge from remote',
-			details:
-				'git merge get changes from local branch and git pull get changes from remote',
 		},
 		{
 			command: 'git pull origin [branch]',
 			description: 'Pull from remote branch',
-			details:
-				'git merge get changes from local branch and git pull get changes from remote',
 		},
 		{
 			command: 'git pull --squash',
