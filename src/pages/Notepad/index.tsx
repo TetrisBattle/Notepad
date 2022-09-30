@@ -1,16 +1,12 @@
 import { observer } from 'mobx-react-lite'
 import { Box, Button, Toolbar } from '@mui/material'
 import { useStoreContext } from 'contexts/StoreContext'
-import {
-	Routes,
-	Route,
-	Link,
-	useLocation,
-} from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 const Notepad = () => {
-	const { notepadStore } = useStoreContext()
-	const location = useLocation()
+	const { appStore } = useStoreContext()
+	const gitRoutes = appStore.routes.find((route) => route.label === 'Notepad')!
+		.children!
 
 	return (
 		<Box>
@@ -20,24 +16,32 @@ const Notepad = () => {
 					justifyContent: 'center',
 				}}
 			>
-				{notepadStore.pages.map((page) => (
-					<Button
-						key={page.id}
-						variant='text'
-						color={page.path === location.pathname ? 'primary' : 'inherit'}
-						component={Link}
-						to={page.path}
-						sx={{ fontSize: 20 }}
-					>
-						{page.id}
-					</Button>
-				))}
+				{gitRoutes.map((route) => {
+					let path = route.path
+					if (route.path === 'git/:id') {
+						path = 'git'
+					}
+
+					return (
+						<Button
+							key={route.path}
+							component={NavLink}
+							to={path}
+							variant='text'
+							sx={{
+								fontSize: 20,
+								color: 'inherit',
+								'&.active': (theme) => ({
+									color: theme.palette.primary.main,
+								}),
+							}}
+						>
+							{route.label}
+						</Button>
+					)
+				})}
 			</Toolbar>
-			<Routes>
-				{notepadStore.pages.map((page) => (
-					<Route key={page.path} path={page.id} element={page.element} />
-				))}
-			</Routes>
+			<Outlet />
 		</Box>
 	)
 }

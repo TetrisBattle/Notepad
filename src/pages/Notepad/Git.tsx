@@ -1,15 +1,16 @@
 import { Box, Button, Toolbar, Typography } from '@mui/material'
-import { useStoreContext } from 'contexts/StoreContext'
 import { commands } from './data/git'
 import CommandItem from './CommandItem'
 import { observer } from 'mobx-react-lite'
-import { useEffect } from 'react'
+import { NavLink, useParams } from 'react-router-dom'
+import NotFound from './NotFound'
 
 const Git = () => {
-	const { notepadStore } = useStoreContext()
-	const selectedGitPageCommands = commands[notepadStore.selectedGitPage]
-
-	useEffect(() => {}, [notepadStore.selectedGitPage])
+	const commandKeys = Object.keys(commands)
+	const params = useParams()
+	if (!params.id) return <NotFound />
+	if (!commandKeys.some((key) => key === params.id)) return <NotFound />
+	const selectedGitCommands = commands[params.id]
 
 	return (
 		<>
@@ -20,17 +21,21 @@ const Git = () => {
 					flexWrap: 'wrap',
 				}}
 			>
-				{notepadStore.gitPages.map((page) => (
+				{commandKeys.map((key) => (
 					<Button
-						key={page}
+						key={key}
+						component={NavLink}
+						to={`/notepad/git/${key}`}
 						variant='text'
-						color={
-							notepadStore.selectedGitPage === page ? 'primary' : 'inherit'
-						}
-						onClick={() => (notepadStore.selectedGitPage = page)}
-						sx={{ fontSize: 20 }}
+						sx={(theme) => ({
+							fontSize: 20,
+							color: 'inherit',
+							'&.active': {
+								color: theme.palette.primary.main,
+							},
+						})}
 					>
-						{page}
+						{key.slice(0, 1).toUpperCase() + key.slice(1)}
 					</Button>
 				))}
 			</Toolbar>
@@ -40,7 +45,7 @@ const Git = () => {
 					display: 'flex',
 					flexDirection: 'column',
 					maxWidth: (theme) => theme.breakpoints.values.md,
-					mx: 'auto'
+					mx: 'auto',
 				}}
 			>
 				<Typography
@@ -53,7 +58,7 @@ const Git = () => {
 					Git Commands
 				</Typography>
 				<Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-					{selectedGitPageCommands.map((gitCommand) => {
+					{selectedGitCommands.map((gitCommand) => {
 						return <CommandItem key={gitCommand.command} {...gitCommand} />
 					})}
 				</Box>

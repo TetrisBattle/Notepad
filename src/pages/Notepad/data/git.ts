@@ -1,7 +1,7 @@
 import { CommandInfo } from '../CommandItem'
 
 export const commands: { [key: string]: CommandInfo[] } = {
-	Init: [
+	init: [
 		{
 			command: 'git init',
 			description: 'Create an empty Git repository',
@@ -21,7 +21,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Connect local repository to origin and push to main',
 		},
 	],
-	Remote: [
+	remote: [
 		{
 			command: 'git remote add origin [GitHub]',
 			description: 'Add new remote repository',
@@ -50,7 +50,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 				'This command do not delete the remote repository from the server. It simply removes the remote and its references from your local repository.',
 		},
 	],
-	Branch: [
+	branch: [
 		{
 			command: 'git branch',
 			description: 'List all local branches',
@@ -103,7 +103,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Remove unstaged changes?',
 		},
 	],
-	Commit: [
+	commit: [
 		{
 			command: 'git add .',
 			description: 'Stage all changes',
@@ -121,7 +121,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Rewrite last commit message',
 		},
 	],
-	Changes: [
+	changes: [
 		{
 			command: 'git fetch',
 			description: 'Fetch new changes from remote',
@@ -164,7 +164,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Force push to remote (overwrite git history)',
 		},
 	],
-	Stash: [
+	stash: [
 		{
 			command: 'git stash',
 			description: 'Stash current changes',
@@ -186,7 +186,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Clear all stashes',
 		},
 	],
-	Reset: [
+	reset: [
 		{
 			command: 'git reset [commit]',
 			description: 'Reset to commit and keep changes',
@@ -224,7 +224,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Undo commit and add the changes to current repository',
 		},
 	],
-	Info: [
+	info: [
 		{
 			command: 'git status',
 			description: 'Show current status',

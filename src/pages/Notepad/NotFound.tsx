@@ -15,7 +15,7 @@ const NotFound = () => {
 				Error 404
 			</Typography>
 			<Typography color='primary' fontSize={20}>
-				The page has not been created yet.
+				The page was not found!
 			</Typography>
 		</Box>
 	)

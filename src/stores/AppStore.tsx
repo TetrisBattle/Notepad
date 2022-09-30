@@ -1,20 +1,41 @@
 import { makeAutoObservable } from 'mobx'
 import Notepad from 'pages/Notepad'
+import Git from 'pages/Notepad/Git'
+import Terminal from 'pages/Notepad/Terminal'
+import Regex from 'pages/Notepad/Regex'
 import RemConverter from 'pages/RemConverter'
-
-export interface Page {
-	id: string
-	path: string
-	defaultPath?: string
-	element: React.ReactElement
-}
 
 export default class AppStore {
 	private _isDarkTheme = true
 	private _isLoading = false
-	private _pages: Page[] = [
-		{ id: 'Notepad', path: '/Notepad', defaultPath: '/Notepad/Git', element: <Notepad /> },
-		{ id: 'RemConverter', path: '/RemConverter', element: <RemConverter /> },
+	private _routes = [
+		{
+			label: 'Notepad',
+			path: '/notepad',
+			element: <Notepad />,
+			children: [
+				{
+					label: 'Git',
+					path: 'git/:id',
+					element: <Git />,
+				},
+				{
+					label: 'Terminal',
+					path: 'terminal',
+					element: <Terminal />,
+				},
+				{
+					label: 'Regex',
+					path: 'regex',
+					element: <Regex />,
+				},
+			],
+		},
+		{
+			label: 'RemConverter',
+			path: '/remconverter',
+			element: <RemConverter />,
+		},
 	]
 
 	constructor() {
@@ -37,7 +58,7 @@ export default class AppStore {
 		this._isLoading = value
 	}
 
-	get pages() {
-		return this._pages
+	get routes() {
+		return this._routes
 	}
 }
