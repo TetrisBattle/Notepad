@@ -25,14 +25,27 @@ const CommandItem = ({ command, description, details }: CommandInfo) => {
 				sx={{
 					display: 'flex',
 					alignItems: 'center',
-					gap: 2,
-					'.MuiTypography-root': { py: 1 },
 				}}
 			>
-				<Typography sx={{ width: '40%', ml: 2, flexShrink: 0 }}>
-					{command}
-				</Typography>
-				<Typography sx={{ flexGrow: 1 }}>{description}</Typography>
+				<Box
+					sx={(theme) => ({
+						width: 1,
+						display: 'flex',
+						alignItems: 'center',
+						gap: 2,
+						[theme.breakpoints.down('sm')]: {
+							p: 1,
+							flexDirection: 'column',
+							alignItems: 'initial',
+							'.MuiTypography-root': { width: 1, ml: 1 },
+						},
+					})}
+				>
+					<Typography sx={{ width: 0.4, ml: 2, flexShrink: 0 }}>
+						{command}
+					</Typography>
+					<Typography sx={{ flexGrow: 1 }}>{description}</Typography>
+				</Box>
 				<Box
 					onClick={() => setExpanded((prev) => !prev)}
 					sx={{
