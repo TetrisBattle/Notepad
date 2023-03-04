@@ -17,8 +17,8 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Add new remote repository',
 		},
 		{
-			command: 'git push -u origin main',
-			description: 'Connect local repository to origin and push to main',
+			command: 'git push -u origin [branch]',
+			description: 'Connect and push branch to origin',
 		},
 	],
 	remote: [
@@ -29,6 +29,10 @@ export const commands: { [key: string]: CommandInfo[] } = {
 		{
 			command: 'git push -u origin main',
 			description: 'connect local repository to origin and push to main',
+		},
+		{
+			command: 'git remote prune origin',
+			description: 'Remove local branches that have no remote-tracking references',
 		},
 		{
 			command: 'git remote -v',
@@ -127,6 +131,10 @@ export const commands: { [key: string]: CommandInfo[] } = {
 			description: 'Fetch new changes from remote',
 		},
 		{
+			command: 'git fetch --prune',
+			description: 'Fetch new changes from remote and remove local branches that have no remote-tracking references',
+		},
+		{
 			command: 'git merge [branch]',
 			description: 'Merge from local branch',
 		},
@@ -201,15 +209,15 @@ export const commands: { [key: string]: CommandInfo[] } = {
 		},
 		{
 			command: 'git reset HEAD^',
-			description: 'Undo last local commit',
+			description: 'Reset last local commit',
 		},
 		{
 			command: 'git reset HEAD~[n]',
-			description: 'Undo n amount of local commits',
+			description: 'Reset n amount of local commits',
 		},
 		{
-			command: 'git reset HEAD~[n] --hard',
-			description: 'Undo n amount of local commits and discard the changes',
+			command: 'git reset --merge HEAD~1',
+			description: 'Undo merge',
 		},
 		{
 			command: 'git restore .',
@@ -221,7 +229,7 @@ export const commands: { [key: string]: CommandInfo[] } = {
 		},
 		{
 			command: 'git revert [commit]',
-			description: 'Undo commit and add the changes to current repository',
+			description: 'Reset commit and add the changes to current repository',
 		},
 	],
 	info: [
