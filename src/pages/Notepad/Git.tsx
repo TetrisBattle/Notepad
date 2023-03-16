@@ -5,7 +5,7 @@ import { observer } from 'mobx-react-lite'
 import { NavLink, useParams } from 'react-router-dom'
 import NotFound from './NotFound'
 
-const Git = () => {
+function Git() {
 	const commandKeys = Object.keys(commands)
 	const params = useParams()
 	if (!params.id) return <NotFound />

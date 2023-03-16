@@ -5,11 +5,11 @@ interface MenuIconButtonProps extends IconButtonProps {
 	icon: JSX.Element
 }
 
-const MenuIconButton = ({
+export default function MenuIconButton({
 	icon,
 	children,
 	...baseProps
-}: MenuIconButtonProps) => {
+}: MenuIconButtonProps) {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
 	return (
@@ -34,5 +34,3 @@ const MenuIconButton = ({
 		</>
 	)
 }
-
-export default MenuIconButton

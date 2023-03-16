@@ -2,7 +2,7 @@ import { Box, Paper, Typography } from '@mui/material'
 import CommandItem from './CommandItem'
 import { commands as commandsArray } from './data/regex'
 
-const Regex = () => {
+export default function Regex() {
 	return (
 		<Box
 			sx={{
@@ -97,5 +97,3 @@ const Regex = () => {
 		</Box>
 	)
 }
-
-export default Regex

@@ -8,7 +8,7 @@ import { Backdrop, CircularProgress } from '@mui/material'
 import { useStoreContext } from 'contexts/StoreContext'
 import Header from 'components/Header'
 
-const AppRoutes = () => {
+function AppRoutes() {
 	const { appStore } = useStoreContext()
 
 	return (

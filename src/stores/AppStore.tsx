@@ -6,9 +6,9 @@ import Regex from 'pages/Notepad/Regex'
 import RemConverter from 'pages/RemConverter'
 
 export default class AppStore {
-	private _isDarkTheme = true
-	private _isLoading = false
-	private _routes = [
+	isDarkTheme = true
+	isLoading = false
+	routes = [
 		{
 			label: 'Notepad',
 			path: '/notepad',
@@ -42,23 +42,11 @@ export default class AppStore {
 		makeAutoObservable(this)
 	}
 
-	get isDarkTheme() {
-		return this._isDarkTheme
-	}
-
 	toggleDarkTheme = () => {
-		this._isDarkTheme = !this._isDarkTheme
+		this.isDarkTheme = !this.isDarkTheme
 	}
 
-	get isLoading() {
-		return this._isLoading
-	}
-
-	set isLoading(value) {
-		this._isLoading = value
-	}
-
-	get routes() {
-		return this._routes
+	setIsLoading(isLoading: boolean) {
+		this.isLoading = isLoading
 	}
 }

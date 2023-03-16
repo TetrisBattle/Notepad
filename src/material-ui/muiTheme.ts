@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles'
 import defaultTheme from './defaultTheme'
 
-const muiTheme = (isDarkTheme: boolean) => {
+export default function muiTheme(isDarkTheme: boolean) {
 	const theme = defaultTheme(isDarkTheme)
 
 	return createTheme(theme, {
@@ -19,5 +19,3 @@ const muiTheme = (isDarkTheme: boolean) => {
 		},
 	})
 }
-
-export default muiTheme

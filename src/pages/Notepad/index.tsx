@@ -3,7 +3,7 @@ import { Box, Button, Toolbar } from '@mui/material'
 import { useStoreContext } from 'contexts/StoreContext'
 import { NavLink, Outlet } from 'react-router-dom'
 
-const Notepad = () => {
+function Notepad() {
 	const { appStore } = useStoreContext()
 	const gitRoutes = appStore.routes.find(
 		(route) => route.label === 'Notepad'

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Box, InputAdornment, TextField, Typography } from '@mui/material'
 
-const RemConverter = () => {
+export default function RemConverter() {
 	const rootPx = 16
 	const [px, setPx] = useState(rootPx.toString())
 	const [rem, setRem] = useState('1')
@@ -100,5 +100,3 @@ const RemConverter = () => {
 		</Box>
 	)
 }
-
-export default RemConverter

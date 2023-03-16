@@ -36,7 +36,7 @@ interface Props extends DialogProps {
 		| undefined
 }
 
-const DraggableDialog = (props: Props) => {
+export default function DraggableDialog(props: Props) {
 	const { title, children, ...baseProps } = props
 
 	return (
@@ -80,5 +80,3 @@ const DraggableDialog = (props: Props) => {
 		</>
 	)
 }
-
-export default DraggableDialog

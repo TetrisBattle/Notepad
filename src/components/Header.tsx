@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from 'icons/Logo.svg'
 import { observer } from 'mobx-react-lite'
 import { useStoreContext } from 'contexts/StoreContext'
 
-const Header = () => {
+function Header() {
 	const { appStore } = useStoreContext()
 
 	return (

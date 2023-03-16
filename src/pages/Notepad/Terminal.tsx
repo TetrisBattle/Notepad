@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import CommandItem from './CommandItem'
 import { commands } from './data/terminal'
 
-const Terminal = () => {
+export default function Terminal() {
 	return (
 		<Box
 			sx={{
@@ -33,5 +33,3 @@ const Terminal = () => {
 		</Box>
 	)
 }
-
-export default Terminal

@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 
-const NotFound = () => {
+export default function NotFound() {
 	return (
 		<Box
 			sx={{
@@ -20,5 +20,3 @@ const NotFound = () => {
 		</Box>
 	)
 }
-
-export default NotFound
