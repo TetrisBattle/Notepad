@@ -11,7 +11,7 @@
 		"prettier/prettier": 1,
 		"react/react-in-jsx-scope": 0,
 		"no-debugger": 1,
-		"no-console": 1,
+		"no-console": 0,
 		"@typescript-eslint/no-empty-function": 1
 	}
 }

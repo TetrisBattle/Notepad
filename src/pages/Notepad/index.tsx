@@ -2,12 +2,14 @@ import { observer } from 'mobx-react-lite'
 import { Box, Button, Toolbar } from '@mui/material'
 import { useStoreContext } from 'contexts/StoreContext'
 import { NavLink, Outlet } from 'react-router-dom'
+import NotFound from './NotFound'
 
 function Notepad() {
 	const { appStore } = useStoreContext()
 	const gitRoutes = appStore.routes.find(
 		(route) => route.label === 'Notepad'
-	)!.children!
+	)?.children
+	if (!gitRoutes) return <NotFound />
 
 	return (
 		<Box>
