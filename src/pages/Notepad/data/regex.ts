@@ -1,6 +1,6 @@
-import { CommandInfo } from '../CommandItem'
+import { CommandItemProps } from '../CommandItem'
 
-export const commands: CommandInfo[][] = [
+export const commands: CommandItemProps[][] = [
 	[
 		{
 			command: '//g',
@@ -61,7 +61,8 @@ export const commands: CommandInfo[][] = [
 		},
 		{
 			command: '/asd./g ',
-			description: 'Match "asd" and any letter after it except for line break',
+			description:
+				'Match "asd" and any letter after it except for line break',
 		},
 		{
 			command: '/asd\\./g ',
@@ -72,7 +73,8 @@ export const commands: CommandInfo[][] = [
 	[
 		{
 			command: '/.asd./g',
-			description: 'Match "asd" and any letter before and after it except for line break',
+			description:
+				'Match "asd" and any letter before and after it except for line break',
 		},
 		{
 			command: '/as.d/g  ',
@@ -81,7 +83,8 @@ export const commands: CommandInfo[][] = [
 		},
 		{
 			command: '/asd../g ',
-			description: 'Match "asd" and two letters after it except for line break',
+			description:
+				'Match "asd" and two letters after it except for line break',
 		},
 	],
 	[
@@ -110,13 +113,15 @@ export const commands: CommandInfo[][] = [
 		},
 		{
 			command: '/(t|T)he/g',
-			description: 'Match "t" or "T" that ends with "he", like "the" or "The"',
+			description:
+				'Match "t" or "T" that ends with "he", like "the" or "The"',
 		},
 	],
 	[
 		{
 			command: '/(a|s){2}/g',
-			description: 'Have to contain 2x "a" or "s", like "as", "sa", "aa", "ss"',
+			description:
+				'Have to contain 2x "a" or "s", like "as", "sa", "aa", "ss"',
 		},
 		{
 			command: '/asd{2,3}/g',
@@ -144,7 +149,8 @@ export const commands: CommandInfo[][] = [
 		},
 		{
 			command: '/(?<!asd)./g',
-			description: 'Match everything except a character after "asd" (negative look behind)',
+			description:
+				'Match everything except a character after "asd" (negative look behind)',
 		},
 	],
 	[
@@ -154,7 +160,8 @@ export const commands: CommandInfo[][] = [
 		},
 		{
 			command: '/.(?!asd)/g',
-			description: 'Match everything except a character before "asd" (negative look ahead)',
+			description:
+				'Match everything except a character before "asd" (negative look ahead)',
 		},
 	],
 	[
@@ -164,11 +171,13 @@ export const commands: CommandInfo[][] = [
 		},
 		{
 			command: '/\\w{4,}/g',
-			description: 'Match alphanumeric that has 4 or more characters in a row',
+			description:
+				'Match alphanumeric that has 4 or more characters in a row',
 		},
 		{
 			command: '/\\w{4,5}/g',
-			description: 'Match alphanumeric that has 4 or 5 characters in a row',
+			description:
+				'Match alphanumeric that has 4 or 5 characters in a row',
 		},
 	],
 	[

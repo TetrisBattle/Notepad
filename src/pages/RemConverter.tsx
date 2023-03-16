@@ -74,7 +74,9 @@ const RemConverter = () => {
 					value={px}
 					onChange={handleChange}
 					InputProps={{
-						endAdornment: <InputAdornment position='start'>px</InputAdornment>,
+						endAdornment: (
+							<InputAdornment position='start'>px</InputAdornment>
+						),
 					}}
 					autoComplete='off'
 				/>
@@ -86,7 +88,11 @@ const RemConverter = () => {
 					value={rem}
 					onChange={handleChange}
 					InputProps={{
-						endAdornment: <InputAdornment position='start'>rem</InputAdornment>,
+						endAdornment: (
+							<InputAdornment position='start'>
+								rem
+							</InputAdornment>
+						),
 					}}
 					autoComplete='off'
 				/>

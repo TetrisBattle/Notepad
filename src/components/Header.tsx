@@ -11,7 +11,12 @@ const Header = () => {
 	const { appStore } = useStoreContext()
 
 	return (
-		<AppBar sx={{ backgroundImage: 'none', borderBottom: 'solid 1px grey' }}>
+		<AppBar
+			sx={{
+				backgroundImage: 'none',
+				borderBottom: 'solid 1px grey',
+			}}
+		>
 			<Toolbar sx={{ p: 1 }}>
 				<Logo
 					style={{
@@ -40,7 +45,8 @@ const Header = () => {
 										'&:hover': { bgcolor: 'transparent' },
 										fontSize: '1.25rem',
 										color: 'inherit',
-										'&.active': theme.palette.mode === 'dark' && {
+										'&.active': theme.palette.mode ===
+											'dark' && {
 											color: theme.palette.primary.main,
 										},
 									})}

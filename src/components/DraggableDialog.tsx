@@ -20,7 +20,11 @@ const PaperComponent = (paperProps: PaperProps) => {
 			cancel={'[class*="MuiDialogContent-root"]'}
 			bounds='parent'
 		>
-			<Paper ref={nodeRef} {...paperProps} sx={{ margin: '0 !important' }} />
+			<Paper
+				ref={nodeRef}
+				{...paperProps}
+				sx={{ margin: '0 !important' }}
+			/>
 		</Draggable>
 	)
 }
@@ -28,7 +32,7 @@ const PaperComponent = (paperProps: PaperProps) => {
 interface Props extends DialogProps {
 	title: string
 	onClose:
-		| ((event: {}, reason?: 'backdropClick' | 'escapeKeyDown') => void)
+		| ((event: object, reason?: 'backdropClick' | 'escapeKeyDown') => void)
 		| undefined
 }
 

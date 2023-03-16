@@ -4,16 +4,18 @@ import RootStore from 'stores/RootStore'
 const rootStore = new RootStore()
 const StoreContext = createContext(rootStore)
 
-export const StoreContextProvider = ({
-	children,
-}: {
+interface StoreContextProviderProps {
 	children: React.ReactNode
-}) => {
+}
+
+export function StoreContextProvider({ children }: StoreContextProviderProps) {
 	return (
-		<StoreContext.Provider value={rootStore}>{children}</StoreContext.Provider>
+		<StoreContext.Provider value={rootStore}>
+			{children}
+		</StoreContext.Provider>
 	)
 }
 
-export const useStoreContext = () => {
+export function useStoreContext() {
 	return useContext(StoreContext)
 }

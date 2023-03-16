@@ -15,8 +15,14 @@ const AppRoutes = () => {
 		<Routes>
 			<Route path='*' element={<Navigate to='/notepad/git' />} />
 			<Route path='/' element={<Navigate replace to='/notepad' />} />
-			<Route path='/notepad' element={<Navigate replace to='/notepad/git/init' />} />
-			<Route path='/notepad/git' element={<Navigate replace to='/notepad/git/init' />} />
+			<Route
+				path='/notepad'
+				element={<Navigate replace to='/notepad/git/init' />}
+			/>
+			<Route
+				path='/notepad/git'
+				element={<Navigate replace to='/notepad/git/init' />}
+			/>
 
 			{appStore.routes.map((route) => {
 				const recursion = (recursionRoute: typeof route) => {
@@ -27,9 +33,9 @@ const AppRoutes = () => {
 								path={`/${recursionRoute.path}`}
 								element={recursionRoute.element}
 							>
-								{recursionRoute.children.map((child) => (
+								{recursionRoute.children.map((child) =>
 									recursion(child)
-								))}
+								)}
 							</Route>
 						)
 					}

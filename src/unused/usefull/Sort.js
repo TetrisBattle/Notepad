@@ -15,7 +15,7 @@ export const quickSort = (array) => {
 			const pivot = array[end]
 			let sortIndex = start
 
-			for (let i=start; i<=end-1; i++) {
+			for (let i = start; i <= end - 1; i++) {
 				if (array[i] < pivot) {
 					swap(array, sortIndex, i)
 					sortIndex++
@@ -43,13 +43,19 @@ export const mergeSort = (array) => {
 		const rightArrayLength = end - middle
 
 		const leftArray = array.slice(start, leftArrayLength + start)
-		const rightArray = array.slice(middle + 1, rightArrayLength + middle + 1)
+		const rightArray = array.slice(
+			middle + 1,
+			rightArrayLength + middle + 1
+		)
 
 		let leftArrayIndex = 0
 		let rightArrayIndex = 0
 		let mergeIndex = start
 
-		while (leftArrayIndex < leftArrayLength && rightArrayIndex < rightArrayLength) {
+		while (
+			leftArrayIndex < leftArrayLength &&
+			rightArrayIndex < rightArrayLength
+		) {
 			if (leftArray[leftArrayIndex] <= rightArray[rightArrayIndex]) {
 				array[mergeIndex] = leftArray[leftArrayIndex]
 				leftArrayIndex++

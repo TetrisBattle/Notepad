@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { Accordion, AccordionDetails, Box, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-export interface CommandInfo {
+export interface CommandItemProps {
 	command: string
 	description: string
 	details?: string
 }
 
-const CommandItem = ({ command, description, details }: CommandInfo) => {
+const CommandItem = ({ command, description, details }: CommandItemProps) => {
 	const [expanded, setExpanded] = useState(false)
 
 	return (

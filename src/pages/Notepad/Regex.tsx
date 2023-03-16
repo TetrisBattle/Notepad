@@ -23,14 +23,18 @@ const Regex = () => {
 
 			<Paper sx={{ width: 'fit-content', p: 2, mx: 'auto' }}>
 				<Typography>
-					Regular expression (Regex) is a way to match a certain area of a
-					string.
+					Regular expression (Regex) is a way to match a certain area
+					of a string.
 				</Typography>
-				<Typography>It starts and ends with "/" sign.</Typography>
-				<Typography>/asd/ = match the first "asd" from string</Typography>
 				<Typography>
-					/asd/g = match all the "asd" from string, letter g makes it match
-					globally
+					It starts and ends with &quot;/&quot; sign.
+				</Typography>
+				<Typography>
+					/asd/ = match the first &quot;asd&quot; from string
+				</Typography>
+				<Typography>
+					/asd/g = match all the &quot;asd&quot; from string, letter g
+					makes it match globally
 				</Typography>
 			</Paper>
 
@@ -70,10 +74,20 @@ const Regex = () => {
 			<Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
 				{commandsArray.map((commands, index) => {
 					return (
-						<Box key={`regex-${index}`} sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+						<Box
+							key={`regex-${index}`}
+							sx={{
+								display: 'flex',
+								flexDirection: 'column',
+								gap: 1,
+							}}
+						>
 							{commands.map((regexCommand) => {
 								return (
-									<CommandItem key={regexCommand.command} {...regexCommand} />
+									<CommandItem
+										key={regexCommand.command}
+										{...regexCommand}
+									/>
 								)
 							})}
 						</Box>

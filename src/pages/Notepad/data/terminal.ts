@@ -1,6 +1,6 @@
-import { CommandInfo } from '../CommandItem'
+import { CommandItemProps } from '../CommandItem'
 
-export const commands: CommandInfo[] = [
+export const commands: CommandItemProps[] = [
 	{
 		command: 'start [file / dir]',
 		description: 'Open file or directory',

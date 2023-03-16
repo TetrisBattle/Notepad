@@ -5,8 +5,9 @@ import { NavLink, Outlet } from 'react-router-dom'
 
 const Notepad = () => {
 	const { appStore } = useStoreContext()
-	const gitRoutes = appStore.routes.find((route) => route.label === 'Notepad')!
-		.children!
+	const gitRoutes = appStore.routes.find(
+		(route) => route.label === 'Notepad'
+	)!.children!
 
 	return (
 		<Box>

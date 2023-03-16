@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { IconButton, IconButtonProps, Menu } from '@mui/material'
 
-interface Props extends IconButtonProps {
+interface MenuIconButtonProps extends IconButtonProps {
 	icon: JSX.Element
 }
 
-const MenuIconButton = ({ icon, children, ...baseProps }: Props) => {
+const MenuIconButton = ({
+	icon,
+	children,
+	...baseProps
+}: MenuIconButtonProps) => {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
 	return (

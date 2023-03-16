@@ -23,7 +23,10 @@ const Terminal = () => {
 			<Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
 				{commands.map((terminalCommand) => {
 					return (
-						<CommandItem key={terminalCommand.command} {...terminalCommand} />
+						<CommandItem
+							key={terminalCommand.command}
+							{...terminalCommand}
+						/>
 					)
 				})}
 			</Box>

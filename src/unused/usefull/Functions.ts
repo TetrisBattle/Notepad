@@ -2,6 +2,7 @@ export function binarySearch(array: number[], target: number) {
 	let min = 0
 	let max = array.length - 1
 
+	// eslint-disable-next-line no-constant-condition
 	while (true) {
 		const mid = Math.round((min + max) / 2)
 
@@ -14,7 +15,7 @@ export function binarySearch(array: number[], target: number) {
 	}
 }
 
-export function decimalIsValid(value: string, decimals: number = 2): boolean {
+export function decimalIsValid(value: string, decimals = 2): boolean {
 	if (/[.,]/.test(value) && value.split(/[.,]/)[1].length > decimals) {
 		return false
 	} else if (/^\d*[.,]?\d*$/.test(value)) {

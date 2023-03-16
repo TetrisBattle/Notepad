@@ -28,7 +28,9 @@ const defaultTheme = (isDarkTheme: boolean) => {
 			toolbar: {}, // This will get rid of minHeight styles
 		},
 		typography: {
-			fontFamily: ['Open Sans', 'Roboto', 'Arial', 'sans-serif'].join(','),
+			fontFamily: ['Open Sans', 'Roboto', 'Arial', 'sans-serif'].join(
+				','
+			),
 			h1: {
 				fontSize: '3rem', // 48px
 				fontWeight: 400,

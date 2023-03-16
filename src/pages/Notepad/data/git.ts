@@ -1,6 +1,6 @@
-import { CommandInfo } from '../CommandItem'
+import { CommandItemProps } from '../CommandItem'
 
-export const commands: { [key: string]: CommandInfo[] } = {
+export const commands: { [key: string]: CommandItemProps[] } = {
 	init: [
 		{
 			command: 'git init',
@@ -32,7 +32,8 @@ export const commands: { [key: string]: CommandInfo[] } = {
 		},
 		{
 			command: 'git remote prune origin',
-			description: 'Remove local branches that have no remote-tracking references',
+			description:
+				'Remove local branches that have no remote-tracking references',
 		},
 		{
 			command: 'git remote -v',
@@ -132,7 +133,8 @@ export const commands: { [key: string]: CommandInfo[] } = {
 		},
 		{
 			command: 'git fetch --prune',
-			description: 'Fetch new changes from remote and remove local branches that have no remote-tracking references',
+			description:
+				'Fetch new changes from remote and remove local branches that have no remote-tracking references',
 		},
 		{
 			command: 'git merge [branch]',
@@ -229,7 +231,8 @@ export const commands: { [key: string]: CommandInfo[] } = {
 		},
 		{
 			command: 'git revert [commit]',
-			description: 'Reset commit and add the changes to current repository',
+			description:
+				'Reset commit and add the changes to current repository',
 		},
 	],
 	info: [

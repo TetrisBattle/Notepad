@@ -59,7 +59,12 @@ const Git = () => {
 				</Typography>
 				<Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
 					{selectedGitCommands.map((gitCommand) => {
-						return <CommandItem key={gitCommand.command} {...gitCommand} />
+						return (
+							<CommandItem
+								key={gitCommand.command}
+								{...gitCommand}
+							/>
+						)
 					})}
 				</Box>
 			</Box>
