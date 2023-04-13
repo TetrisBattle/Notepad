@@ -1,0 +1,72 @@
+-- Create and use database
+CREATE DATABASE {test_db};
+USE {test_db};
+
+-- Delete database and table
+DROP test_db;
+DROP test_table;
+
+-- PRIMARY and FOREIGN KEY
+CREATE TABLE test_table (
+	id INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	year YEAR,
+	date DATE,
+	boolean BIT NOT NULL, -- 0 or 1
+	price float,
+	random INT,
+	text VARCHAR(255) DEFAULT 'default text',
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE test_table2 (
+	id INT NOT NULL AUTO_INCREMENT,
+	test_table_id INT NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (test_table_id) REFERENCES test_table(id)
+);
+
+-- Add new data
+INSERT INTO test_table (name) VALUES ('test1');
+INSERT INTO test_table (name, price) VALUES ('test1', 12.5), ('test2', NULL);
+
+-- Add new column "info"
+ALTER TABLE test_table ADD info VARCHAR(255);
+-- Change column type
+ALTER TABLE test_table ALTER COLUMN price INT;
+-- Rename column
+ALTER TABLE test_table RENAME COLUMN old_name to new_name;
+-- Delete column "info"
+ALTER TABLE test_table DROP COLUMN price;
+
+-- Update data
+UPDATE test_table SET price = 9.99, random = 420 WHERE id = 1;
+
+-- Delete data
+DELETE FROM test_table WHERE id = 1;
+
+-- SELECT
+SELECT * FROM test_table;
+SELECT COUNT(*) FROM test_table; -- Count rows
+SELECT name, price FROM test_table LIMIT 10;
+SELECT price as Price FROM test_table;
+SELECT DISTINCT name FROM test_table; -- DISTINCT = unique values
+SELECT * FROM test_table WHERE id = 1 AND (name = 'test' OR name = 'test1');
+SELECT * FROM test_table WHERE NOT id = 1;
+SELECT * FROM test_table WHERE year BETWEEN 1990 AND 2020;
+SELECT * FROM test_table
+	WHERE id = 1 AND
+		name = 'test1' AND
+		year > 2020 AND
+		price IS NOT NULL AND
+		random IS NULL
+	ORDER BY name DESC;
+
+SELECT * FROM test_table WHERE name LIKE '%st%'; -- % = any characters
+
+-- JOIN
+SELECT * FROM test_table
+	JOIN test_table2 ON test_table.id = test_table2.test_table_id;
+SELECT test_table.price, test_table2.name  FROM test_table
+	JOIN test_table2 ON test_table.id = test_table2.test_table_id;
