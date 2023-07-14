@@ -1,0 +1,8 @@
+LineHeight
+- Larger the textSize the smaller the lineHeight
+- 1.2 heading textSize
+- 1.4 body textSize
+
+LetterSpacing
+- just for headings
+- around -1%
