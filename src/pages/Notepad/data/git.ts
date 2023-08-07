@@ -33,7 +33,7 @@ export const commands: { [key: string]: CommandItemProps[] } = {
 		{
 			command: 'git remote prune origin',
 			description:
-				'Remove local branches that have no remote-tracking references',
+				'Removes references to remote branches that no longer exist on remote',
 		},
 		{
 			command: 'git remote -v',
@@ -86,6 +86,12 @@ export const commands: { [key: string]: CommandItemProps[] } = {
 		{
 			command: 'git branch -D [branch]',
 			description: "Delete branch even if it hasn't merged to main",
+		},
+		{
+			command:
+				'git branch | grep -v "main" | grep -v "master" | grep -v "dev" | xargs git branch -D',
+			description:
+				'Removes all local branches except main, master and dev',
 		},
 		{
 			command: 'git push origin :[branch]',
