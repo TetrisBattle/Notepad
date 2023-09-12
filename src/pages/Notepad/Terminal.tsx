@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
-import CommandItem from './CommandItem'
+import { CommandItem } from './CommandItem'
 import { commands } from './data/terminal'
 
-export default function Terminal() {
+export const Terminal = () => {
 	return (
 		<Box
 			sx={{
@@ -14,7 +14,7 @@ export default function Terminal() {
 			<Typography
 				variant='h1'
 				color='primary'
-				fontWeight={600}
+				fontWeight={400}
 				textAlign='center'
 				mb={2}
 			>

@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import { AppBar, Toolbar, Button, MenuItem, Box } from '@mui/material'
 import { Menu as MenuIcon } from '@mui/icons-material'
-import MenuIconButton from './MenuIconButton'
-import DarkThemeIconButton from './DarkThemeIconButton'
-import { ReactComponent as Logo } from 'icons/Logo.svg'
+import { MenuIconButton } from './MenuIconButton'
+import { DarkThemeIconButton } from './DarkThemeIconButton'
 import { observer } from 'mobx-react-lite'
-import { useStoreContext } from 'contexts/StoreContext'
+import { useStore } from 'hooks/useStore'
+import { Logo } from '@thng/react'
 
-function Header() {
-	const { appStore } = useStoreContext()
+export const Header = observer(() => {
+	const { appStore } = useStore()
 
 	return (
 		<AppBar
@@ -18,13 +18,9 @@ function Header() {
 			}}
 		>
 			<Toolbar sx={{ p: 1 }}>
-				<Logo
-					style={{
-						height: 48,
-						width: 48,
-						marginRight: 'auto',
-					}}
-				/>
+				<Box sx={{ mr: 'auto', display: 'flex', alignItems: 'center' }}>
+					<Logo size={48} />
+				</Box>
 				<Box
 					sx={{
 						display: {
@@ -45,6 +41,8 @@ function Header() {
 										'&:hover': { bgcolor: 'transparent' },
 										fontSize: '1.25rem',
 										color: 'inherit',
+										fontWeight: (theme) =>
+											theme.typography.fontWeightRegular,
 										'&.active': theme.palette.mode ===
 											'dark' && {
 											color: theme.palette.primary.main,
@@ -86,6 +84,4 @@ function Header() {
 			</Toolbar>
 		</AppBar>
 	)
-}
-
-export default observer(Header)
+})

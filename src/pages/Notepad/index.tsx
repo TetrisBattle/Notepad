@@ -1,14 +1,13 @@
 import { observer } from 'mobx-react-lite'
 import { Box, Button, Toolbar } from '@mui/material'
-import { useStoreContext } from 'contexts/StoreContext'
+import { useStore } from 'hooks/useStore'
 import { NavLink, Outlet } from 'react-router-dom'
-import NotFound from './NotFound'
+import { NotFound } from './NotFound'
 
-function Notepad() {
-	const { appStore } = useStoreContext()
-	const gitRoutes = appStore.routes.find(
-		(route) => route.label === 'Notepad'
-	)?.children
+export const Notepad = observer(() => {
+	const { appStore } = useStore()
+	const gitRoutes = appStore.routes.find((route) => route.label === 'Notepad')
+		?.children
 	if (!gitRoutes) return <NotFound />
 
 	return (
@@ -47,6 +46,4 @@ function Notepad() {
 			<Outlet />
 		</Box>
 	)
-}
-
-export default observer(Notepad)
+})

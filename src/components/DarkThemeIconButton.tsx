@@ -1,12 +1,12 @@
 import { Brightness4Outlined as Brightness4OutlinedIcon } from '@mui/icons-material'
-import { IconButton, IconButtonProps } from '@mui/material'
-import { useStoreContext } from 'contexts/StoreContext'
+import { IconButton, IconButtonProps } from '@thng/react'
+import { useStore } from 'hooks/useStore'
 
-export default function DarkThemeIconButton(iconButtonProps: IconButtonProps) {
-	const { appStore } = useStoreContext()
+export const DarkThemeIconButton = (iconButtonProps: IconButtonProps) => {
+	const { appStore } = useStore()
 
 	return (
-		<IconButton onClick={appStore.toggleDarkTheme} {...iconButtonProps}>
+		<IconButton onClick={appStore.toggleDarkMode} {...iconButtonProps}>
 			<Brightness4OutlinedIcon />
 		</IconButton>
 	)

@@ -8,11 +8,11 @@ export interface CommandItemProps {
 	details?: string
 }
 
-export default function CommandItem({
+export const CommandItem = ({
 	command,
 	description,
 	details,
-}: CommandItemProps) {
+}: CommandItemProps) => {
 	const [expanded, setExpanded] = useState(false)
 
 	return (

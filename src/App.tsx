@@ -5,11 +5,11 @@ import {
 	Navigate,
 } from 'react-router-dom'
 import { Backdrop, CircularProgress } from '@mui/material'
-import { useStoreContext } from 'contexts/StoreContext'
-import Header from 'components/Header'
+import { useStore } from 'hooks/useStore'
+import { Header } from 'components/Header'
 
-function AppRoutes() {
-	const { appStore } = useStoreContext()
+const AppRoutes = () => {
+	const { appStore } = useStore()
 
 	return (
 		<Routes>
@@ -31,7 +31,7 @@ function AppRoutes() {
 							<Route
 								key={recursionRoute.path}
 								path={`/${recursionRoute.path}`}
-								element={recursionRoute.element}
+								element={<recursionRoute.element />}
 							>
 								{recursionRoute.children.map((child) =>
 									recursion(child)
@@ -43,7 +43,7 @@ function AppRoutes() {
 						<Route
 							key={recursionRoute.path}
 							path={recursionRoute.path}
-							element={recursionRoute.element}
+							element={<recursionRoute.element />}
 						/>
 					)
 				}
@@ -54,8 +54,8 @@ function AppRoutes() {
 	)
 }
 
-export default function App() {
-	const { appStore } = useStoreContext()
+export const App = () => {
+	const { appStore } = useStore()
 
 	return (
 		<Router>

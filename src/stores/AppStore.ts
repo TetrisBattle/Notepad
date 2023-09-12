@@ -1,40 +1,40 @@
 import { makeAutoObservable } from 'mobx'
-import Notepad from 'pages/Notepad'
-import Git from 'pages/Notepad/Git'
-import Terminal from 'pages/Notepad/Terminal'
-import Regex from 'pages/Notepad/Regex'
-import RemConverter from 'pages/RemConverter'
+import { Notepad } from 'pages/Notepad'
+import { Git } from 'pages/Notepad/Git'
+import { Terminal } from 'pages/Notepad/Terminal'
+import { Regex } from 'pages/Notepad/Regex'
+import { RemConverter } from 'pages/RemConverter'
 
-export default class AppStore {
-	isDarkTheme = true
+export class AppStore {
+	isDarkMode = true
 	isLoading = false
 	routes = [
 		{
 			label: 'Notepad',
 			path: '/notepad',
-			element: <Notepad />,
+			element: Notepad,
 			children: [
 				{
 					label: 'Git',
 					path: 'git/:id',
-					element: <Git />,
+					element: Git,
 				},
 				{
 					label: 'Terminal',
 					path: 'terminal',
-					element: <Terminal />,
+					element: Terminal,
 				},
 				{
 					label: 'Regex',
 					path: 'regex',
-					element: <Regex />,
+					element: Regex,
 				},
 			],
 		},
 		{
 			label: 'RemConverter',
 			path: '/remconverter',
-			element: <RemConverter />,
+			element: RemConverter,
 		},
 	]
 
@@ -42,8 +42,8 @@ export default class AppStore {
 		makeAutoObservable(this)
 	}
 
-	toggleDarkTheme = () => {
-		this.isDarkTheme = !this.isDarkTheme
+	toggleDarkMode = () => {
+		this.isDarkMode = !this.isDarkMode
 	}
 
 	setIsLoading(isLoading: boolean) {

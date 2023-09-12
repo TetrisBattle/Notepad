@@ -1,5 +1,5 @@
-# React-Project
+# Apps
 
-The project started as learning place for react and is currently used as notepad. The notepad includes Git, Terminal and Regex commands.
+All kinds of apps
 
-The site is hosted at [Notepad](https://thien.vercel.app/)
+- Dungeon and Dragons

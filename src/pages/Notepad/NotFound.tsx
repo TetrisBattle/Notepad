@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 
-export default function NotFound() {
+export const NotFound = () => {
 	return (
 		<Box
 			sx={{
@@ -11,7 +11,7 @@ export default function NotFound() {
 				gap: 2,
 			}}
 		>
-			<Typography variant='h1' color='primary' fontWeight='bold'>
+			<Typography variant='h1' color='primary'>
 				Error 404
 			</Typography>
 			<Typography color='primary' fontSize={20}>

@@ -1,11 +1,11 @@
 import { Box, Button, Toolbar, Typography } from '@mui/material'
 import { commands } from './data/git'
-import CommandItem from './CommandItem'
+import { CommandItem } from './CommandItem'
 import { observer } from 'mobx-react-lite'
 import { NavLink, useParams } from 'react-router-dom'
-import NotFound from './NotFound'
+import { NotFound } from './NotFound'
 
-function Git() {
+export const Git = observer(() => {
 	const commandKeys = Object.keys(commands)
 	const params = useParams()
 	if (!params.id) return <NotFound />
@@ -51,7 +51,7 @@ function Git() {
 				<Typography
 					variant='h1'
 					color='primary'
-					fontWeight={600}
+					fontWeight={400}
 					textAlign='center'
 					mb={2}
 				>
@@ -70,6 +70,4 @@ function Git() {
 			</Box>
 		</>
 	)
-}
-
-export default observer(Git)
+})

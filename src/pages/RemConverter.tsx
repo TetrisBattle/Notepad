@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Box, InputAdornment, TextField, Typography } from '@mui/material'
 
-export default function RemConverter() {
+export const RemConverter = () => {
 	const rootPx = 16
 	const [px, setPx] = useState(rootPx.toString())
 	const [rem, setRem] = useState('1')
@@ -51,7 +51,7 @@ export default function RemConverter() {
 				component='h1'
 				variant='h2'
 				color='primary'
-				fontWeight='bold'
+				fontWeight='medium'
 				mt={4}
 			>
 				PX - REM Converter

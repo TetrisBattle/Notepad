@@ -1,8 +1,8 @@
 import { Box, Paper, Typography } from '@mui/material'
-import CommandItem from './CommandItem'
+import { CommandItem } from './CommandItem'
 import { commands as commandsArray } from './data/regex'
 
-export default function Regex() {
+export const Regex = () => {
 	return (
 		<Box
 			sx={{
@@ -14,7 +14,7 @@ export default function Regex() {
 			<Typography
 				variant='h1'
 				color='primary'
-				fontWeight={600}
+				fontWeight={400}
 				textAlign='center'
 				mb={2}
 			>
