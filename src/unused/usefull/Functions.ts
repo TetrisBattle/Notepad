@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 export function binarySearch(array: number[], target: number) {
 	let min = 0
 	let max = array.length - 1
@@ -21,4 +23,21 @@ export function decimalIsValid(value: string, decimals = 2): boolean {
 	} else if (/^\d*[.,]?\d*$/.test(value)) {
 		return true
 	} else return false
+}
+
+export function afterDelay(repeat: 'once' | 'repeat') {
+	switch (repeat) {
+		case 'once': {
+			setTimeout(() => {
+				console.log('once')
+			}, 1000)
+			break
+		}
+		case 'repeat': {
+			setInterval(() => {
+				console.log('repeat')
+			}, 1000)
+			break
+		}
+	}
 }
