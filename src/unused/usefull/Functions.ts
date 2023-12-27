@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 export function binarySearch(array: number[], target: number) {
 	let min = 0
 	let max = array.length - 1

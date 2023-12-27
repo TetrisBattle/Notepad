@@ -1,4 +1,5 @@
-export function getNode(name) { // #page .container button
+// #page .container button
+export function getNode(name) {
 	const node = document.querySelector(name)
 	// const node = document.querySelectorAll(name) // get all nodes
 	return node
@@ -20,8 +21,9 @@ export function toggleClass(name, className) {
 }
 
 export function getCssVarValue(cssVar) {
-	return getComputedStyle(document.documentElement)
-		.getPropertyValue('--' + cssVar)
+	return getComputedStyle(document.documentElement).getPropertyValue(
+		'--' + cssVar
+	)
 }
 
 export function setCssVarValue(cssVar, newValue) {

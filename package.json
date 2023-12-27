@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "eslintConfig": {
-    "extends": "@thng"
+    "extends": "plugin:thng/recommendedReact"
   },
   "scripts": {
     "dev": "vite",
@@ -27,6 +27,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@thng/dev": "^1.0.1"
+    "@thng/dev": "^1.2.6"
   }
 }
