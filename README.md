@@ -1,5 +1,3 @@
-# Apps
+# Notepad
 
-All kinds of apps
-
-- Dungeon and Dragons
+The website is hosted at [thien.vercel.app](https://thien.vercel.app/)
