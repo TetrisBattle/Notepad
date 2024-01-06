@@ -98,7 +98,7 @@ export const commands: CommandItemProps[][] = [
 			description: 'Match lowercase letters between a-z',
 		},
 		{
-			command: '/[a-zA-z]/g',
+			command: '/[a-zA-Z]/g',
 			description: 'Match lowercase and uppercase letters between a-z',
 		},
 		{
