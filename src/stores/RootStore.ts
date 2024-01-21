@@ -1,5 +1,5 @@
 import { AppStore } from './AppStore'
-import { DndStore } from 'features/Dnd/DndStore'
+import { DndStore } from 'features/dnd/DndStore'
 
 export class RootStore {
 	appStore = new AppStore()

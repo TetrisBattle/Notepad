@@ -32,7 +32,7 @@ export const ReactHookFormTextField = <TData extends FieldValues>({
 				error: !!errors[name],
 				helperText: errors[name]?.message as string | undefined,
 				...otherProps,
-		  }
+			}
 		: otherProps
 
 	if (isDecimalInput) {

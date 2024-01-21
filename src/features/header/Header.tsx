@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
 import { AppBar, Toolbar, Box } from '@mui/material'
 import { MenuIconButton } from './MenuIconButton'
-import { DarkThemeIconButton } from './DarkThemeIconButton'
+import { DarkThemeIconButton } from '../../components/DarkThemeIconButton'
 import { IconButton, Logo } from '@thng/react'
-import { RouteOption } from 'Routes'
+import { RouteOption } from 'routes'
 import { HeaderButton } from './HeaderButton'
 
 export const Header = () => {

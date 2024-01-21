@@ -1,8 +1,8 @@
 import { Box, Button } from '@thng/react'
-import { RouteOption } from 'Routes'
+import { RouteOption } from 'routes'
 import { Link } from 'react-router-dom'
 
-export const Forms = () => {
+export const Playground = () => {
 	return (
 		<Box
 			sx={{
@@ -12,11 +12,11 @@ export const Forms = () => {
 				gap: 2,
 			}}
 		>
-			<Button component={Link} to={RouteOption.FormikForm}>
-				Formik Form
+			<Button component={Link} to={RouteOption.Forms}>
+				Forms
 			</Button>
-			<Button component={Link} to={RouteOption.ReactHookForm}>
-				React Hook Form
+			<Button component={Link} to={RouteOption.DnD}>
+				DnD
 			</Button>
 		</Box>
 	)

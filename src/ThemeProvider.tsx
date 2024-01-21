@@ -26,10 +26,10 @@ export const ThemeProvider = observer(({ children }: ThemeProviderProps) => {
 						default: '#121416',
 						paper: '#121416',
 					},
-			  }
+				}
 			: {
 					mode: 'light',
-			  },
+				},
 	}
 
 	return <BaseThemeProvider theme={theme}>{children}</BaseThemeProvider>

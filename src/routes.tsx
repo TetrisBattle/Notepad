@@ -2,18 +2,18 @@ import { Navigate, createBrowserRouter } from 'react-router-dom'
 import { App } from 'App'
 import { NotFound } from 'features/NotFound'
 
-import { Notepad } from 'pages/Notepad'
-import { Git } from 'pages/Notepad/Git'
-import { Terminal } from 'pages/Notepad/Terminal'
-import { Regex } from 'pages/Notepad/Regex'
+import { Notepad } from 'features/notepad/Notepad'
+import { Git } from 'features/notepad/Git'
+import { Terminal } from 'features/notepad/Terminal'
+import { Regex } from 'features/notepad/Regex'
 
-import { RemConverter } from 'pages/RemConverter'
+import { RemConverter } from 'features/RemConverter'
 
-import { Forms } from 'playground/forms/Forms'
-import { FormikForm } from 'playground/forms/formik/FormikForm'
-import { ReactHookForm } from 'playground/forms/reactHookForm/ReactHookForm'
-import { Dnd } from 'features/Dnd'
-import { Playground } from 'playground/Payground'
+import { Forms } from 'features/playground/forms/Forms'
+import { FormikForm } from 'features/playground/forms/formik/FormikForm'
+import { ReactHookForm } from 'features/playground/forms/reactHookForm/ReactHookForm'
+import { Dnd } from 'features/dnd/DnD'
+import { Playground } from 'features/playground/Payground'
 
 export enum RouteOption {
 	NotFound = '/404',

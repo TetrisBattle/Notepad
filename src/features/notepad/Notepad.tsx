@@ -1,16 +1,9 @@
 import { observer } from 'mobx-react-lite'
 import { Button, Toolbar } from '@mui/material'
-// import { useStore } from 'hooks/useStore'
 import { NavLink, Outlet } from 'react-router-dom'
-// import { NotFound } from './NotFound'
-import { RouteOption } from 'Routes'
+import { RouteOption } from 'routes'
 
 export const Notepad = observer(() => {
-	// const { appStore } = useStore()
-	// const gitRoutes = appStore.routes.find((route) => route.label === 'Notepad')
-	// 	?.children
-	// if (!gitRoutes) return <NotFound />
-
 	return (
 		<>
 			<Toolbar
