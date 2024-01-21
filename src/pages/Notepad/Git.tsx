@@ -8,9 +8,9 @@ import { NotFound } from './NotFound'
 export const Git = observer(() => {
 	const commandKeys = Object.keys(commands)
 	const params = useParams()
-	if (!params.id) return <NotFound />
-	if (!commandKeys.some((key) => key === params.id)) return <NotFound />
-	const selectedGitCommands = commands[params.id]
+	if (!params.id) throw new Error('Missing id param')
+	const gitPageExists = commandKeys.some((key) => key === params.id)
+	const selectedGitCommands = gitPageExists ? commands[params.id] : null
 
 	return (
 		<>
@@ -39,35 +39,45 @@ export const Git = observer(() => {
 					</Button>
 				))}
 			</Toolbar>
-			<Box
-				sx={{
-					p: 2,
-					display: 'flex',
-					flexDirection: 'column',
-					maxWidth: (theme) => theme.breakpoints.values.md,
-					mx: 'auto',
-				}}
-			>
-				<Typography
-					variant='h1'
-					color='primary'
-					fontWeight={400}
-					textAlign='center'
-					mb={2}
+			{selectedGitCommands ? (
+				<Box
+					sx={{
+						p: 2,
+						display: 'flex',
+						flexDirection: 'column',
+						maxWidth: (theme) => theme.breakpoints.values.md,
+						mx: 'auto',
+					}}
 				>
-					Git Commands
-				</Typography>
-				<Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-					{selectedGitCommands.map((gitCommand) => {
-						return (
-							<CommandItem
-								key={gitCommand.command}
-								{...gitCommand}
-							/>
-						)
-					})}
+					<Typography
+						variant='h1'
+						color='primary'
+						fontWeight={400}
+						textAlign='center'
+						mb={2}
+					>
+						Git Commands
+					</Typography>
+					<Box
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							gap: 1,
+						}}
+					>
+						{selectedGitCommands.map((gitCommand) => {
+							return (
+								<CommandItem
+									key={gitCommand.command}
+									{...gitCommand}
+								/>
+							)
+						})}
+					</Box>
 				</Box>
-			</Box>
+			) : (
+				<NotFound />
+			)}
 		</>
 	)
 })

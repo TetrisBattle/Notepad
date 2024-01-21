@@ -1,15 +1,17 @@
 import { useState } from 'react'
-import { IconButton, IconButtonProps, Menu } from '@mui/material'
+import { IconButton, Menu } from '@mui/material'
+import { Menu as MenuIcon } from '@mui/icons-material'
+import { MenuItem } from '@thng/react'
+import { NavLink } from 'react-router-dom'
 
-interface MenuIconButtonProps extends IconButtonProps {
-	icon: JSX.Element
+type MenuIconButtonProps = {
+	items: {
+		path: string
+		label: string
+	}[]
 }
 
-export const MenuIconButton = ({
-	icon,
-	children,
-	...baseProps
-}: MenuIconButtonProps) => {
+export const MenuIconButton = ({ items }: MenuIconButtonProps) => {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
 	return (
@@ -18,9 +20,14 @@ export const MenuIconButton = ({
 				onClick={(e: React.MouseEvent<HTMLElement>) =>
 					setAnchorEl(e.currentTarget)
 				}
-				{...baseProps}
+				sx={{
+					color: 'inherit',
+					display: {
+						sm: 'none',
+					},
+				}}
 			>
-				{icon}
+				<MenuIcon />
 			</IconButton>
 
 			<Menu
@@ -29,7 +36,21 @@ export const MenuIconButton = ({
 				onClick={() => setAnchorEl(null)}
 				onClose={() => setAnchorEl(null)}
 			>
-				{children}
+				{items.map(({ path, label }) => (
+					<MenuItem
+						key={path}
+						component={NavLink}
+						to={path}
+						sx={{
+							fontWeight: 600,
+							'&.active': (theme) => ({
+								color: theme.palette.primary.main,
+							}),
+						}}
+					>
+						{label}
+					</MenuItem>
+				))}
 			</Menu>
 		</>
 	)

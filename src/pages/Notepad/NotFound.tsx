@@ -11,12 +11,10 @@ export const NotFound = () => {
 				gap: 2,
 			}}
 		>
-			<Typography variant='h1' color='primary'>
+			<Typography variant='h1' color='primary' fontWeight='medium'>
 				Error 404
 			</Typography>
-			<Typography color='primary' fontSize={20}>
-				The page was not found!
-			</Typography>
+			<Typography fontSize={20}>Git was not found!</Typography>
 		</Box>
 	)
 }

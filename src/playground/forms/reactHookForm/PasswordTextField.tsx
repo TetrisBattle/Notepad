@@ -14,7 +14,7 @@ import {
 	atleastOneLowercaseRegex,
 	atleastOneSpecialCharacterRegex,
 	atleastOneUppercaseRegex,
-} from 'playground/form/validations/regex'
+} from 'playground/forms/validations/regex'
 
 export type PasswordTextFieldProps<
 	TData extends FieldValues & { password: string },

@@ -3,9 +3,9 @@ import { Box, Button, InputAdornment } from '@thng/react'
 import { LoadingButton, wait } from '@thng/react'
 import { Formik } from 'formik'
 import { observer } from 'mobx-react-lite'
-import { FormTitle } from '../../components/FormTitle'
-import { mockOptions } from '../../options'
-import { Data, defaultData, schema } from '../../validations/yupValidation'
+import { FormTitle } from '../FormTitle'
+import { mockOptions } from '../mockOptions'
+import { Data, defaultData, schema } from '../validations/yupValidation'
 import { FormikTextField } from './FormikTextField'
 
 export const FormikForm = observer(() => {

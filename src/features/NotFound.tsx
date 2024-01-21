@@ -1,6 +1,4 @@
-import { Box, Button, Typography } from '@thng/react'
-import { RouteOption } from 'Routes'
-import { Link } from 'react-router-dom'
+import { Box, Typography } from '@thng/react'
 
 export const NotFound = () => {
 	return (
@@ -15,9 +13,6 @@ export const NotFound = () => {
 			}}
 		>
 			<Typography variant='h1'>Not Found!</Typography>
-			<Button component={Link} to={RouteOption.Home}>
-				Return to home page
-			</Button>
 		</Box>
 	)
 }

@@ -1,64 +1,99 @@
+import { Navigate, createBrowserRouter } from 'react-router-dom'
+import { App } from 'App'
 import { NotFound } from 'features/NotFound'
-import { Home } from 'features/Home'
+
+import { Notepad } from 'pages/Notepad'
+import { Git } from 'pages/Notepad/Git'
+import { Terminal } from 'pages/Notepad/Terminal'
+import { Regex } from 'pages/Notepad/Regex'
+
+import { RemConverter } from 'pages/RemConverter'
+
+import { Forms } from 'playground/forms/Forms'
+import { FormikForm } from 'playground/forms/formik/FormikForm'
+import { ReactHookForm } from 'playground/forms/reactHookForm/ReactHookForm'
 import { Dnd } from 'features/Dnd'
-import {
-	Navigate,
-	Outlet,
-	RouteObject,
-	createBrowserRouter,
-} from 'react-router-dom'
-import { Forms } from 'playground/form/components/FormsDashboard'
-import { FormikForm } from 'playground/form/forms/formik/FormikForm'
-import { ReactHookForm } from 'playground/form/forms/reactHookForm/ReactHookForm'
+import { Playground } from 'playground/Payground'
 
 export enum RouteOption {
 	NotFound = '/404',
-	Home = '/home',
+	Notepad = '/notepad',
+	Git = '/notepad/git',
+	Terminal = '/notepad/terminal',
+	Regex = '/notepad/regex',
+	RemConverter = '/remConverter',
 	Playground = '/playground',
-	Forms = '/forms',
-	FormikForm = '/formikForm',
-	ReactHookForm = '/reactHookForm',
-	DnD = '/dnd',
+	Forms = '/playground/forms',
+	FormikForm = '/playground/forms/formikForm',
+	ReactHookForm = '/playground/forms/reactHookForm',
+	DnD = '/playground/forms/dnd',
 }
 
-export const routes: RouteObject[] = [
+export const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Outlet />,
+		element: <App />,
 		children: [
 			{ path: RouteOption.NotFound, element: <NotFound /> },
 			{
 				path: '*',
 				element: <Navigate replace to={RouteOption.NotFound} />,
 			},
-			{ path: '/', element: <Navigate replace to={RouteOption.Home} /> },
-			{ path: RouteOption.Home, element: <Home /> },
+			{ path: '/', element: <Navigate replace to={RouteOption.Git} /> },
 			{
-				path: RouteOption.Playground,
-				element: <div />,
+				path: RouteOption.Notepad,
+				element: <Notepad />,
 				children: [
 					{
-						path: RouteOption.Forms,
-						element: <Forms />,
-						children: [
-							{
-								path: RouteOption.FormikForm,
-								element: <FormikForm />,
-							},
-							{
-								path: RouteOption.ReactHookForm,
-								element: <ReactHookForm />,
-							},
-						],
+						path: RouteOption.Notepad,
+						element: (
+							<Navigate replace to={RouteOption.Git + '/init'} />
+						),
+					},
+					{
+						path: RouteOption.Git,
+						element: (
+							<Navigate replace to={RouteOption.Git + '/init'} />
+						),
+					},
+					{
+						path: RouteOption.Git + '/:id',
+						element: <Git />,
+					},
+					{
+						path: RouteOption.Terminal,
+						element: <Terminal />,
+					},
+					{
+						path: RouteOption.Regex,
+						element: <Regex />,
 					},
 				],
+			},
+			{
+				path: RouteOption.RemConverter,
+				element: <RemConverter />,
+			},
+			{
+				path: RouteOption.Playground,
+				element: <Playground />,
+			},
+			{
+				path: RouteOption.Forms,
+				element: <Forms />,
+			},
+			{
+				path: RouteOption.FormikForm,
+				element: <FormikForm />,
+			},
+			{
+				path: RouteOption.ReactHookForm,
+				element: <ReactHookForm />,
 			},
 			{ path: RouteOption.DnD, element: <Dnd /> },
 		],
 	},
-]
-
-export const router = createBrowserRouter(routes)
+])
 
 export const routeToTitle = (route: RouteOption): string => {
 	return route[1].toUpperCase() + route.slice(2)

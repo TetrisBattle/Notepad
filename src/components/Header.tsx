@@ -1,15 +1,12 @@
 import { NavLink } from 'react-router-dom'
-import { AppBar, Toolbar, Button, MenuItem, Box } from '@mui/material'
-import { Menu as MenuIcon } from '@mui/icons-material'
+import { AppBar, Toolbar, Box } from '@mui/material'
 import { MenuIconButton } from './MenuIconButton'
 import { DarkThemeIconButton } from './DarkThemeIconButton'
-import { observer } from 'mobx-react-lite'
-import { useStore } from 'hooks/useStore'
-import { Logo } from '@thng/react'
+import { IconButton, Logo } from '@thng/react'
+import { RouteOption } from 'Routes'
+import { HeaderButton } from './HeaderButton'
 
-export const Header = observer(() => {
-	const { appStore } = useStore()
-
+export const Header = () => {
 	return (
 		<AppBar
 			sx={{
@@ -17,9 +14,15 @@ export const Header = observer(() => {
 				borderBottom: 'solid 1px grey',
 			}}
 		>
-			<Toolbar sx={{ p: 1 }}>
+			<Toolbar sx={{ pr: 1 }}>
 				<Box sx={{ mr: 'auto', display: 'flex', alignItems: 'center' }}>
-					<Logo size={48} />
+					<IconButton
+						component={NavLink}
+						to={RouteOption.Playground}
+						size='small'
+					>
+						<Logo size={32} />
+					</IconButton>
 				</Box>
 				<Box
 					sx={{
@@ -30,58 +33,27 @@ export const Header = observer(() => {
 					}}
 				>
 					<Box sx={{ pr: 1 }}>
-						{appStore.routes.map((route) => {
-							return (
-								<Button
-									key={route.path}
-									component={NavLink}
-									to={route.path}
-									variant='text'
-									sx={(theme) => ({
-										'&:hover': { bgcolor: 'transparent' },
-										fontSize: '1.25rem',
-										color: 'inherit',
-										fontWeight: (theme) =>
-											theme.typography.fontWeightRegular,
-										'&.active': theme.palette.mode ===
-											'dark' && {
-											color: theme.palette.primary.main,
-										},
-									})}
-								>
-									{route.label}
-								</Button>
-							)
-						})}
+						<HeaderButton
+							path={RouteOption.Notepad}
+							label='Notepad'
+						/>
+						<HeaderButton
+							path={RouteOption.RemConverter}
+							label='RemConverter'
+						/>
 					</Box>
 				</Box>
 				<MenuIconButton
-					sx={{
-						color: 'inherit',
-						display: {
-							sm: 'none',
+					items={[
+						{ path: RouteOption.Notepad, label: 'Notepad' },
+						{
+							path: RouteOption.RemConverter,
+							label: 'RemConverter',
 						},
-					}}
-					icon={<MenuIcon />}
-				>
-					{appStore.routes.map((route) => (
-						<MenuItem
-							key={route.path}
-							component={NavLink}
-							to={route.path}
-							sx={{
-								fontWeight: 600,
-								'&.active': (theme) => ({
-									color: theme.palette.primary.main,
-								}),
-							}}
-						>
-							{route.label}
-						</MenuItem>
-					))}
-				</MenuIconButton>
+					]}
+				/>
 				<DarkThemeIconButton sx={{ color: 'inherit' }} />
 			</Toolbar>
 		</AppBar>
 	)
-})
+}
