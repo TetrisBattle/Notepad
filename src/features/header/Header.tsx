@@ -7,6 +7,8 @@ import { RouteOption } from 'routes'
 import { HeaderButton } from './HeaderButton'
 
 export const Header = () => {
+	const linkToPlayground = false
+
 	return (
 		<AppBar
 			sx={{
@@ -16,13 +18,26 @@ export const Header = () => {
 		>
 			<Toolbar sx={{ pr: 1 }}>
 				<Box sx={{ mr: 'auto', display: 'flex', alignItems: 'center' }}>
-					<IconButton
-						component={NavLink}
-						to={RouteOption.Playground}
-						size='small'
-					>
-						<Logo size={32} />
-					</IconButton>
+					{linkToPlayground ? (
+						<IconButton
+							component={NavLink}
+							to={RouteOption.Playground}
+							size='small'
+						>
+							<Logo size={40} />
+						</IconButton>
+					) : (
+						<Box
+							sx={{
+								height: 1,
+								display: 'flex',
+								alignItems: 'center',
+								p: 0.5,
+							}}
+						>
+							<Logo size={40} />
+						</Box>
+					)}
 				</Box>
 				<Box
 					sx={{
